@@ -1,0 +1,1155 @@
+.enterplan-sec {
+  margin-bottom: 60px;
+}
+.effective-date, .enterplan-sec {
+  padding: 30px;
+  border: 2px solid #b8c0c9;
+  border-radius: 20px;
+  position: relative;
+}
+.planInfo-txt {
+  position: absolute;
+  left: 30px;
+  top: -10px;
+  font-size: 14px;
+  line-height: 16px;
+  background: #e7f2fe;
+  padding: 0 10px;
+  color: #529fde;
+}
+.effective-date .txt span, .plans-type .plans-left label, .enterplan-sec input, .enterplan-sec label {
+  font-size: 14px;
+  color: #000000;
+  line-height: 18px;
+  display: inline-block;
+}
+.enterplan-sec .plan-name {
+  width: 75%;
+  padding-bottom: 10px;
+}
+.enterplan-sec .plan-name label {
+  float: left;
+  padding-right: 20px;
+  text-align: right;
+  width: 19%;
+}
+.enterplan-sec .plan-name input {
+  width: 81%;
+  float: right;
+}
+.plans-type {
+  margin-bottom: 40px;
+}
+.plans-type .plans-right, .plans-type .plans-left {
+  max-width: 342px;
+  text-align: right;
+  float: left;
+  width: 100%;
+}
+.plans-type .plans-right {
+  max-width: 550px;
+}
+.plans-type .plans-right label, .plans-type .plans-left label {
+  width: 45%;
+  float: left;
+  padding-right: 20px;
+}
+.plans-type .plans-right select, .plans-type .plans-left select {
+  width: 55%;
+  float: left;
+}
+.plans-type .wraps {
+  padding-bottom: 13px;
+}
+select {
+  font-size: 14px;
+  color: #000000;
+  line-height: 18px;
+  border: 2px solid #bcbcc3;
+  padding: 0 0 0 3px;
+}
+.plans-type .plans-right label {
+  width: 65%;
+}
+.plans-type .plans-right select {
+  width: 35%;
+}
+.plans-type .plans-right input {
+  float: left;
+}
+.effective-date {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 18px;
+  border-radius: 10px;
+}
+.effective-date .planInfo-txt {
+  left: 15px;
+}
+.effective-date .end-cal, .effective-date .start-cal {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.effective-date .cal-wrap input {
+  width: 85px;
+  margin-right: 2px;
+  vertical-align: top;
+}
+.effective-date .txt {
+  text-align: left;
+}
+.effective-date .txt span {
+  width: 100px;
+  text-align: center;
+}
+.effective-date .cal-wrap .cal-icn {
+  margin-top: 3px;
+}
+.btn-sec {
+  text-align: right;
+  /*padding-bottom: 15px;*/
+  /*border-bottom: 2px solid #bcbcc3;*/
+  /*margin-bottom: 30px;*/
+  /*border-top: 2px solid #bcbcc3;*/
+  padding: 20px 0;
+  margin: 30px 0 0;
+
+}
+.btn-sec .btn {
+  margin-left: 5px;
+  padding: 2px 15px;
+  font-weight: 700;
+  min-width: 100px;
+}
+/*.config-page {
+	padding: 100px 30px;
+}*/
+.config-page {
+  padding: 30px;
+}
+.btn-sec .back-btn {
+  float: left;
+}
+.btn-sec .forword-btn {
+  float: right;
+}
+.plan-output {
+  padding: 15px;
+  border: 1px solid #b5b8b9;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.plan-output .plan-benefit {
+  width: 50%;
+  float: left;
+}
+.plan-benefit .plan-name span {
+  width: 136px;
+  float: left;
+}
+.plan-benefit .plan-name {
+  padding-bottom: 7px;
+}
+.plan-benefit .plan-name strong {
+  width: calc(100% - 136px);
+  width: -webkit-calc(100% - 136px);
+  width: -moz-calc(100% - 136px);
+  width: -ms-calc(100% - 136px);
+}
+.plan-benefit .column-sec .row-sec {
+  padding-bottom: 7px;
+}
+.plan-benefit .column-sec span, .plan-benefit .column-sec strong, .plan-benefit .column-sec {
+  width: 40%;
+  float: left;
+}
+.plan-benefit .column-sec:last-child {
+  width: 60%;
+}
+.plan-benefit .right-coln .column-sec {
+  width: 50%;
+}
+.plan-benefit .right-coln .column-sec:first-child {
+  padding-top: 25px;
+}
+.plan-benefit .right-coln .column-sec:last-child {
+  border: 1px solid #517ea9;
+  border-radius: 10px;
+  padding: 17px 10px 10px;
+}
+.plan-benefit .right-coln .column-sec:last-child .row-sec {
+  padding-bottom: 15px;
+}
+.plan-benefit .right-coln .column-sec:last-child strong, .plan-benefit .right-coln .column-sec:last-child span {
+  width: 50%;
+}
+.plan-benefit .column-sec span {
+  text-align: right;
+  padding: 0 7px;
+}
+.plan-benefit .column-sec strong {
+  text-align: left;
+  padding: 0 7px;
+  width: 60%;
+}
+.left-wedget {
+  width: 220px;
+  float: left;
+}
+.deductible-sec {
+  width: calc(100% - 240px);
+  width: -webkit-calc(100% - 240px);
+  width: -moz-calc(100% - 240px);
+  width: -ms-calc(100% - 240px);
+  float: right;
+}
+.deductible-sec .deductible-box {
+  /*border: 2px solid #507da9;*/
+  padding: 15px;
+  border:1px solid #bbbdbe; 
+  min-height: 628px;
+}
+.deductible-sec.benefit-service .deductible-box{ border: none; }
+.deductible-sec.benefit-service .deductible-box.benefit-deductible{ border: 1px solid #bbbdbe !important; margin: 0; }
+
+/*.deductible-sec.benefit-service{  border: 1px solid #b5b8b9; border-radius: 6px; margin-bottom: 25px; padding: 30px 5px; position: relative; }
+.deductible-sec.benefit-service .head-txt{ position: absolute; background: #e7eeff; left: 10px; padding: 0 5px; top: -10px; }*/
+
+/*.deductible-sec.benefit-service .deductible-box{ border: none; }*/
+/*.deductible-sec.benefit-service .deductible-box.benefit-deductible{ border: 1px solid #bbbdbe !important; margin: 0; }*/
+
+.deductible-sec{  border: 1px solid #b5b8b9; border-radius: 6px; margin-bottom: 25px; padding: 30px 5px; position: relative; min-height: 690px; }
+.deductible-sec .head-txt{ position: absolute; background: #e7eeff; left: 10px; padding: 0 5px; top: -10px; }
+
+.deductible-sec.no-border .deductible-box{ border: none; }
+
+.left-wedget ul li a {
+  color: #000000;
+  display: block;
+}
+.left-wedget ul li.active a {
+  font-weight: 700;
+}
+.left-wedget ul li {
+  padding: 10px;
+  border-bottom: 1px dashed #000;
+}
+.left-wedget .links-sec {
+  position: relative;
+  border: 1px solid #b5b8b9;
+  border-radius: 6px;
+  padding: 30px 5px;
+  margin-bottom: 25px;
+}
+.left-wedget .planInfo-txt {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.left-wedget .links-sec .wrap {
+  border: 1px solid #458fd2;
+  padding: 5px;
+  max-height: 145px;
+  overflow: auto;
+}
+.left-wedget .links-sec .wrap.cost-share {
+  max-height: 300px;
+}
+.deductible-sec.benefit-service .info-wraps {
+  /*padding: 0;*/
+  padding:40px 15px 0;
+}
+.deductible-sec .info-wraps {
+  padding: 0 40px;
+}
+.deductible-sec .info-wraps .columns {
+  width: 30%;
+  text-align: center;
+  float: left;
+}
+.deductible-sec .info-wraps .columns .cost {
+  max-width: 170px;
+  widows: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.dtails-blog .detail-clmn .cost:after, .deductible-sec .info-wraps .columns .cost:after {
+  position: absolute;
+  left: 22px;
+  top: 3px;
+  content: "$";
+}
+.deductible-sec .info-wraps .columns .cost input {
+  width: 100%;
+  padding: 0 10px 0 30px;
+}
+.deductible-sec .info-wraps .columns.chkbx {
+  text-align: left;
+}
+.deductible-sec .info-wraps .empty {
+  min-height: 18px;
+}
+.deductible-sec .info-wraps .rows {
+  padding-bottom: 15px;
+}
+.deductible-sec .btn-sec {
+  padding-top: 15px;
+  border-bottom: 1px solid #74abdd;
+}
+.deductible-sec .head-txt {
+  font-size: 16px;
+  color: #529fde;
+  padding-bottom: 10px;
+}
+.deductible-sec input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+.deductible-sec label {
+  position: relative;
+  padding-left: 25px;
+  display: inline-block;
+  cursor: pointer;
+}
+.deductible-sec .chkbx {
+  position: relative;
+}
+.deductible-sec input[type="checkbox"]:checked + label::before, .deductible-sec label:after {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: 2px;
+  content: "";
+  border: 1px solid #c5c5c5;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.deductible-sec input[type="checkbox"]:checked + label::before {
+  background: #ffffff url(../images/checked.png) no-repeat center center;
+  z-index: 2
+}
+
+/* ================= fourthPage screen =========================== */
+.align-rgt {
+  text-align: right;
+}
+.margin-0 {
+  margin: 0;
+}
+.InputDisabled {
+  background: #e7e7e7;
+}
+.dtails-blog .detail-clmn {
+  width: 50%;
+  float: left;
+}
+
+.dtails-blog .detail-clmn .detail-clmn {
+  padding: 0 10px 10px;
+}
+.dtails-blog .detail-clmn select {
+  width: 100%;
+}
+.dtails-blog .detail-clmn input {
+  width: 100%;
+  padding: 0 10px 0 30px;
+}
+.dtails-blog .detail-clmn .cost {
+  position: relative;
+}
+.table-wrap {
+  padding: 15px;
+  overflow: auto;
+}
+.table-wrap table {
+  width: 100%;
+  border: 0;
+  min-width: 524px;
+}
+.table-wrap table th {
+  background: #4c93db;
+  color: #ffffff;
+  font-weight: 700;
+}
+.table-wrap table th, .table-wrap table td {
+  border: 1px solid #ffffff;
+  height: 42px;
+}
+.table-wrap table th:nth-child(6n-1) {
+  width: 180px;
+}
+.table-wrap table tbody tr:nth-child(even) td {
+  background: #d5e6f7;
+}
+.table-wrap table tbody tr:nth-child(odd) td {
+  background: #eef7ff;
+}
+.table-wrap table td span {
+  color: #000;
+}
+.table-wrap table td a {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* ================= fifthPage screen =========================== */
+
+.coinsure-plan .info-wraps .columns .cost::after {
+  content: "%";
+  left: auto;
+  right: 10px;
+}
+.coinsure-plan .info-wraps {
+  padding-bottom: 100px;
+}
+
+/* ================= sixPage screen =========================== */
+
+.coinsure-dtail .dtails-blog .detail-clmn .cost::after {
+  content: "%";
+}
+/* ================= out of pocket  screen =========================== */
+.dtails-blog .detail-clmn .chkbx {
+  text-align: right;
+}
+.dtails-blog .detail-clmn .chkbx label {
+  padding-left: 0;
+  padding-right: 25px;
+}
+.dtails-blog .detail-clmn .chkbx input[type="checkbox"]:checked + label::before, .dtails-blog .detail-clmn .chkbx label:after {
+  left: auto;
+  right: 0;
+}
+.dtails-blog .detail-clmn .chkbx {
+  margin-bottom: 15px;
+}
+/* ================= copay  screen =========================== */
+
+.copay-detail .detail-row .detail-clmn {
+  float: left;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  width: auto;
+}
+.copay-detail .detail-row .chkbx {
+  padding-bottom: 10px;
+}
+.copay-detail .detail-row .detail-clmn:nth-child(2) {
+  width: 100px;
+}
+.copay-detail .detail-row .detail-clmn select, .copay-detail .detail-row .detail-clmn input, .copay-detail .detail-row .detail-clmn span {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.copay-detail .table-wrap table {
+  min-width: 586px;
+}
+/* ================= Ambulance  screen =========================== */
+.benefit-service .deductible-box {
+  padding: 0;
+  margin-bottom: 15px;
+  min-height: 550px;
+}
+.benefit-deductible{
+  border:1px solid #bbbdbe;
+}
+.benefit-service .benefit-left {
+  float: left;
+  width: 50%;
+  padding: 40px 15px 0;
+  position: relative; 
+  max-height: 627px; 
+  min-height: 627px; 
+  overflow: auto;
+}
+.benefit-service .benefit-right {
+  float: right;
+  width: 50%;
+  padding: 10px;
+  /*border-left: 2px solid #507da9;*/
+  border-left: 1px solid #507da9; 
+  max-height: 627px; 
+  min-height: 627px;
+  overflow: auto;
+}
+.benefit-service .benefit-right ul {
+  /*margin-bottom:25px;*/
+  margin-bottom:0 !important;
+  border-bottom: 1px solid #74abdd;
+}
+.benefit-service .benefit-right ul li {
+  float: left;
+}
+.benefit-service .benefit-right ul li a {
+  padding: 3px 7px;
+  background: #a5c9ef;
+}
+.benefit-service .benefit-right ul li.active a, .benefit-service .benefit-right ul li a:hover {
+  background: #e6f5ff;
+}
+.benefit-service .benefit-left .detail-row .chkbx {
+  padding-bottom: 15px;
+}
+.benefit-service .benefit-left .detail-row {
+  padding-bottom: 50px;
+}
+.benefit-service .benefit-left .btn-sec {
+  margin: 0;
+  border: 0;
+}
+.benefit-service .benefit-result {
+  border: 1px solid #bbbdbe;
+  min-height: 256px;
+  padding: 10px;
+}
+.dtails-blog .multiSelect .chkbx {
+  text-align: left;
+  margin: 0;
+}
+.dtails-blog .multiSelect .chkbx label {
+  padding-right: 0;
+  padding-left: 25px;
+}
+.multiSelect {
+  background: #ffffff;
+  border: 2px solid #bcbcc3;
+  padding: 7px;
+}
+.multiSelect .chkbx, .multiSelect ul {
+  margin: 0;
+}
+.multiSelect ul {
+  max-height: 64px;
+  overflow: auto;
+}
+.dtails-blog .multiSelect .chkbx input[type="checkbox"]:checked + label::before, .dtails-blog .multiSelect .chkbx label::after {
+  left: 0;
+  right: auto;
+  top: 3px;
+}
+
+/*Physicain page start here*/
+div.copay-plan-section .columns:nth-child(1) {
+  width: 100%;
+}
+.copay-plan-section span {
+  display: inline-block;
+  line-height: 30px;
+  /*max-width: 70%;*/
+  max-width: 95%;
+  width: 100%;
+  vertical-align: top;
+  line-height: 1;
+}
+.copay-plan-section input {
+  margin-bottom: 5px;
+  width: 56px
+}
+.network-text input {
+  width: 56px
+}
+.rows.service-text .columns .cost input {
+  width: 60px;
+}
+.pcp-member-section span {
+  display: inline-block;
+  max-width: 68%;
+  vertical-align: top;
+}
+.pcp-member-section input {
+  width: 56px;
+  margin-bottom: 9px;
+}
+.deductible-sec .pcp-member-section  label {
+  margin-top: 3px;
+}
+.deductible-sec .pcp-member-section .columns.chkbx {
+  width: 100%;
+}
+.rows.service-text .columns .cost:after {
+  left: 36%;
+}
+.copay-plan-section label {
+  padding-left: 18px;
+}
+.copay-plan-section .columns:nth-child(2) {
+  width: 20%;
+}
+div.info-wraps .plan-section .columns {
+  width: 70%;
+}
+.asc-text strong {
+  display: block;
+  padding-left: 25px;
+  margin-bottom: 3px;
+}
+.asc-text h6 {
+  font-size: 17px;
+  margin-bottom: 0;
+  padding-top: 5px;
+}
+.asc-grops-text h6 {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 8px;
+  padding-left: 26px;
+}
+.copay-plan-section .cost {
+  margin: 0;
+}
+
+.network-text span {
+  max-width: 75%;
+  vertical-align: top;
+}
+.text-point {
+  position: relative;
+  padding-left: 14px;
+}
+.text-point:after {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  background: #000;
+  top: 50%;
+  margin-top: -3px;
+  left: 0;
+}
+.coverd-text strong {
+  margin-bottom: 15px;
+  display: block;
+}
+
+/*--------Ambulance-tab-------*/
+.benefit-tab .benefit-result {
+  border: 1px solid #74abdd;
+  border-top: none;
+}
+.benefit-tab .benefit-tab-link li, .benifit-tabTwo-link li, .benifit-tabThree-link li {
+  margin-right: 2px;
+}
+.benefit-tab .benefit-tab-link li:last-child, .benifit-tabTwo-link li:last-child, .benifit-tabThree-link li:last-child {
+  margin-right: 0;
+}
+.benefit-service .benefit-tab .benefit-tab-link li a, .benefit-service .benifit-tab-content .benifit-tabTwo-link li a, .benefit-service .benifit-tab-content .benifit-tabThree-link li a {
+  border: 1px solid #74abdd;
+  border-bottom: none;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  font-size: 13px;
+  padding: 3px 8px;
+  min-width: auto;
+}
+.benefit-service .benefit-tab .benefit-tab-link li.active a, .benefit-service .benifit-tab-content .benifit-tabTwo-link li.active a, .benefit-service .benifit-tab-content .benifit-tabThree-link li.active a {
+  border-bottom: 1px solid #e7f2fe;
+  margin-bottom: -1px;
+  font-weight: 700;
+}
+.benefit-tab .benefit-tab-link, .benifit-tabTwo-link, .benifit-tabThree-link {
+  border-bottom: 1px solid #74abdd;
+}
+.formone-wrap label:after, .formone-wrap label:before {
+  display: none;
+}
+.formone-wrap label {
+  padding-left: 0;
+  font-size: 13px;
+  margin-bottom:10px;/*EDITED*/
+}
+.formone-wrap {
+  float: left;
+  width: 48%;
+  margin-right: 10px;
+}
+.formone-wrap:nth-of-type(2), .formone-wrap:nth-of-type(4),.formone-wrap:nth-child(2n) {
+  margin-right: 0;
+}
+.formone-wrap input {
+  /*width: 47%;*/
+  width: 100%; max-width: 112px;
+  
+}
+.formone-wrap input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.formone-wrap input:-ms-input-placeholder {
+  color: #000;
+}
+
+.formone-wrap input::-ms-input-placeholder {
+  color: #000;
+}
+.benifit-formone {
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.formone-btn-wrap {
+  text-align: right;
+  padding: 46px 0 0;
+}
+.benefit-tab .btn {
+  min-width: 100px;
+  padding: 4px;
+  text-transform: capitalize;
+}
+.benifit-tabTwo-info {
+  padding: 20px 0 0;
+  display: none;
+  border-bottom: 1px solid #74abdd;
+  margin-bottom: 24px;
+}
+.benifit-tabTwo-info.active{
+  display: block;
+}
+.benifit-tabTwo-info .formone-wrap {
+  margin-bottom: 20px;
+
+}
+.benifit-tabThree-info .formone-wrap {
+  margin-bottom: 15px;
+  width: 48%;
+}
+.formone-wrap input.md-width {
+  /*width: 65%;*/
+  width:100%; max-width: 112px;
+}
+.benifit-tabThree-info {
+  padding: 10px;
+  display: none;
+}
+.benifit-tabThree-info.active{
+  display: block;
+}
+.benifit-tabThree-info form {
+  /*padding-left: 35px;*//*EDITED*/
+  border-bottom: 1px solid #74abdd;
+  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap:wrap;
+}
+.benifit-tabThree-info .formone-btn-wrap {
+  padding: 100px 0 0 0;
+  width: 100%;
+}
+.benifit-tableWrap h4 {
+  font-size: 13px;
+  color: #74abdd;
+  text-transform: capitalize;
+  margin: 0 0 15px 0;
+}
+.benifit-tableWrap {
+  /*padding: 15px 0 4px 0;*/
+  padding:15px 10px 4px 10px;
+}
+.benifit-tableWrap .table-wrap {
+  padding: 0;
+  /*margin: 0 0 0 15px;*//*EDITED*/
+  padding:10px;
+}
+.benifit-tableWrap .table-wrap table {
+  min-width: 410px;
+}
+.width100 {
+  max-width: 100%;
+}
+.benefit-deductible {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.benifit-btn-sec {
+  position: absolute;
+  bottom: 63px;
+  width: 95%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+/*.benefit-service .benefit-tab .benefit-result {
+  padding: 10px 10px 0 10px !important;
+  border-bottom: none !important; 
+  min-height: 592px;
+}*/
+.benefit-service .benefit-tab .benefit-result {
+  padding: 10px !important; margin-bottom: 10px;
+}
+.copay-form-wrap .formone-wrap{
+  margin-right: 14px;
+}
+.copay-form-wrap .formone-wrap:first-child{
+  width: 20%;
+}
+.copay-form-wrap .formone-wrap:nth-child(2){
+  width: 15%;
+}
+.copay-form-wrap .formone-wrap:nth-child(3){
+  width: 20%;
+}
+.copay-form-wrap .formone-wrap:last-child{
+  width: 35%;
+  margin-right: 0;
+}
+.copay-form-wrap .formone-wrap label {
+  display: block;
+  margin-bottom: 5px;
+}
+.copay-form-wrap {
+  float: left;
+  width: 100%;
+}
+.benifit-tabThree-info .md-form{
+  padding: 0;
+}
+.copay-form-wrap select {
+  font-size: 12px;
+  width: 100%;
+}
+.benifit-chckBox{
+  width: 100%;
+}
+.benifit-chckBox .chkbx{
+  float: left;
+  width: 40%;
+}
+.benifit-chckBox .chkbx:last-child{
+  width: 60%;
+}
+.benifit-chckBox .chkbx label:before, .benifit-chckBox .chkbx label:after{
+  display: block;
+}
+.benifit-chckBox .chkbx label{
+  font-size: 12px;
+  padding:2px 2px 2px 25px;/***EDITED**/
+}
+.benifit-tabThree-info .benifit-chckBox + .formone-btn-wrap {
+  padding: 15px 0;
+}
+.qualifier-input > div,.qualifier-input .detail-clmn{
+  width: 46%;
+  margin-right: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.qualifier-input .detail-clmn.md-space{
+  margin-right: 0;
+}
+.qualifier-input form{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap:wrap;
+}
+.qualifier-input form > div select,.qualifier-input form > div input{
+  width: 66%;
+}
+.qualifier-input form > div label{
+  min-width: 68px;
+}
+.qualifier-input > div:nth-child(2n){
+  margin-right: 0;
+}
+.qualifier-input .detail-clmn > div{
+  float:left;
+  width: 100%;
+}
+.qualifier-input .detail-clmn > div.md-detail-clmn{
+  width: 68px;
+  margin: 0;
+}
+.qualifier-input .detail-clmn > div.md-detail-clmnTwo{
+  width: 67%;
+  margin: 0;
+}
+.formone-wrap.md-width{
+  width: 100%;
+}
+.md-detail-clmnTwo .multiSelect ul {
+  max-height: 83px;
+}
+.qualifier-input .detail-clmn label{
+  font-size: 13px;
+}
+.qualifier-input {
+  margin-bottom: 20px;
+}
+.qualifier-input .multiSelect li{
+  float: none !important;
+}
+.qualifier-input form {
+  border-bottom: 1px solid #74abdd;
+  padding-bottom: 10px;
+}
+.qualifier-input .benifit-tableWrap{
+  float: none;
+  width: 100%;
+}
+.benifit-tab-content{
+  display: none;
+}
+.benifit-tab-content.active{
+  display: block;
+}
+.limitation label{
+  font-size: 12px;
+}
+.limitation select{
+  font-size: 12px;
+}
+.limitation .formone-wrap{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.limitation .formone-wrap select,.limitation .formone-wrap input{
+  /*float: right;*//*EDITED*/
+  /*width: 48%;*/
+}
+.md-border{
+  border-bottom: 1px solid #74abdd;
+  margin-bottom: 10px;
+}
+.limitation .formone-btn-wrap{
+  float: left;
+  width: 100%;
+}
+.limitation {
+  border-bottom: 1px solid #74abdd;
+}
+.limitation .benifit-formone{
+  margin-bottom: 5px;
+}
+.md-limitation-table{
+  padding-top: 40px;
+}
+
+.table-wrap{ display:table; width: 100%; }
+.table-wrap > div{ display: table-cell; vertical-align: top; float: none !important; }
+.qualifier-input .formone-btn-wrap{width: 100%;}
+/*==========RAHUL STYLING START==========*/
+.table-wrap td .break{
+  display: block;
+}
+.table-wrap td .break:last-child i{
+  display: none;
+}
+/***EDITED***/
+.chiro,.chiro-physi{
+  width:50% !important;
+  padding-bottom: 50px;
+  max-height: 605px; 
+  overflow: auto;
+}
+.cost-share-names{
+  width:100%;
+}
+.chiro-tab{
+  margin-bottom:0 !important;
+  border:1px solid #bbbdbe !important;
+  border-radius:5px !important;
+}
+.benefit-result.chiro-tab-wrapper{
+  padding:10px 5px 59px !important;
+  border:1px solid #bbbdbe !important;
+}
+.chiro ul{
+  border-bottom:none !important;
+}
+/*.chiro-wrap{
+  padding: 10px 10px 0 10px;
+  border: 1px solid #bbbdbe;
+  border-bottom: none; 
+  min-height: 486px;
+}*/
+.chiro-wrap{
+  padding: 10px;
+  border: 1px solid #bbbdbe;
+}
+.chiro-wrap .benifit-tabThree-link li,.chiro-two .benifit-tabTwo-link li,.chiro .benefit-tab-link li{
+  margin-right:0;
+}
+.chiro-tab-wrapper .benifit-tabTwo-info {
+  margin-bottom:0 !important;
+  border:none !important;
+}
+/*.chiro-wrap-inner{
+  border:1px solid #bbbdbe; border-bottom: none; min-height: 450px;
+}*/
+.chiro-wrap-inner{
+  border:1px solid #bbbdbe;
+}
+.chiro-wrap-inner .benifit-tabThree-info{
+  padding:10px ;
+}
+.chiro-table{
+  padding:10px;
+}
+.chiro-table .table-wrap {
+  margin: 0 0 0 3px;
+}
+.chiro-table h4{
+  font-weight: 900 !important;
+}
+.table-wrap table td{
+  border-top:4px solid #fffff;
+}
+.chiro-table_tr{
+  border-bottom:4px solid #fff;
+}
+.chiro-table .table-wrap table th,.chiro-table .table-wrap table td {
+  border: 2px solid #ffffff;
+}
+.chiro_label label{
+  margin-right: 5px;
+  width: 104px;
+  float: left;
+  text-align: right;
+  margin-top: 4px;
+}
+.chiro_form{
+  width:auto !important;
+
+}
+.cost-share-names label{
+  margin-right:5px;
+}
+.benifit-chckBox .chkbx label:after,.benifit-chckBox .chkbx label:before,.deductible-sec input[type="checkbox"]:checked + label::before, .deductible-sec label:after{
+  top:0 !important;
+}
+.chiro_form{
+  padding:10px !important;
+}
+.chiro_col{
+  width:auto !important;
+}
+.selectbox.ng-untouched.ng-pristine{
+  width:auto !important;
+}
+.chiro-select{
+  width:auto !important;
+}
+.chiro-select-wrapper{
+  float:left;
+}
+
+.chiro-physi{
+  position: relative; 
+}
+.chiro-btn{
+  position:absolute;
+  bottom:0;
+  right:0;
+  border:none !important;
+  padding:10px;
+  width:100%;
+}
+
+.limitation .chiro-select-wrapper{
+  width:50%;
+}
+.chiro-select-wrapper select,.chiro-select-wrapper input{
+  width:100%;
+}
+.limitation .chiro_label label {
+  width: 115px;
+}
+.large-selectbox{
+  max-width:100% !important;
+  width:100% !important;
+}
+.chirop-btn{
+  border:none !important;
+}
+ .chiro{
+  position: relative;
+}
+.move-right .back-btn{
+  float: right;
+}
+.mid-contant .ng-untouched.ng-pristine.ng-invalid{
+  /*width:inherit !important;*/
+}
+/*.ng-untouched.ng-pristine.ng-invalid{*/
+  /*width:auto !important;*/
+/*}*/
+
+.print-btn-wrap{ border: 1px solid #b5b8b9; background: none; display: block; text-align: center; padding:20px 10px; margin-bottom: 25px; border-radius: 6px; }
+.print-btn-wrap .btn{ padding: 5px 10px; display: block;  }
+.benefit-left form{ position: relative; height: auto; }
+
+
+.benefit-tab-link{  }
+.benefit-service .benefit-right ul li{ margin-right: 2px; position: relative; }
+.benefit-service .benefit-right ul li a{ background: #2f71ab; color: #fff !important; border-radius: 5px 5px 0 0 !important; /*border-color: #1a3e5e !important;*/ border-bottom: none !important; }
+.benefit-service .benefit-right ul li a:hover,
+.benefit-service .benefit-right ul li.active a{ color: #1a3e5e !important; background: #e7f2fe; font-weight: normal; }
+.benefit-service .benefit-right ul li.active:after{ position:absolute;  width: calc(100% - 2px); left: 1px; bottom:-1px; height: 2px; background: #e7f2fe; content: ""; }
+.benefit-service .benefit-right ul li a.btn:focus{ box-shadow: none !important; }
+.table-wrap table{ margin-bottom: 0 !important; }
+
+.multiSelect.sperate-multiselect{ max-width: 200px; }
+.multiSelect.sperate-multiselect li{ float: none !important; }
+.md-detail-clmnTwo .multiSelect.sperate-multiselect ul{ max-height: 208px; }
+.btn.reset{ float: left; }
+.tab-content-inner{ border: 1px solid #bbbdbe; min-height: 583px; }
+
+/*14 may start here*/
+
+.form-space{ padding-bottom: 50px; }
+.full-width-coll{ display: block !important; }
+.half-width{ display: inline-block !important; width: 40%;  }
+.half-width input{ max-width: 100px; }
+.one-fourth-width{ display: inline-block !important; width: 24%; text-align: center;  }
+.one-fourth-width input{ max-width: 100px; }
+.one-third-width{ display: inline-block !important; width: 32%;  }
+.one-third-width input{ max-width: 100px; }
+.width-row{ float: left; width: 20%; padding:  0 10px; text-align: center; }
+.width-row select,
+.width-row input{ width: 100%; }
+.italic-style{ font-style: italic; }
+.underline-text{ text-decoration: underline; display: inline; }
+.bottom-border{ border-bottom: 1px solid #000; }
+.left-space{ padding-left: 25px; }
+.bottom-space{ padding-bottom: 15px; }
+.full-border{ border: 1px solid #000; display: block; text-align: center; padding: 5px; }
+.select-width{ min-width: 200px; }
+.input-width{ width: 80px; margin: 0 5px 10px 0; }
+.input-width-select{ width: 80px; margin: 0 10px 0; }
+.inline-box{ display: inline-block; }
+.align-right{ text-align: right; }
+
+.select-detail strong{ display:inline-block; width: 40%; }
+.select-detail span{ background: grey; padding: 5px 10px; }
+.benifit-btn-sec{ bottom: 0; }
+.coll-left{ display: inline-block; vertical-align: top; margin-left: 20px; width: 100px; text-align: center; }
+.margin-bottom-none{ margin-bottom: 0; }
+.input-bdr{ border: none; border-bottom: 1px solid #000; background: none; padding: 0 10px; text-align: center; width: 90px; margin: 0 10px; font-style: italic;  }
+
+.select-wrap-sec{ text-align: right; padding-right: 100px; }
+.select-wrap-sec select{ margin-left: 10px; }
+/*14 may end here*/
+

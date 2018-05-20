@@ -1,0 +1,96 @@
+<!--Content Area Start-->
+ <div class="content mid-contant">
+  <div class="container">
+    <form #planInfoForm = "ngForm">
+      <div class="enterplan-sec" >
+        <div class="planInfo-txt">Enter Plan Info</div>
+        <div class="plan-name clearfix">
+          <label for="">Benefit Plan Name</label>
+
+          <input type="text" placeholder="00000 Company XYZ PPO 99999 0001"class="form-control"  name="benefitPlanName1" [class.error] = "benefitPlanName.invalid && isSubmit" #benefitPlanName = "ngModel"  required [(ngModel)]="Obj.benefitPlanName"/>
+
+        </div>
+        <div class="plans-type clearfix">
+          <div class="plans-left">
+            <div class="wraps clearfix">
+              <label>Plan Type</label>
+
+              <select class="selectBox"  [class.error] = "Obj.planType == '' && isSubmit" [ngModel]="Obj.planType" required  #planTypeText = "ngModel" name="planType" (ngModelChange)="Obj.planType=$event">
+              	<option value="" selected>Select Plan Type</option>
+                <option *ngFor="let object of planType" [ngValue]="object"  >{{object.pName}}</option>
+              </select>
+            </div>
+            <div class="wraps clearfix">
+              <label>Renewal Type</label>
+              <select class="selectBox" [ngModel]="Obj.renewalType" [class.error] = "Obj.renewalType == '' && isSubmit" required  #renewalTypeText = "ngModel"name="renewalType" (ngModelChange)="Obj.renewalType=$event">
+               	<option value="" selected>Select Renewal Type</option>
+                <option *ngFor="let object of  renewalType" [ngValue]="object" [selected]="object === Obj.renewalType">{{object.rName}}</option>
+              </select>
+
+            </div>
+            <div class="wraps clearfix">
+              <label>Segment</label>
+              <select class="selectBox" [ngModel]="Obj.segmentType"[class.error] = "Obj.segmentType == '' && isSubmit"  required  #segmentTypeText = "ngModel"name="segmentType" (ngModelChange)="Obj.segmentType=$event">
+               	<option value="" selected>Select Segment</option>
+                <option *ngFor="let object of  segmentType" [ngValue]="object" [selected]="object === Obj.segmentType">{{object.sName}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="plans-right">
+            <div class="wraps clearfix">
+              <label>Twelve Months Contract Period</label>
+              <input type="checkbox" id="chkbx"name="tMonth"[checked]="tMonthCPeriod" (change)="tMonthCPeriod=!tMonthCPeriod"/>
+            </div>
+            <div class="wraps clearfix">
+              <label>Benefit Period </label>
+              <select class="selectBox" [ngModel]="Obj.benefitPeriod" [class.error] = "Obj.benefitPeriod == '' && isSubmit" required  #benefitPeriodText = "ngModel"name="benefitPeriod" (ngModelChange)="Obj.benefitPeriod=$event">
+                	<option value="" selected>Select Benefit Period</option>
+                <option *ngFor="let object of  benefitPeriod" [ngValue]="object" [selected]="object==Obj.benefitPeriod">{{object.bpName}}</option>
+              </select>
+            </div>
+            <div class="wraps clearfix">
+              <label>Plan State Type</label>
+              <select class="selectBox" [ngModel]="Obj.planStateType" [class.error] = "Obj.planStateType == '' && isSubmit" required  #planStateTypeText = "ngModel"name="planStateType" (ngModelChange)="Obj.planStateType=$event">
+                	<option value="" selected>Select Plan State Type</option>
+                <option *ngFor="let object of  planStateType" [ngValue]="object" [selected]="object==Obj.planStateType">{{object.psName}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="effective-date clearfix">
+          <div class="start-cal">
+            <div class="txt">
+              <span>Start</span>
+            </div>
+            <div class="cal-wrap">
+              <ngbd-datepicker-popup></ngbd-datepicker-popup>
+              <!--<input type="text" placehol]der="01/01/2015"/>-->
+              <!--<a href="#" class="cal-icn"><img src="assets/images/calender-icn.jpg" alt="" /></a>-->
+            </div>
+          </div>
+          <div class="end-cal">
+            <div class="txt">
+              <span>End</span>
+            </div>
+            <div class="cal-wrap">
+              <ngbd-datepicker-popup ></ngbd-datepicker-popup>
+              <!--<input type="text" placeholder="12/31/2015"/>-->
+              <!--<a href="#" class="cal-icn"><img src="assets/images/calender-icn.jpg" alt="" /></a>-->
+            </div>
+          </div>
+          <div class="planInfo-txt">Plan Effective Date</div>
+        </div>
+        <div class="btn-sec">
+          <!--href="javascript:void(0);"-->
+          <!-- [routerLink] = "['/planconfig']" -->
+          <a  name="save"value="Save"class="btn" (click) = "submitForm(planInfoForm.valid)">SAVE</a><a href="javascript:void(0);" (click)="reset()"class="btn">CANCEL</a>
+        </div>
+      </div>
+
+
+
+    </form>
+
+  </div>
+</div>
+<!--Content Area End-->

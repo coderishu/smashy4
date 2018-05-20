@@ -1,0 +1,329 @@
+.enterplan-sec{
+	margin-bottom: 60px;
+}
+.effective-date,
+.enterplan-sec{
+	padding: 30px;
+	border:2px solid #b8c0c9;
+	border-radius: 20px;
+	position: relative;
+}
+.planInfo-txt{
+	position: absolute;
+	left:30px;
+	top:-10px;
+	font-size: 14px;
+	line-height: 16px;
+	background: #e7f2fe;
+	padding: 0 10px;
+	color:#529fde;
+}
+.effective-date .txt span,
+.plans-type .plans-left label,
+.enterplan-sec input,
+.enterplan-sec label{
+	font-size: 14px;
+	color:#000000;
+	line-height: 18px;
+	display: inline-block;
+}
+.enterplan-sec .plan-name{
+	width: 75%;
+	padding-bottom: 10px;
+}
+.enterplan-sec .plan-name label{
+	float: left;
+	padding-right: 20px;
+	text-align: right;
+	width: 19%;
+}
+.enterplan-sec .plan-name input{
+	width: 81%;
+	float: right;
+}
+.plans-type{
+	margin-bottom: 40px;
+}
+.plans-type .plans-right,
+.plans-type .plans-left{
+	max-width: 342px;
+	text-align: right;
+	float:left;
+	width: 100%;
+}
+.plans-type .plans-right{
+	max-width: 550px;
+}
+.plans-type .plans-right label,
+.plans-type .plans-left label{
+	width: 45%;
+	float: left;
+	padding-right: 20px;
+}
+.plans-type .plans-right select,
+.plans-type .plans-left select{
+	width: 55%;
+	float:left;
+}
+.plans-type .wraps{
+	padding-bottom: 13px;
+}
+select{
+	font-size: 14px;
+	color:#000000;
+	line-height: 18px;
+	border: 2px solid #bcbcc3;
+	padding:0 3px;
+}
+.plans-type .plans-right label{
+	width: 65%;
+}
+.plans-type .plans-right select{
+	width: 35%;
+}
+.plans-type .plans-right input{
+	float: left;
+}
+.effective-date{
+	max-width: 280px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 18px;
+	border-radius: 10px;
+}
+.effective-date .planInfo-txt{
+	left:15px;
+}
+.effective-date .end-cal,
+.effective-date .start-cal{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.effective-date .cal-wrap input{
+	width: 85px;
+	margin-right: 2px;
+	vertical-align: top;
+}
+.effective-date .txt{
+	text-align: left;
+}
+.effective-date .txt span{
+	width: 100px;
+	text-align: center;
+}
+.effective-date .cal-wrap .cal-icn{
+	margin-top: 3px;
+}
+.btn-sec{
+	text-align: right;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #bcbcc3;
+	margin-bottom: 30px;
+}
+.btn-sec .btn{
+	margin-left: 5px;
+	padding: 2px 15px;
+	font-weight: 700;
+	min-width:100px;
+}
+.config-page{
+	padding: 100px 30px;
+}
+.btn-sec .back-btn{
+	float: left;
+}
+.btn-sec .forword-btn{
+	float: right;
+}
+.plan-output{
+	padding: 15px;
+	border:1px solid #b5b8b9;
+	border-radius: 6px;
+	margin-bottom: 30px;
+}
+.plan-output .plan-benefit{
+	width: 50%;
+	float: left;
+}
+.plan-benefit .plan-name span{
+	width: 136px;
+	float:left;
+}
+.plan-benefit .plan-name{
+	padding-bottom: 7px;
+}
+.plan-benefit .plan-name strong{
+	width: calc(100% - 136px);
+	width: -webkit-calc(100% - 136px);
+	width: -moz-calc(100% - 136px);
+	width: -ms-calc(100% - 136px);
+}
+.plan-benefit .column-sec .row-sec{
+	padding-bottom: 7px;
+}
+.plan-benefit .column-sec span,
+.plan-benefit .column-sec strong,
+.plan-benefit .column-sec{
+	width: 40%;
+	float: left;
+}
+.plan-benefit .column-sec:last-child{
+	width: 60%;
+}
+.plan-benefit .right-coln .column-sec{
+	width: 50%;
+}
+.plan-benefit .right-coln .column-sec:first-child{
+	padding-top: 25px;
+}
+.plan-benefit .right-coln .column-sec:last-child{
+	border:1px solid #517ea9;
+	border-radius: 10px;
+	padding: 17px 10px 10px;
+}
+.plan-benefit .right-coln .column-sec:last-child .row-sec{
+	padding-bottom: 15px;
+}
+.plan-benefit .right-coln .column-sec:last-child strong,
+.plan-benefit .right-coln .column-sec:last-child span{
+	width: 50%;
+}
+.plan-benefit .column-sec span{
+	text-align: right;
+	padding:0 7px;
+}
+.plan-benefit .column-sec strong{
+	text-align: left;
+	padding:0 7px;
+	width: 60%;
+}
+.left-wedget{
+	width: 220px;
+	float: left;
+}
+.deductible-sec{
+	width: calc(100% - 240px);
+	width: -webkit-calc(100% - 240px);
+	width: -moz-calc(100% - 240px);
+	width: -ms-calc(100% - 240px);
+	float:right;
+	
+	
+}
+.deductible-sec .deductible-box{
+	border:2px solid #507da9;
+	padding: 15px;
+}
+.left-wedget ul li a{
+	color:#000000;
+	display: block;
+}
+.left-wedget ul li{
+	padding: 10px;
+	border-bottom:1px dashed #000;
+}
+.left-wedget .links-sec{
+	position: relative;
+	border:1px solid #b5b8b9;
+	border-radius:6px;
+	padding: 30px 5px;
+	margin-bottom: 25px;
+}
+.left-wedget .planInfo-txt{
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	font-weight: 700;
+	white-space: nowrap;
+	
+}
+.left-wedget .links-sec .wrap{
+	border:1px solid #458fd2;
+	padding: 5px;
+	max-height:145px;
+	overflow: auto;
+}
+.left-wedget .links-sec .wrap.cost-share{
+	max-height:300px;
+}
+.deductible-sec .info-wraps{
+	padding: 0 40px;
+}
+.deductible-sec .info-wraps .columns{
+	width: 30%;
+	text-align: center;
+	float: left;
+}
+.deductible-sec .info-wraps .columns .cost{
+	max-width: 170px;
+	widows: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.deductible-sec .info-wraps .columns .cost:after{
+	position: absolute;
+	left: 22px;
+	top: 3px;
+	content:"$";
+}
+.deductible-sec .info-wraps .columns .cost input{
+	width: 100%;
+	padding:0 10px 0 30px;
+}
+.deductible-sec .info-wraps .columns.chkbx{
+	text-align: left;
+	
+}
+.deductible-sec .info-wraps .empty{
+	min-height: 18px;
+}
+.deductible-sec .info-wraps .rows{
+	padding-bottom: 15px;
+}
+.deductible-sec .btn-sec{
+	padding-top: 15px;
+	border-bottom:1px solid #74abdd;
+}
+.deductible-sec .head-txt{
+	font-size: 16px;
+	color:#529fde;
+	padding-bottom: 10px;
+}
+.deductible-sec input[type="checkbox"]{
+	opacity: 0;
+	position: absolute;
+	left:0;
+	top: 0;
+	width: 0;
+	height: 0;
+}
+.deductible-sec label{
+	position: relative;
+	padding-left: 25px;
+	display: inline-block;
+	cursor: pointer;
+}
+.deductible-sec .chkbx{
+	position: relative;
+	
+}
+.deductible-sec input[type="checkbox"]:checked + label::before,
+.deductible-sec label:after{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 0;
+	top: 2px;
+	content:"";
+	border:1px solid #c5c5c5;
+	background-color: #ffffff;
+	z-index: 1;
+}
+.deductible-sec input[type="checkbox"]:checked + label::before{
+	background: #ffffff url(../images/checked.png) no-repeat center center;
+	z-index: 2
+}

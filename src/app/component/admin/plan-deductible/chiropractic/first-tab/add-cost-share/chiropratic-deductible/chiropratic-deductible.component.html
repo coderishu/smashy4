@@ -1,0 +1,70 @@
+<form class="clearfix" #ngDeductiableForm="ngForm">
+  <div class="formone-wrap chiro_label">
+
+    <label for="Benifit1"> Network : </label>
+    <div class="chiro-select-wrapper">
+      
+    <select class="selectBox" [ngModel]="ChriopraticCopayObj.deductibleNetworkVal"    name=" deductibleNetworkTxt" #deductibleNetworkType = "ngModel" [class.error] = "ChriopraticCopayObj.deductibleNetworkVal == '' && isSubmitCostShare "  required  (ngModelChange)="modifyNetwork($event)">
+      <!--<option value="">Select Network</option>-->
+      <option *ngFor="let object of networkInfor" [ngValue]="object" [innerHtml]="object.nService"></option>
+    </select>
+    </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Level : </label>
+    <input type="text"  name="level"  [(ngModel)]="ChriopraticCopayObj.level" >
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Member : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text" class="md-width"  required name="member"  [(ngModel)]="ChriopraticCopayObj.member"  [class.error] = "memberText.invalid && isSubmitCostShare " #memberText = "ngModel">
+  </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Family : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text" class="md-width"  required name="family"  [(ngModel)]="ChriopraticCopayObj.family"  [class.error] = "familyText.invalid && isSubmitCostShare " #familyText = "ngModel">
+  </div>
+  </div>
+  <div class="formone-btn-wrap">
+    <button class="btn" (click)="saveDeductible(ngDeductiableForm.valid)">
+      save
+    </button>
+    <button class="btn" (click)="resetDeductible()">
+      cancel
+    </button>
+  </div>
+</form>
+<div class=" benifit-tableWrap chiro-table">
+  <h4> deductible : </h4>
+  <div class="table-wrap ">
+    <table>
+      <tbody>
+      <tr class="chiro-table_tr">
+        <th>Network</th>
+        <th>Level</th>
+        <th>Individual</th>
+        <th>Family</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let object of recordChriopraticBuffer |selectedNetWork:costShareSelected:ChriopraticCopayObj.deductibleNetworkVal:selectedPrevious:'deductible'; let i=index;">
+
+        <td [innerHtml]="object.selectedSetWork">INN</td>
+        <td [innerHtml]="object.level"></td>
+        <td [innerHtml]="object.member">400</td>
+
+        <td [innerHtml]="object.family">800</td>
+        <td><a href="javascript:void(0);" (click)="editChriopraticTemplate(object,$event,i)">Edit</a><span> | </span><a href="javascript:void(0);"(click)="deleteChriopraticTemplate(object,i)">Delete</a></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

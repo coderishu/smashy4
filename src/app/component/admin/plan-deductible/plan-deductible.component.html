@@ -1,0 +1,98 @@
+
+
+<div class="content">
+
+<div class="container">
+<div class="plan-output clearfix">
+							<div class="plan-benefit">
+								<div class="plan-name">
+									<span>Benefit Plan Name</span> <strong [innerHtml]="planDeductibleObj.benefitPlanName"></strong>
+								</div>
+								<div class="clearfix">
+									<div class="column-sec ">
+										<div class="row-sec clearfix">
+											<span>Segment</span>
+											<strong [innerHtml]="planDeductibleObj.segmentType.sName"></strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>Network</span>
+											<strong [innerHtml]="planDeductibleObj.providerNetwork.pnName">Alliance</strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>Group ID</span>
+											<strong>0075</strong>
+										</div>
+									</div>
+									<div class="column-sec">
+										<div class="row-sec clearfix">
+											<span>Plan Type</span>
+											<strong [innerHtml]="planDeductibleObj.planType.pName"></strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>Suite</span>
+											<strong [innerHtml]="planDeductibleObj.suite.sName">A</strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>Group Name</span>
+											<strong>PHOENIX CORPORATION</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="plan-benefit">
+								<div class="right-coln clearfix">
+									<div class="column-sec ">
+										<div class="row-sec clearfix">
+											<span>Copay</span>
+											<strong [innerHtml]="planDeductibleObj.copayPlanType.cpName">Copay</strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>GF/Non GF</span>
+											<strong>Non GF</strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>Funding</span>
+											<strong>Fully Insured</strong>
+										</div>
+									</div>
+									<div class="column-sec">
+										<div class="row-sec clearfix">
+											<span>Effective Date</span>
+											<strong>1/1/2015</strong>
+										</div>
+										<div class="row-sec clearfix">
+											<span>Status</span>
+											<strong>Draft</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="deductible-info clearfix">
+							<div class="left-wedget">
+								<div class="links-sec">
+									<div class="wrap">
+										<ul>
+											<li *ngFor="let gCost of gCosts"><a innerHtml="{{gCost.gCostShare}}" [routerLink]="[gCost.routerLink]" routerLinkActive="active"></a></li>
+
+										</ul>
+									</div>
+									<div class="planInfo-txt">Global Cost Share</div>
+								</div>
+								<div class="links-sec">
+									<div class="wrap cost-share">
+										<ul>
+                      <li *ngFor="let bServiceObj of bServices"><a innerHtml="{{bServiceObj.bService}}"[routerLink]="[bServiceObj.routerLink]"routerLinkActive="active"></a></li>
+
+										</ul>
+									</div>
+									<div class="planInfo-txt">Benefit Services</div>
+								</div>
+								<div class="print-btn-wrap"><span class="btn" (click)="router.navigate(['/PdfoverView'])">PRINT PDF</span></div>
+							</div>
+
+           <router-outlet></router-outlet>
+
+						</div>
+						</div>
+						</div>

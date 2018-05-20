@@ -1,0 +1,48 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong>Home Health Component</strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+                <div class="benefit-left">
+                        <form #ngChiropratic="ngForm">
+                        <div class="detail-row clearfix">
+                                <p><strong class="underline-text">GF PLAN:</strong></p>		
+                                <div class="chkbx">
+                                <input type="checkbox" id="checkbx1" [checked]="Obj.copyPlan"(change)="Obj.copyPlan= !Obj.copyPlan">
+                                <label for="checkbx1">Subject to applicable deductible and coinsurance.<strong>limits do not apply (s)</strong>. </label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx2" [checked]="Obj.customA"(change)="Obj.customA= !Obj.customA">
+                                <label for="checkbx2">Subject to applicable deductible and coinsurance. 6 hours of care per member per day.<strong>limits apply (N)</strong>. </label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx3" (change)="show()">
+                                <label for="checkbx3">Custom <strong>(N)</strong> </label>
+                            </div>
+                            <p><strong class="underline-text">Non-GF PLAN:</strong></p>		
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx4"  [checked]="Obj.chvm"(change)="Obj.chvm= !Obj.chvm">
+                                <label for="checkbx4">Subject to applicable deductible and coinsurance. 6 hours of care per member per day. <strong>limits apply (S)</strong>.</label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx5" [checked]="Obj.demoapp"(change)="Obj.demoapp= !Obj.demoapp">
+                                <label for="checkbx5">Subject to applicable deductible and coinsurance. <strong>limits do not apply (N)</strong> </label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx6" (change)="show()">
+                                <label for="checkbx6">Custom <strong>(N)</strong> </label>
+                            </div>
+                                            
+                        </div>
+                        <div class="btn-sec clearfix benifit-btn-sec">
+                            <div class="forword-btn">
+                                <a href="javascript:void(0);" class="btn" (click)="homehealth(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+             
+              <div class="benefit-right benefit-tab chiro">
+                  <app-bscommon-module [BenefitServicesBuffer]="homehealthBuffer" [isShow]="isShow"></app-bscommon-module>
+                </div>
+        </div>
+      </div>
+      

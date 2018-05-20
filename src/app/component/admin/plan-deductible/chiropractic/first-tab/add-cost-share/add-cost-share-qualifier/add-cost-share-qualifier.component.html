@@ -1,0 +1,157 @@
+
+
+  <div class="qualifier-input clearfix">
+    <form #ngAddCostShareForm="ngForm">
+      <div class="formone-wrap">
+        <label for="Benifit1"> Qualifier </label>
+        <select class="selectBox" [ngModel]="ChriopraticAddCSQObj.selectQualifier" [class.error] = "ChriopraticAddCSQObj.selectQualifier == '' && isSubmitADDCS"  required  #ChiropraticCopayType = "ngModel" name="CopayTypeTxt" (ngModelChange)="ChriopraticAddCSQObj.selectQualifier=$event">>
+          <option value="">Place of Service</option>
+          <option *ngFor="let qualifier of qualifiers" [innerHtml]="qualifier.addQual" [ngValue]="qualifier"></option>
+
+        </select>
+      </div>
+      <div class="chkbx md-checkbox">
+        <input id="checkbx61" type="checkbox" [checked]="ChriopraticAddCSQObj.range" (change)="ChriopraticAddCSQObj.range=!ChriopraticAddCSQObj.range">
+        <label for="checkbx61" >Is Range</label>
+      </div>
+      <div class="formone-wrap">
+        <label for="Benifit1"> Range Min </label>
+        <input placeholder="Min" type="text" name="minrange" [class.error] = "minranges.invalid && isSubmitADDCS" #minranges = "ngModel"  [required]="(ChriopraticAddCSQObj.range==true)?'true':'false'" [(ngModel)]="ChriopraticAddCSQObj.minRange"  />
+      </div>
+      <div class="formone-wrap">
+        <label for="Benifit1"> Range Max </label>
+        <input placeholder="Max" type="text" name="maxrange" [class.error] = "maxranges.invalid && isSubmitADDCS" #maxranges = "ngModel"  [required]="(ChriopraticAddCSQObj.range==true)?'true':'false'" [(ngModel)]="ChriopraticAddCSQObj.maxRange"  />
+      </div>
+      <div class="detail-clmn clearfix">
+        <div class="detail-clmn md-detail-clmn">
+          Includes
+        </div>
+        <div class="detail-clmn md-detail-clmnTwo">
+          <div class="multiSelect">
+            <ul>
+              <li *ngFor="let include of ChriopraticAddCSQObj.includes">
+                <div class="chkbx">
+                  <!--{{include.checkedVal}}-->
+                  <input id="{{include.title}}+{{include.id}}" type="checkbox" [checked]="include.checkedIn" (change)="include.checkedIn= $event.target.checked" >
+                  <label for="{{include.title}}+{{include.id}}" [innerHtml]="include.title"></label>
+                </div>
+              </li>
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx2" type="checkbox" [checked]="ChriopraticAddCSQObj.includes.Home" (change)="ChriopraticAddCSQObj.includes.Home=!ChriopraticAddCSQObj.includes.Home">-->
+                  <!--<label for="chkbx2">Home</label>-->
+                <!--</div>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx3" type="checkbox" [checked]="ChriopraticAddCSQObj.includes.walk" (change)="ChriopraticAddCSQObj.includes.walk=!ChriopraticAddCSQObj.includes.walk">-->
+                  <!--<label for="chkbx3">Walk in clinic</label>-->
+                <!--</div>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx4" type="checkbox" [checked]="ChriopraticAddCSQObj.includes.Lab" (change)="ChriopraticAddCSQObj.includes.Lab=!ChriopraticAddCSQObj.includes.Lab">-->
+                  <!--<label for="chkbx4">lab</label>-->
+                <!--</div>-->
+              <!--</li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="detail-clmn md-space clearfix">
+        <div class="detail-clmn md-detail-clmn">
+          Excludes
+        </div>
+        <div class="detail-clmn md-detail-clmnTwo">
+          <div class="multiSelect">
+            <ul>
+              <li *ngFor="let exclude of ChriopraticAddCSQObj.excludes">
+                <div class="chkbx">
+
+                  <input id="{{exclude.title}}" type="checkbox" [checked]="exclude.checkedEx"  name="{{exclude}}" (change)="exclude.checkedEx=$event.target.checked" >
+                  <label for="{{exclude.title}}" [innerHtml]="exclude.title"></label>
+                </div>
+              </li>
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx12" type="checkbox" [checked]="ChriopraticAddCSQObj.excludes.Office" (change)="ChriopraticAddCSQObj.excludes.Office=!ChriopraticAddCSQObj.excludes.Office">-->
+                  <!--<label for="chkbx12">Office</label>-->
+                <!--</div>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx13" type="checkbox" [checked]="ChriopraticAddCSQObj.excludes.Home" (change)="ChriopraticAddCSQObj.excludes.Home=!ChriopraticAddCSQObj.excludes.Home">-->
+                  <!--<label for="chkbx13">Home</label>-->
+                <!--</div>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx14" type="checkbox" [checked]="ChriopraticAddCSQObj.excludes.walk" (change)="ChriopraticAddCSQObj.excludes.walk=!ChriopraticAddCSQObj.excludes.walk">-->
+                  <!--<label for="chkbx14">Walk in clinic</label>-->
+                <!--</div>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<div class="chkbx">-->
+                  <!--<input id="chkbx15" type="checkbox" [checked]="ChriopraticAddCSQObj.excludes.Lab" (change)="ChriopraticAddCSQObj.excludes.Lab=!ChriopraticAddCSQObj.excludes.Lab">-->
+                  <!--<label for="chkbx15">lab</label>-->
+                <!--</div>-->
+              <!--</li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="formone-btn-wrap">
+        <button class="btn"(click)="saveCostShare(ngAddCostShareForm.valid)" >
+          save
+        </button>
+        <button class="btn" (click)="resetAddCostShare()">
+          cancel
+        </button>
+      </div>
+    </form>
+    <div class=" benifit-tableWrap">
+      <div class="table-wrap ">
+        <table>
+          <tbody>
+          <tr>
+            <th>Qualifier</th>
+            <th>Range Min.</th>
+            <th>Range Max</th>
+            <th>Includes</th>
+            <th>Excludes</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let Obj of recordChriopraticADDCSBuffer|selectedNetWork:costShareSelected:ChriopraticAddCSQObj:selectedPrevious:'addCostShareQualifier';let i = index;">
+            <td [innerHtml]="Obj.selectQualifier['addQual']">Place of Service</td>
+            <td [innerHtml]="Obj.minRange"></td>
+            <td [innerHtml]="Obj.maxRange"></td>
+            <td>
+              <span class="break" *ngFor="let Objinclude of Obj.includes;"><p *ngIf="Objinclude.checkedIn==true">{{Objinclude.title}}<i>,</i></p></span>
+              </td>
+            <td>
+              <span class="break" *ngFor="let Objexclude of Obj.excludes;"><p *ngIf="Objexclude.checkedEx==true">{{Objexclude.title}}<i>,</i></p></span>
+            </td>
+            <td><a href="javascript:void(0);" (click)="editChriopraticADDCSTemplate(Obj,$event,i)">Edit</a><span> | </span><a href="javascript:void(0);"(click)="deleteChriopraticADDCSTemplate(Obj,i)">Delete</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+

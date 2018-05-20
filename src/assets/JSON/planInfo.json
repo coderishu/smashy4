@@ -1,0 +1,82 @@
+{
+  "planInfo": {
+    "planType": [
+      {
+        "pId": "1",
+        "pName": "PPO"
+      },
+      {
+        "pId": "2",
+        "pName": "EPO"
+      },
+      {
+        "pId": "3",
+        "pName": "HMO"
+      }
+    ],
+    "renewalType": [
+      {
+        "rId": "1",
+        "rName": "New Group"
+      },
+      {
+        "rId": "2",
+        "rName": "Renewal Group"
+      },
+      {
+        "rId": "3",
+        "rName": "Transferred Group"
+      }
+    ],
+    "segmentType": [
+      {
+        "sId": "1",
+        "sName": "IU 65"
+      },
+      {
+        "sId": "2",
+        "sName": "IO 65"
+      },
+      {
+        "sId": "3",
+        "sName": "2 To 50"
+      },
+      {
+        "sId": "4",
+        "sName": "51 To 99"
+      },
+      {
+        "sId": "5",
+        "sName": "100 To 299"
+      },
+      {
+        "sId": "6",
+        "sName": "300+"
+      }
+    ],
+    "benefitPeriod": [
+      {
+        "bpId": "1",
+        "bpName": "Calendar Year"
+      },
+      {
+        "bpId": "2",
+        "bpName": "Plan Year"
+      }
+    ],
+    "planStateType": [
+      {
+        "psId": "1",
+        "psName": "IN-STATE PLAN"
+      },
+      {
+        "psId": "2",
+        "psName": "OUT-OF-STATE PLAN"
+      },
+      {
+        "psId": "3",
+        "psName": "IN/OUT-OF-STATE PLAN"
+      }
+    ]
+  }
+}

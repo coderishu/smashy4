@@ -1,0 +1,93 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Speciality Medications</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+
+    <!-- <form #ngChiropratic="ngForm" class="chiro">
+      <div class="deductible-box">
+      </div>
+    </form> -->
+
+    <div class="benefit-left">
+        <form #ngChiropratic="ngForm">
+        <div class="detail-row clearfix">
+          <p><strong>Catamaran/OptumRx</strong></p>
+          <p><span class="italic-style">Catamaran/OptumRx Specialty Medications is the only option</span></p><br>
+          <div class="rows clearfix">
+            <span class="columns chkbx">                                             
+                <input id="checkbx1" type="checkbox" [checked]="Obj.customA"(change)="Obj.customA= !Obj.customA">
+                  <label for="checkbx1">&nbsp;</label>                                                                                              
+              <span>Copay:</span>	
+            </span>
+            <input class="coll-left" type="text" placeholder="$" [disabled]="(Obj.customA === true)?'false':'true'"  [(ngModel)]="Obj.pcpCopyVal"   [required]="(Obj.customA==true)?'true':'false'"  name="pcpCopyz21" [class.error] = "customA.invalid && isSubmit && Obj.customA" #customA = "ngModel">
+          </div>
+          <div class="rows clearfix">
+            <span class="columns chkbx">                                             
+               <input id="checkbx2" type="checkbox" [checked]="Obj.demoapp"(change)="Obj.demoapp= !Obj.demoapp">
+                  <label for="checkbx2">&nbsp;</label>                                                                                              
+              <span>Coinsurance:</span>	
+            </span>
+            <input class="coll-left" type="text" placeholder="%" [disabled]="(Obj.demoapp === true)?'false':'true'"  [(ngModel)]="Obj.chiropra"   [required]="(Obj.demoapp==true)?'true':'false'"  name="pcpCopyz22" [class.error] = "customAA.invalid && isSubmit && Obj.demoapp" #customAA = "ngModel">
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx3" (change)="show()">
+            <label for="checkbx3">Custom <strong>(N)</strong></label>
+          </div>
+          <p><strong class="underline-text">BCBSAZ Legacy</strong></p>
+          <p><strong>Choose One:</strong></p>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx4" [checked]="Obj.phymedicine"(change)="Obj.phymedicine= !Obj.phymedicine">
+            <label for="checkbx4">Expanded Specialty Medications (includes self-injectables. oral medications, inhaled medications, etc) <strong>(S)</strong></label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx5" [checked]="Obj.costShareVal"(change)="Obj.costShareVal= !Obj.costShareVal">
+            <label for="checkbx5">Specialty Self-injectables only <strong>(S)</strong></label>
+          </div>
+          <p><strong>And Choose One:</strong></p>
+          <div class="rows clearfix">
+            <span class="columns chkbx">                                             
+              <input id="checkbx6" type="checkbox" [checked]="Obj.pcpCopy"(change)="Obj.pcpCopy= !Obj.pcpCopy">
+                  <label for="checkbx6">&nbsp;</label>                                                                                              
+              <span>Copay</span>	
+            </span>
+            <div class="bottom-space clearfix" >											 											  						
+             <span class="width-row">
+               <strong>Level 1</strong>
+               <input type="text" placeholder="$"  [disabled]="(Obj.pcpCopy === true)?'false':'true'"  [(ngModel)]="Obj.chiropratics"  [required]="(Obj.pcpCopy==true)?'true':'false'"  name="pcpCopyz" [class.error] = "copyPlan.invalid && isSubmit && Obj.pcpCopy"  #copyPlan = "ngModel">
+             </span>
+
+             <span class="width-row">
+               <strong>Level 1</strong>
+               <input type="text" placeholder="$"  [disabled]="(Obj.pcpCopy === true)?'false':'true'"  [(ngModel)]="Obj.chiropra"   [required]="(Obj.pcpCopy==true)?'true':'false'"  name="pcpCopyz1" [class.error] = "copyPlan1.invalid && isSubmit && Obj.pcpCopy" #copyPlan1 = "ngModel">
+             </span> 
+             
+             <span class="width-row">
+               <strong>Level 1</strong>
+               <input type="text" placeholder="$" [disabled]="(Obj.pcpCopy === true)?'false':'true'"  [(ngModel)]="Obj.customA2" [required]="(Obj.pcpCopy==true)?'true':'false'"  name="pcpCopyz2" [class.error] = "copyPlan2.invalid && isSubmit && Obj.pcpCopy" #copyPlan2 = "ngModel">
+             </span> 
+             
+             <span class="width-row">
+               <strong>Level 1</strong>
+               <input type="text" placeholder="$" [disabled]="(Obj.pcpCopy === true)?'false':'true'"  [(ngModel)]="Obj.nonCpy"  [required]="(Obj.pcpCopy==true)?'true':'false'"  name="pcpCopyz3" [class.error] = "copyPlan3.invalid && isSubmit && Obj.pcpCopy" #copyPlan3 = "ngModel">
+             </span> 
+             <strong>(S)</strong> 
+                
+            </div>											
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx7" (change)="show()">
+            <label for="checkbx7">Custom <strong>(N)</strong></label>
+          </div>
+                            
+        </div>
+        <div class="btn-sec clearfix benifit-btn-sec">
+          <div class="forword-btn">
+            <a href="javascript:void(0);" class="btn" (click)="specialityMedi(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="specialityMedications"  [isShow]="isShow"></app-bscommon-module>
+    </div>
+  </div>
+</div>

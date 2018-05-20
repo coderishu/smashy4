@@ -1,0 +1,106 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong> Physical Occupation Component </strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+                <div class="benefit-left">
+                        <form #ngChiropratic="ngForm">
+                        <div class="detail-row clearfix">
+
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx1"  [checked]="Obj.demoapp" (change)="Obj.demoapp=!Obj.demoapp">
+                                <label for="checkbx1">Subject to applicable deductible and coinsurance.<strong>No group therapy service for physical and occupational therapy (S for Non-GF)</strong>. </label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx2"  [checked]="Obj.chvm" (change)="Obj.chvm=!Obj.chvm">
+                                <label for="checkbx2">Subject to applicable deductible and coinsurance. <strong>Group therapy service included (S for GF)</strong>. </label>
+                            </div>
+                            <div class="rows clearfix">
+                                <div class="columns chkbx"> 																						                                                                                              
+                                     <div class="inline-box">
+                                         <input id="checkbx3" type="checkbox"  [checked]="Obj.phymedicine" (change)="Obj.phymedicine=!Obj.phymedicine">
+                                        <label for="checkbx3">&nbsp;</label>												    
+                                         <input type="text" placeholder="$" class="input-width margin-bottom-none" [disabled]="(Obj.phymedicine === true)?'false':'true'"  [(ngModel)]="Obj.customA"   [required]="(Obj.phymedicine==true)?'true':'false'"  name="pcpCopyz2" [class.error] = "copyPlan2.invalid && isSubmit && Obj.phymedicine" #copyPlan2 = "ngModel">PT/OT/ST (including evaluations) copay per member, per provider, per day <strong>(N)</strong>.
+                                     </div>                                                                                  
+                                </div>
+                                <div class="left-space clearfix">   
+                                <span>AND choose one for group therapy service:</span>	
+                                <div class="chkbx">
+                                <input type="checkbox" id="checkbx4"  [checked]="Obj.pcpCopy" (change)="Obj.pcpCopy=!Obj.pcpCopy">
+                                <label for="checkbx4">No group therapy services for physical and occupational therapy <strong>(S for Non-GF)</strong>. </label>
+                
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx5" [checked]="Obj.subApplicable" (change)="Obj.subApplicable=!Obj.subApplicable">
+                                <label for="checkbx5">Group therapy services included <strong>(S for GF)</strong>. </label>
+                            </div>
+                                </div>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx6" (click)="show()">
+                                <label for="checkbx6">Custom <strong>(N)</strong> </label>
+                            </div>
+                            <p class="left-space"><strong>AND choose if applicable:</strong></p>
+                            <div class="rows clearfix">
+                                <div class="columns chkbx"> 																						                                                                                              
+                                     <div class="inline-box">
+                                         <input id="checkbx7" type="checkbox"  [checked]="Obj.chiropratics" (change)="Obj.chiropratics=!Obj.chiropratics">
+                                        <label for="checkbx7">maximum of</label>												    
+                                         <input type="text" placeholder="$" class="input-width margin-bottom-none" [disabled]="(Obj.chiropratics === true)?'false':'true'"  [(ngModel)]="Obj.costShareVal"   [required]="(Obj.chiropratics==true)?'true':'false'"  name="pcpCopyz3" [class.error] = "copyPlan3.invalid && isSubmit && Obj.chiropratics" #copyPlan3 = "ngModel">PT/OT/ST visits per member, per calendar/plan year
+<strong>(N)</strong>.
+                                     </div>                                                                                  
+                                </div>
+                                <div class="left-space clearfix">
+                                    <div class="left-space clearfix">
+                                        <div class="select-wrap-sec clearfix">
+                                            <span>in-network visit count toward the visit limit?</span>
+                                            <select>
+                                                <option>Select</option>
+                                                <option>Select 01</option>
+                                                <option>Select 02</option>
+                                                <option>Select 03</option>
+                                                <option>Select 04</option>
+                                                <option>Select 05</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-wrap-sec clearfix">
+                                            <span>out-of-network visits count toward the visit limit?</span>
+                                            <select>
+                                                <option>Select</option>
+                                                <option>Select 01</option>
+                                                <option>Select 02</option>
+                                                <option>Select 03</option>
+                                                <option>Select 04</option>
+                                                <option>Select 05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                
+                                <p>Are evaluations included in the limit?</p>
+                                <div class="chkbx">
+                                <input type="checkbox" id="checkbx8" [checked]="Obj.nonCpy" (change)="Obj.nonCpy=!Obj.nonCpy">
+                                <label for="checkbx8">No <strong>(S)</strong>. </label>
+
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx9" [checked]="Obj.max" (change)="Obj.max=!Obj.max">
+                                <label for="checkbx9">Yes <strong>(N)</strong>. </label>
+                            </div>
+                                </div>
+                            </div>
+                       
+                            
+                                                                
+                        </div>
+                        <div class="btn-sec clearfix benifit-btn-sec">
+                            <div class="forword-btn">
+                                <a href="jaavscript:void(0);" class="btn" (click)="physicalOccup(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+          
+              <div class="benefit-right benefit-tab chiro">
+                  <app-bscommon-module [BenefitServicesBuffer]="physicalOccupation" [isShow]="isShow"></app-bscommon-module>
+                </div>
+        </div>
+      </div>
+      

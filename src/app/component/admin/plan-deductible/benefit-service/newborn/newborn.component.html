@@ -1,0 +1,47 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong>New born Component</strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+                <div class="benefit-left">
+                        <form #ngChiropratic="ngForm">
+                        <div class="detail-row clearfix">
+                                <p><strong class="italic-style">Deductible and inpatient copay waived on NB facility claim is standard for GF Plans.</strong></p>		
+                                <p class="bottom-space"><strong class="italic-style">Non-GF standard is to apply the deductible on NB facility claim.</strong></p>													
+                            
+                                <div class="chkbx">
+                                <input type="checkbox" id="checkbx1" [checked]="Obj.copyPlan" (change)="Obj.copyPlan=!Obj.copyPlan">
+                                <label for="checkbx1">Deductible and inpatient copay/access fee waived <strong>(S for GF)</strong>. </label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx2" [checked]="Obj.pcpCopy" (change)="Obj.pcpCopy=!Obj.pcpCopy">
+                                <label for="checkbx2">Deductible and inpatient copay/access fee apply  <strong>(s for Non-GF)</strong>. </label>
+                            </div>
+                                <div class="rows clearfix">
+                                <div class="columns chkbx"> 																						                                                                                              
+                                     <div class="inline-box">
+                                         <input id="checkbx3" type="checkbox" [checked]="Obj.demoapp" (change)="Obj.demoapp=!Obj.demoapp">
+                                        <label for="checkbx3">Inpatient Copay:</label>												    
+                                         <input type="text" placeholder="$" [disabled]="(Obj.demoapp == true)?'false':'true'"  [(ngModel)]="Obj.customA2"   [required]="(Obj.demoapp==true)?'true':'false'"  name="pcpCopyz1" [class.error] = "maximumOf1.invalid && isSubmit && Obj.demoapp" #maximumOf1 = "ngModel" class="input-width margin-bottom-none"> <strong>(N)</strong>.
+                                     </div>                                                                                  
+                                </div>
+                            </div>
+                            
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx4" (change)="show()">
+                                <label for="checkbx4">Custom <strong>(N)</strong> </label>
+                            </div>
+                                                                                            
+                                                                
+                        </div>
+                        <div class="btn-sec clearfix benifit-btn-sec">
+                            <div class="forword-btn">
+                                <a href="javascript:void(0);" class="btn" (click)="newborn(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+              <div class="benefit-right benefit-tab chiro">
+                  <app-bscommon-module [BenefitServicesBuffer]="newbornBuffer" [isShow]="isShow"></app-bscommon-module>
+                </div>
+        </div>
+      </div>
+      

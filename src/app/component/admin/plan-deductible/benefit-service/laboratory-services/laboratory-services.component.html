@@ -1,0 +1,98 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Laboratory Room</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+      <div class="benefit-left">
+          <form #ngChiropratic="ngForm">
+          <div class="detail-row clearfix">
+            <div class="copay-plan">
+            <span class="full-border">Copay Plan:</span>
+            <br>
+            <p class="bottom-border"><strong>GF PLAN:</strong></p>
+            <p>During a physician office visit, Copay is waived for lab service in a physician's office when it is the only service on the claim <strong>(s) and</strong></p>
+            <p><strong>Select one:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx1" [checked]="Obj.copyPlan" (change)="Obj.copyPlan=!Obj.copyPlan">
+              <label for="checkbx1">At contracted, free-standing independent clinical labs, BCBSAZ/Plan pays <strong>100%</strong> for covered services, deductible and coinsurance waived. At all other facilities, applicable deductible and coinsurance apply <strong>(s)</strong>. </label>
+            </div>
+            <p class="left-space"><strong>OR:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx2"  [checked]="Obj.subApplicable"(change)="Obj.subApplicable = !Obj.subApplicable">
+              <label for="checkbx2">applicable deductible and coinsurance apply to all lab service performance outside a physician office, regardless of location <strong>(N)</strong>. </label>
+            </div>
+            <p class="left-space"><strong>OR:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx3" (click)="show()">
+              <label for="checkbx3">Custom <strong>(N)</strong>. </label>
+            </div>
+            
+            <p class="bottom-border"><strong>NON-GF PLAN:</strong></p>
+            <p>During a physician office visit, copay is waived for lab service in a physician's office when it is the only service on the claim <strong>(S) and</strong></p>
+            <p><strong>Select one:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx4" [checked]="Obj.pcpCopy"(change)="Obj.pcpCopy = !Obj.pcpCopy">
+              <label for="checkbx4">Applicable deductible and coinsurance apply to all lab services performed outside a physician office, regardless of location <strong>(N)</strong>. </label>
+            </div>
+            <p class="left-space"><strong>OR:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx5" [checked]="Obj.custom"(change)="Obj.custom = !Obj.custom">
+              <label for="checkbx5">At contracted, free-standing independent clinical labs, BCBSAZ/Plan pays 100% for covered service, deductible and coinsurance waived. At all other facilities, applicable deductible and coinsurance apply <strong>(N)</strong>. </label>
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx6" (click)="show()">
+              <label for="checkbx6">Custom <strong>(N)</strong>. </label>
+            </div>
+            
+          </div>
+          
+          <div class="non-copay-plan">
+            <span class="full-border">Non-Copay Plan:</span>
+            <br>
+            <p class="bottom-border"><strong>GF PLAN:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx7" [checked]="Obj.specialistCpy"(change)="Obj.specialistCpy = !Obj.specialistCpy">
+              <label for="checkbx7">During a physician office visit, deductible and coinsurance apply. At contracted, free-standing independent clinical labs, BCBSAZ/Plan <strong>100%</strong> for covered services, deductible and coinsurance waived. At all other facilities, applicable deductible and coinsurance apply <strong>(s)</strong>. </label>
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx8" (click)="show()">
+              <label for="checkbx8">Custom <strong>(N)</strong>. </label>
+            </div>
+            
+            <p class="bottom-border"><strong>Non-GF PLAN:</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx9" [checked]="Obj.phymedicine"(change)="Obj.phymedicine = !Obj.phymedicine">
+              <label for="checkbx9">Applicable deductible and coinsurance apply, regardless of where laboratory services are performed <strong>(S)</strong>. </label>
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx10" [checked]="Obj.chvm"(change)="Obj.chvm = !Obj.chvm">
+              <label for="checkbx10">During a physician office visit, applicable deductible and coinsurance apply. At contracted, free-standing independent clinical labs, BCBSAZ/Plan Pays <strong>100%</strong> for covered services, deductible and coinsurance waived. at all other facilities, applicable deductible and coinsurance apply <strong>(N)</strong>. </label>
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx11" (click)="show()">
+              <label for="checkbx11">Custom <strong>(N)</strong>. </label>
+            </div>
+            
+            <p class="bottom-border"><strong>Professional service provided by a pathologist (including dermapathologist):</strong></p><br>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx12" [checked]="Obj.demoapp"(change)="Obj.demoapp = !Obj.demoapp">
+              <label for="checkbx12">Subject to applicable deductible and coinsurance <i class="italic-style">(even when the services are provided in a physician's office)</i> <strong>(S)</strong>. </label>
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx13" (click)="show()">
+              <label for="checkbx13">Custom <strong>(N)</strong>. </label>
+            </div>
+            <br><br><br><br>
+          </div>
+                              
+          </div>
+          <div class="btn-sec clearfix benifit-btn-sec">
+            <div class="forword-btn">
+              <a href="javascript:void(0);" class="btn" (click)="laboratory(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="benefit-right benefit-tab chiro">
+            <app-bscommon-module [BenefitServicesBuffer]="laboratoryServicesBuffer" [isShow]="isShow"></app-bscommon-module>
+          </div>
+  </div>
+</div>

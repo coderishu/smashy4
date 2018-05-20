@@ -1,0 +1,93 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Emergency Room</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+      <div class="benefit-left">
+          <form #ngChiropratic="ngForm" >
+        <div class="detail-row clearfix">
+          <p class="bottom-space"><strong>Fully Insured and ASC group can choose: </strong></p>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx1" [checked]="Obj.copyPlan"(change)="Obj.copyPlan= !Obj.copyPlan">
+            <label for="checkbx1">Non-contracted ER claim paid based on billed charged <strong>(S)</strong>.</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx2" [checked]="Obj.demoapp"(change)="Obj.demoapp= !Obj.demoapp"> 
+            <label for="checkbx2">Non-contracted ER claim paid based on PPACA Formula <strong>(N)</strong>.</label>
+          </div>
+          <p class="bottom-space"><strong>GF PLAN:</strong></p>																
+          <div class="rows clearfix">
+            <div class="columns chkbx"> 																						                                                                                              
+               <div class="inline-box">
+                 <input id="checkbx3" type="checkbox"  [checked]="Obj.benefitCateType"(change)="Obj.benefitCateType= !Obj.benefitCateType">
+                  <label for="checkbx3">&nbsp;</label> 
+                   <input type="text" placeholder="$150" [disabled]="(Obj.benefitCateType === true)?'false':'true'"  [(ngModel)]="Obj.chiropra"   [required]="(Obj.benefitCateType==true)?'true':'false'"  name="pcpCopyz" [class.error] = "copyPlan.invalid && isSubmit && Obj.benefitCateType" #copyPlan = "ngModel"class="input-width">access fee per member per facility, per day, plus in-network deductible and coinsurance <strong>(S)</strong>.
+               </div>                                                                                  
+            </div>
+          </div>
+          <div class="rows clearfix">
+            <div class="columns chkbx"> 																						                                                                                              
+                                       <div class="inline-box">
+                                         <input id="checkbx4" type="checkbox"  [checked]="Obj.customA"(change)="Obj.customA= !Obj.customA">
+                  <label for="checkbx4">&nbsp;</label> 
+                   <input type="text" placeholder="$" [disabled]="(Obj.customA === true)?'false':'true'"  [(ngModel)]="Obj.nonCpy"   [required]="(Obj.customA==true)?'true':'false'"  name="pcpCopyz1" [class.error] = "copyPlan1.invalid && isSubmit && Obj.customA" #copyPlan1 = "ngModel" class="input-width">Copay per member, per facility, per day, deductible and coinsurance are waived <strong>(N)</strong>.
+               </div>                                                                                  
+            </div>
+          </div>
+          <div class="rows clearfix">
+            <div class="columns chkbx"> 																						                                                                                              
+                                       <div class="inline-box">
+                                         <input id="checkbx5" type="checkbox"  [checked]="Obj.chvm"(change)="Obj.chvm= !Obj.chvm">
+                  <label for="checkbx5">&nbsp;</label> 
+                   <input type="text" placeholder="$"  [disabled]="(Obj.chvm === true)?'false':'true'"  [(ngModel)]="Obj.subApplicable"   [required]="(Obj.chvm==true)?'true':'false'"  name="pcpCopyz2" [class.error] = "copyPlan2.invalid && isSubmit && Obj.chvm" #copyPlan2 = "ngModel" class="input-width">Acess free par surgery, plus applicable deductible and coinsurance <strong>(N)</strong>.
+               </div>                                                                                  
+            </div>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx6" (change)="show()">
+            <label for="checkbx6">Custom <strong>(N)</strong> </label>
+          </div>
+          <p class="bottom-space"><strong>Non-GF Plan:</strong></p>
+          <div class="rows clearfix">
+            <div class="columns chkbx"> 																						                                                                                              
+                                       <div class="inline-box">
+                                         <input id="checkbx7" type="checkbox"  [checked]="Obj.phymedicine"(change)="Obj.phymedicine= !Obj.phymedicine">
+                  <label for="checkbx7">&nbsp;</label> 
+                   <input type="text" placeholder="$250"  [disabled]="(Obj.phymedicine === true)?'false':'true'"  [(ngModel)]="Obj.max"   [required]="(Obj.phymedicine==true)?'true':'false'"  name="pcpCopyz3" [class.error] = "copyPlan3.invalid && isSubmit && Obj.phymedicine" #copyPlan3 = "ngModel" class="input-width">Copay per member, par facility, per day, deductible and coinsurance are waived for professional and facility emergency services <strong>(S)</strong>.
+               </div>                                                                                  
+            </div>
+          </div>
+          <div class="rows clearfix">
+            <div class="columns chkbx"> 																						                                                                                              
+                                       <div class="inline-box">
+                                         <input id="checkbx8" type="checkbox"  [checked]="Obj.costShareVal"(change)="Obj.costShareVal= !Obj.costShareVal">
+                  <label for="checkbx8">&nbsp;</label> 
+                   <input type="text" placeholder="$" [disabled]="(Obj.costShareVal === true)?'false':'true'"  [(ngModel)]="Obj.specialistCpyVal"   [required]="(Obj.costShareVal==true)?'true':'false'"  name="pcpCopyz4" [class.error] = "copyPlan4.invalid && isSubmit && Obj.costShareVal" #copyPlan4 = "ngModel" class="input-width">Copay per member, par facility, per day, deductible and coinsurance are waived for professional and facility emergency services <strong>(N)</strong>.
+               </div>                                                                                  
+            </div>
+          </div>
+          <div class="rows clearfix">
+            <div class="columns chkbx"> 																						                                                                                              
+                                       <div class="inline-box">
+                                         <input id="checkbx9" type="checkbox"  [checked]="Obj.emerg"(change)="Obj.emerg= !Obj.emerg">
+                  <label for="checkbx9">&nbsp;</label> 
+                   <input type="text" value="$"  [disabled]="(Obj.emerg === true)?'false':'true'"  [(ngModel)]="Obj.specialistCpyVal"   [required]="(Obj.emerg==true)?'true':'false'"  name="pcpCopyz5" [class.error] = "copyPlan5.invalid && isSubmit && Obj.emerg" #copyPlan5 = "ngModel"class="input-width">access fee per member, per facility, per day, plus in-network deductible and coinsurance <strong>(N)</strong>.
+               </div>                                                                                  
+            </div>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx10" (change)="show()">
+            <label for="checkbx10">Custom <strong>(N)</strong> </label>
+          </div>	
+                       
+        </div>
+      </form>
+      <div class="btn-sec clearfix benifit-btn-sec">
+          <div class="forword-btn">
+            <a href="javascript:void(0);" class="btn" (click)="emergency(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+          </div>
+        </div>
+      </div>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="emergencyRoomBuffer"  [isShow]="isShow"></app-bscommon-module>
+    </div>
+  </div>
+</div>

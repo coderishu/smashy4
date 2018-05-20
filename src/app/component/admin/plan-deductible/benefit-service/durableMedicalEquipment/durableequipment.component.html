@@ -1,0 +1,42 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong>Durable Equipment</strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+            <div class="benefit-left">
+                <form #ngChiropratic="ngForm">
+                <div class="detail-row clearfix">
+                  
+                  <div class="chkbx">
+                    <input type="checkbox" id="checkbx1" [checked]="Obj.copyPlan"(change)="Obj.copyPlan= !Obj.copyPlan">
+                    <label for="checkbx1"><strong>Unit limits do not apply</strong> - subject to applicable deductible, coinsurance and copays <strong>(S for GF)</strong> </label>
+                  </div>
+                  <div class="chkbx">
+                    <input type="checkbox" id="checkbx2"  [checked]="Obj.demoapp"(change)="Obj.demoapp= !Obj.demoapp">
+                    <label for="checkbx2"><strong>Unit limits apply</strong> - subject to applicable deductible, coinsurance and copays (S for Non-GF). Limit prostheties and orthotics to 1 unit or 1 pair, as applicable, per person per plan/calendar year.</label>
+                  </div>
+                  <div class="chkbx">
+                    <input type="checkbox" id="checkbx3"  [checked]="Obj.customA"(change)="Obj.customA= !Obj.customA">
+                    <label for="checkbx3"><strong>$300 limit on wigs applies.</strong></label>
+                  </div>
+                  <div class="chkbx">
+                    <input type="checkbox" id="checkbx4"  [checked]="Obj.benefitCateType"(change)="Obj.benefitCateType= !Obj.benefitCateType">
+                    <label for="checkbx4"><strong>No doller limit on wigs applies.</strong></label>
+                  </div>
+                  <div class="chkbx">
+                    <input type="checkbox" id="checkbx5" (click)="show()">
+                    <label for="checkbx5">Custom <strong>(N)</strong></label>
+                  </div>                      
+                </div>
+                <div class="btn-sec clearfix benifit-btn-sec">
+                  <div class="forword-btn">
+                    <a href="javascript:void(0);" class="btn" (click)="Equipm(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                  </div>
+                </div>
+              </form>
+              
+              </div>
+          <div class="benefit-right benefit-tab chiro">
+            <app-bscommon-module [BenefitServicesBuffer]="durableequipment"  [isShow]="isShow"></app-bscommon-module>
+          </div>
+        </div>
+      </div>
+      

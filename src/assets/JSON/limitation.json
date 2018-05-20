@@ -1,0 +1,268 @@
+{
+"limitation":{
+   "benefitCategorys":[
+   {"pId":"1","bCategory":"Ambulance"},
+   {"pId":"2","bCategory":"Air Ambulance"},
+   {"pId":"3","bCategory":"Ground Ambulance"},
+   {"pId":"4","bCategory":"Water Ambulance"}
+   ],
+   "network":[
+   {"rId":"1","nName":"INN"},
+   {"rId":"2","rName":"OON"},
+   {"rId":"3","rName":"COMMON"},
+   {"rId":"4","rName":"IN AND OUT"}
+   ],
+  "segmentType": [
+    {
+      "sId": "1",
+      "sName": "IU 65"
+    },
+    {
+      "sId": "2",
+      "sName": "IO 65"
+    },
+    {
+      "sId": "3",
+      "sName": "2 To 50"
+    },
+    {
+      "sId": "4",
+      "sName": "51 To 99"
+    },
+    {
+      "sId": "5",
+      "sName": "100 To 299"
+    },
+    {
+      "sId": "6",
+      "sName": "300 +"
+    }
+  ],
+    "benefitPeriod":[
+   {"bpId":"1","bpName":"Calendar Year"},
+   {"bpId":"2","bpName":"Plan Year"},
+   {"bpId":"3","bpName":"Calendar/Plan Year"}
+   ],
+    "planStateType":[
+      {
+        "psId": "1",
+        "psName": "IN-STATE PLAN"
+      },
+      {
+        "psId": "2",
+        "psName": "OUT-OF-STATE PLAN"
+      },
+      {
+        "psId": "3",
+        "psName": "IN/OUT-OF-STATE PLAN"
+      }
+   ],
+   "benefitServices": [
+    {
+      "id": "1",
+      "bService": "Physician Services",
+      "routerLink": "physicianServices"
+    },
+    {
+      "id": "2",
+      "bService": "Chiropractic",
+      "routerLink": "chiropractic"
+    },
+    {
+      "id": "3",
+      "bService": "Other Professional Services",
+      "routerLink": "professionalServices"
+    },
+    {
+      "id": "4",
+      "bService": "Preventive Services",
+      "routerLink": "preventiveServices"
+    },
+    {
+      "id": "5",
+      "bService": "Laboratory Services",
+      "routerLink": "labServices"
+    },
+    {
+      "id": "6",
+      "bService": "Radiology Services",
+      "routerLink": "radiologyServices"
+    },
+    {
+      "id": "7",
+      "bService": "Prescription Medications",
+      "routerLink": "prescriptionMedications"
+    },
+    {
+      "id": "8",
+      "bService": "Specialty Medications",
+      "routerLink": "specialtyMedications"
+    },
+    {
+      "id": "9",
+      "bService": "Outpatient Services",
+      "routerLink": "outpatientServices"
+    },
+    {
+      "id": "10",
+      "bService": "Bariatric Surgery",
+      "routerLink": "bariatricSurgery"
+    },
+    {
+      "id": "11",
+      "bService": "Emergency Room",
+      "routerLink": "emergencyRoom"
+    },
+    {
+      "id": "12",
+      "bService": "Ambulance",
+      "routerLink": "ambulance"
+    },
+    {
+      "id": "13",
+      "bService": "Urgent Care",
+      "routerLink": "urgentCare"
+    },
+    {
+      "id": "14",
+      "bService": "Inpatient Hospital",
+      "routerLink": "inpatientHospital"
+    },
+    {
+      "id": "15",
+      "bService": "Long Term Acute Care",
+      "routerLink": "longTermAcuteCare"
+    },
+    {
+      "id": "16",
+      "bService": "Employee Assistance Program",
+      "routerLink": "employeeAssistanceProgram"
+    },
+    {
+      "id": "17",
+      "bService": "Maternity",
+      "routerLink": "maternity"
+    },
+    {
+      "id": "18",
+      "bService": "Newborn",
+      "routerLink": "newborn"
+    },
+    {
+      "id": "19",
+      "bService": "Home Health",
+      "routerLink": "homeHealth"
+    },
+    {
+      "id": "20",
+      "bService": "Extended Active Rehabilitation",
+      "routerLink": "extendedActiveRehabilitation"
+    },
+    {
+      "id": "21",
+      "bService": "Physical/Occupational/Speech Therapy",
+      "routerLink": "physicalOccupationalSpeechTherapy"
+    },
+    {
+      "id": "22",
+      "bService": "Skilled Nursing Facility",
+      "routerLink": "skilledNursingFAcility"
+    },
+    {
+      "id": "23",
+      "bService": "Durable Medical Equipment",
+      "routerLink": "durableMedicalEquipment"
+    },
+    {
+      "id": "24",
+      "bService": "Hospice",
+      "routerLink": "hospice"
+    },
+    {
+      "id": "25",
+      "bService": "Routine Vision Services",
+      "routerLink": "routineVisionServices"
+    },
+    {
+      "id": "26",
+      "bService": "Autism Spectrum Disorders",
+      "routerLink": "autismSpectrumDisorders"
+    },
+    {
+      "id": "27",
+      "bService": "Hearing",
+      "routerLink": "hearing"
+    },
+    {
+      "id": "28",
+      "bService": "Sexual Dysfunction",
+      "routerLink": "sexualDysfunction"
+    },
+    {
+      "id": "29",
+      "bService": "Tobacco Cessation",
+      "routerLink": "tobaccoCessation"
+    },
+    {
+      "id": "30",
+      "bService": "Weight Loss Reimbursement",
+      "routerLink": "weightLossReimbursement"
+    },
+    {
+      "id": "31",
+      "bService": "4th Quarter Carry-Over Deductible",
+      "routerLink": "fourthQuarterCarryOverDeductible"
+    },
+    {
+      "id": "32",
+      "bService": "Ancillary Services Out of State",
+      "routerLink": "ancillaryServices"
+    },
+    {
+      "id": "33",
+      "bService": "Cataract Surgery",
+      "routerLink": "cataractSurgery"
+    },
+    {
+      "id": "34",
+      "bService": "Eosinophilic Gastro Intestinal Disorder",
+      "routerLink": "eosinophilicGastroIntestinalDisorder"
+    },
+    {
+      "id": "34",
+      "bService": "Medical Foods",
+      "routerLink": "medicalFoods"
+    },
+    {
+      "id": "35",
+      "bService": "Diabetes And Asthma",
+      "routerLink": "diabetesAndAsthma"
+    },
+    {
+      "id": "36",
+      "bService": "Transgender Services",
+      "routerLink": "transgenderServices"
+    },
+    {
+      "id": "37",
+      "bService": "Nutritional Counselling",
+      "routerLink": "nutritionalCounselling"
+    },
+    {
+      "id": "38",
+      "bService": "Percertification",
+      "routerLink": "precertification"
+    },
+    {
+      "id": "39",
+      "bService": "Telemedicine",
+      "routerLink": "telemedicine"
+    },
+    {
+      "id": "40",
+      "bService": "Transplant Travel & Lodging",
+      "routerLink": "tranplantTravelLodging"
+    }
+  ]
+}
+}

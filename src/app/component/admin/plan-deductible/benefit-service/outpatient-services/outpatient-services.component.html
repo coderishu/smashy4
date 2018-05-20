@@ -1,0 +1,53 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Outpatient Services</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+      <div class="benefit-left">
+          <form #ngChiropratic="ngForm" class="chiro">
+          <div class="detail-row clearfix">
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx1">
+              <label for="checkbx1">Subject to applicable deductible and coinsurance  <strong>(S)</strong> </label>
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx2">
+              <label for="checkbx2">PPO facility <strong>100%</strong> Non-PPO, subject to deductible ans coinsurance, with precertification <strong>(N)</strong></label>
+            </div>	
+            <div class="rows clearfix">
+              <div class="columns chkbx"> 																						                                                                                              
+                                         <div class="inline-box">
+                                           <input id="checkbx3" type="checkbox">
+                    <label for="checkbx3">&nbsp;</label> 
+                     <input type="text" value="$" class="input-width">Copay for outpatient surgery, deductible and coinsurance for other serices:	
+                                         <select class="input-width-select">
+                   <option>select</option>
+                   <option>select</option>
+                   <option>select</option>
+                   <option>select</option>
+                   <option>select</option>
+                 </select>
+                 <strong>(N)</strong>
+                 </div>
+                                         
+                                          
+              </div>
+
+            </div>
+            <div class="chkbx">
+              <input type="checkbox" id="checkbx4" (click)="show()">
+              <label for="checkbx4">Custom <strong>(N)</strong> </label>
+            </div>
+                              
+          </div>
+          <div class="btn-sec clearfix benifit-btn-sec">
+            <div class="forword-btn">
+              <a href="javascript:void(0);" class="btn">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+            </div>
+          </div>
+             
+    </form>
+        </div>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="outpatientServices" [isShow]="isShow"></app-bscommon-module>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+/* Override Bootstrap styles here */
+
+.breadcrumb {
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  padding: 8px 2px;
+}

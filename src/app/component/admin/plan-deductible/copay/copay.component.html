@@ -1,0 +1,114 @@
+<div class="deductible-sec copay-detail">
+  <div class="head-txt"><strong>Copay : </strong></div>
+
+  <div class="deductible-box">
+    <form #copayForm="ngForm">
+    <div class="info-wraps">
+      <div class="detail-row clearfix">
+        <div class="detail-clmn">
+          <span class="txt">Network</span>
+          <select class="selectBox" [class.error] = "Obj.inNetwork == '' && isSubmit" [ngModel]="Obj.inNetwork" required  #inNetworkText = "ngModel" name="inNetwork" (ngModelChange)="Obj.inNetwork=$event">
+            <option value="">Network</option>
+            <option value="1">INN</option>
+            <option value="2">OON</option>
+            <option value="3">COMMON</option>
+            <option value="4">IN/OUT</option>
+          </select>
+        </div>
+        <div class="detail-clmn">
+          <span class="txt">Level</span>
+          <input type="text"  name="level"  [(ngModel)]="Obj.level"   />
+        </div>
+      </div>
+      <div class="detail-row clearfix">
+        <div class="detail-clmn">
+          <span class="txt">Copay Type</span>
+          <select class="selectBox"[class.error] = "Obj.copayType == '' && isSubmit" [ngModel]="Obj.copayType" required  #copayTypeText = "ngModel" name="copayType" (ngModelChange)="Obj.copayType=$event">
+            <option value="">Copay Type</option>
+            <option value="1">PCP</option>
+            <option value="2">Specialist</option>
+          </select>
+        </div>
+        <div class="detail-clmn">
+          <span class="txt">Amount</span>
+          <input type="text"  required name="amount"  [(ngModel)]="Obj.amount"  [class.error] = "amountText.invalid && isSubmit " #amountText = "ngModel" />
+
+        </div>
+        <div class="detail-clmn">
+          <span class="txt">Time Period</span>
+          <select class="selectBox"[class.error] = "Obj.timePeriod == '' && isSubmit" [ngModel]="Obj.timePeriod" required  #timePeriodText = "ngModel" name="timePeriod" (ngModelChange)="Obj.timePeriod=$event">
+            <option value="">Time Period</option>
+            <option value="1">Per VISIT</option>
+            <option value="2">Per DAY</option>
+            <option value="3">Per CALENDAR YEAR</option>
+            <option value="4">Per PLAN YEAR</option>
+            <option value="5">Per PLAN/CALENDAR YEAR</option>
+            <option value="6">Per 6 MONTHS</option>
+            <option value="7">Per LIFE TIME</option>
+            <option value="8">Per ADMISSION</option>
+          </select>
+        </div>
+        <div class="detail-clmn">
+          <span class="txt">Additional Qualifiers</span>
+          <select class="selectBox" [class.error] = "Obj.addQty == '' && isSubmit" [ngModel]="Obj.addQty" required  #addQtyText = "ngModel" name="addQty" (ngModelChange)="Obj.addQty=$event">
+            <option value="">Additional Qualifiers</option>
+            <option value="1">Per Member</option>
+            <option value="2">Per Member, Per Provider</option>
+            <option value="3">Per Member, Per Facility</option>
+            <option value="4">Per Member, Per Transplant</option>
+            <option value="5">Per Member, Per Surgery</option>
+            <option value="6">Per Member, Per Service</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="detail-row clearfix">
+        <div class="chkbx">
+          <input type="checkbox" id="checkbx4" [checked]="Obj.accFee"(change)="Obj.accFee=!Obj.accFee" />
+          <label for="checkbx4">Is Access Fee</label>
+        </div>
+        <div class="chkbx">
+          <input type="checkbox" id="checkbx5" [checked]="Obj.applies"(change)="Obj.applies=!Obj.applies"/>
+          <label for="checkbx5">Copy Applies After Deductible Met</label>
+        </div>
+      </div>
+    </div>
+    <div class="btn-sec margin-0 clearfix">
+      <div class="forword-btn">
+        <a   (click) = "SavecopayForm(copayForm.valid)" class="btn">Save</a><a href="javascript:void(0);" (click)="resetCopay()"class="btn">Cancel</a>
+      </div>
+    </div>
+  </form>
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Network</th>
+          <th>Copay Type</th>
+          <th>Amount</th>
+          <th>Time Period</th>
+          <th>Qualifiers</th>
+          <th>Action</th>
+        </tr>
+
+        <tr *ngFor="let cpyObj of recordBuffer; let i = index" >
+          <td [innerHtml]="cpyObj.inNetwork">INN</td>
+          <td [innerHtml]="cpyObj.copayType">Provider</td>
+          <td [innerHtml]="cpyObj.amount">20</td>
+          <td [innerHtml]="cpyObj.timePeriod">Per VISIT</td>
+          <td [innerHtml]="cpyObj.addQty">Per Member Per Provider Per Day</td>
+          <td><a href="javascript:void(0);"(click)="editTemplate(cpyObj,$event,i)">Edit</a> <span> | </span> <a (click)="deleteTemplate(cpyObj,i)" href="javascript:void(0);">Delete</a></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

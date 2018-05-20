@@ -1,0 +1,97 @@
+<ul class="clearfix benefit-tab-link">
+  <li class="active" (click)="currentTab(0)" [ngClass]="{'active': currentTabbing==0}">
+    <a href="javascript:void(0);" class="btn chiro-tab ">Cost Share</a>
+  </li>
+  <li (click)="currentTab(1)" [ngClass]="{'active': currentTabbing==1}">
+    <a href="javascript:void(0);" class="btn chiro-tab">Limitation</a>
+  </li>
+
+  <li (click)="currentTab(3)" [ngClass]="{'active': currentTabbing==3}">
+    <a href="javascript:void(0);" class="btn chiro-tab">Inclusion</a>
+  </li>
+</ul>
+<!-- <div class="tab-content-inner"></div> -->
+
+<div class="benefit-result  chiro-tab-wrapper" *ngIf="isShow">
+  
+  <div class="benifit-tab-content" [ngClass]="{'active': custom==true && currentTabbing==0}">
+      <div class="benifit-tabTwo-info active clearfix" >
+          <div class="formone-wrap cost-share-names">
+            <label for="Benifit1"> Select a Cost Share Category : </label>
+      
+            <!--[class.error] = "costShareSelected=='' && isSubmit"  required-->
+            <select class="selectBox chiro-select"   [(ngModel)]="costShareSelected"   #costShareType = "ngModel" name="costShareTxt" (ngModelChange)="costShareModify($event)">
+              <option value="">Cost Share Name</option>
+              <option *ngFor="let object of costShares" [ngValue]="object" >{{object.costShareName}}</option>
+            </select>
+          </div>
+        </div> 
+
+    <div class="benifit-tabTwo-wrap" >
+      <ul class="benifit-tabTwo-link clearfix">
+        <li class="active" (click)="CostShareactive(0)" [ngClass]="{'active':currentCostShareActive==0}">
+          <a href="javascript:void(0);" class="btn chiro-tab">Add Cost share</a>
+        </li>
+        <li (click)="CostShareactive(1)" [ngClass]="{'active':currentCostShareActive==1}">
+          <a href="javascript:void(0);" class="btn chiro-tab">Add Cost share qualifier</a>
+        </li>
+      </ul>
+      <div class="chiro-wrap">
+      <div class="benifit-tabTwo-content">
+
+        <!--<div class="benifit-tabTwo-info  clearfix" [ngClass]="{'active':currentCostShareActive==1}">-->
+        <div class="benifit-tabTwo-info  clearfix" [ngClass]="{'active':currentCostShareActive==1}" *ngIf="currentCostShareActive==1">
+
+          <app-add-cost-share-qualifier [selectedPrevious]="benefitSCostShare"  [costShareSelected]="costShareSelected" [networkInfor]="netWorkInfo" [shareRec]="getRec"> </app-add-cost-share-qualifier>
+        </div>
+
+      </div>
+      <div class="benifit-tabThree-wrap" *ngIf="currentCostShareActive==0">
+        <ul class="benifit-tabThree-link clearfix" >
+          <li class="active" (click)="beniFitTabThree(0)" [ngClass]="{'active':currentbeniFitTabThreeActive==0}">
+            <a href="javascript:void(0);" class="btn chiro-tab ">deductible</a>
+          </li>
+          <li (click)="beniFitTabThree(1)" [ngClass]="{'active':currentbeniFitTabThreeActive==1}">
+            <a href="javascript:void(0);" class="btn chiro-tab">coinsurance</a>
+          </li>
+          <li (click)="beniFitTabThree(2)" [ngClass]="{'active':currentbeniFitTabThreeActive==2}">
+            <a href="javascript:void(0);" class="btn chiro-tab">out of pocket</a>
+          </li>
+          <li (click)="beniFitTabThree(3)" [ngClass]="{'active':currentbeniFitTabThreeActive==3}">
+            <a href="javascript:void(0);" class="btn chiro-tab">copay</a>
+          </li>
+        </ul>
+        <div class="benifit-tabThree-content chiro-wrap-inner">
+          <div class="benifit-tabThree-info active " [ngClass]="{'active':currentbeniFitTabThreeActive==0}"*ngIf="currentbeniFitTabThreeActive==0">
+
+            <app-chiropratic-deductible [selectedPrevious]="benefitSCostShare"  [costShareSelected]="costShareSelected" [networkInfor]="netWorkInfo"></app-chiropratic-deductible>
+
+          </div>
+          <div class="benifit-tabThree-info" [ngClass]="{'active':currentbeniFitTabThreeActive==1}" *ngIf="currentbeniFitTabThreeActive==1">
+            <app-chiropatic-coinurance [selectedPrevious]="benefitSCostShare" [costShareSelected]="costShareSelected" [networkInfor]="netWorkInfo"></app-chiropatic-coinurance>
+          </div>
+
+          <div class="benifit-tabThree-info" [ngClass]="{'active':currentbeniFitTabThreeActive==2}" *ngIf="currentbeniFitTabThreeActive==2">
+
+            <app-chiropractic-outof-pocket [selectedPrevious]="benefitSCostShare" [costShareSelected]="costShareSelected" [networkInfor]="netWorkInfo"></app-chiropractic-outof-pocket>
+          </div>
+          <div class="benifit-tabThree-info" [ngClass]="{'active':currentbeniFitTabThreeActive==3}" *ngIf="currentbeniFitTabThreeActive==3">
+            <app-chiropractic-copay [selectedPrevious]="benefitSCostShare"  [costShareSelected]="costShareSelected" [networkInfor]="netWorkInfo" [shareRec]="getRec"></app-chiropractic-copay>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="benifit-tab-content "  [ngClass]="{'active': custom==true && currentTabbing==1}" *ngIf="custom==true && currentTabbing==1">
+    <app-limitation [selectedPrevious]="benefitSCostShare"  [costShareSelected]="costShareSelected"></app-limitation>
+    <!--</div>-->
+  </div>
+
+  <div class="benifit-tab-content "  [ngClass]="{'active': currentTabbing==3}" *ngIf="currentTabbing==3">
+      <app-inclusion [selectedPrevious]="benefitSCostShare" [shareRec]="getRec"></app-inclusion>
+      <!--</div>-->
+    </div>
+</div>
+

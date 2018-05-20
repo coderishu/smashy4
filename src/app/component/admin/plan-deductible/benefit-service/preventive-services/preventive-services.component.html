@@ -1,0 +1,155 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Preventive Services</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+    <div class="benefit-left">
+      <form #ngChiropratic="ngForm">
+      <div class="detail-row clearfix">
+        <p>
+          <strong>Refer to Routine vision Service, Nutritional Counselling/Training and Tobacco Cessation and section for Rx section for additional information.</strong>
+        </p>
+        <p>
+          <strong>NON-GF PLAN:</strong>
+        </p>
+        <div class="chkbx">
+          <input id="checkbx1" type="checkbox"  [checked]="Obj.copyPlan" (change)="Obj.copyPlan=!Obj.copyPlan"/>
+          <label for="checkbx1"><strong>BCBSAZ/Plan</strong> pays <strong>100%</strong> of the BCBSAZ allowed amount for in-network expanded preventive services <strong>(s)</strong>.</label>
+        </div>
+        <p class="left-space">
+          <strong>AND:</strong>
+        </p>
+        <div class="chkbx">
+          <input id="checkbx2" type="checkbox"  [checked]="Obj.chiropratics"(change)="Obj.chiropratics= !Obj.chiropratics"/>
+          <label for="checkbx2"><strong class=" full-width-coll italic-style bottom-border">FDA approved Barrier Contraceptive Methods, select one:</strong> Cover all diaphragms and cervical caps at 100% only when obtained from in-network physicians or retail pharmacies. Exclude <span class="underline-text">OTC male and female condoms and spermicides</span> <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx3" type="checkbox"  [checked]="Obj.customA"(change)="Obj.customA= !Obj.customA" (click)="show()"/>
+          <label for="checkbx3">Custom <strong>(N)</strong></label>
+        </div>
+        <p class="left-space">
+          <strong>AND:</strong>
+        </p>
+        <div class="chkbx">
+          <input id="checkbx4" type="checkbox"  [checked]="Obj.nonCpy"(change)="Obj.nonCpy= !Obj.nonCpy"/>
+          <label for="checkbx4"><strong class=" full-width-coll italic-style bottom-border">FDA approved Contraceptive implanted Devices, select One:</strong> Cover all FDA approved implanted devices (including removal, reinsertion and follow-up visits when cided for contraception) at 100% only when obtained in an in-network physician office. Cost-sharing applies when obtained at in-network inpatient or outpatient facilities <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx5" type="checkbox" (click)="show()"/>
+          <label for="checkbx5">Custom <strong>(N)</strong></label>
+        </div>
+        <p class="left-space">
+          <strong>AND:</strong>
+        </p>
+        <div class="chkbx">
+          <input id="checkbx6" type="checkbox"  [checked]="Obj.maximumOf" (change)="Obj.maximumOf = !Obj.maximumOf"/>
+          <label for="checkbx6"><strong class=" full-width-coll italic-style bottom-border">FDA approved Sterilization procedures, select one:</strong> Cover all FDA-approved sterilixation procedures at 100%
+            When performed at any in-network provider location (physician office, outpatient facility, inpatient facility) if the primary purpose of procedure is contraception <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx7" type="checkbox" (click)="show()"/>
+          <label for="checkbx7">Custom <strong>(N)</strong></label>
+        </div>
+        <p class="bottom-border">
+          <strong>**For OON Preventive services select one:</strong>
+        </p>
+        <br>
+        <div class="chkbx">
+          <input id="checkbx8" type="checkbox"  [checked]="Obj.prevent" (change)="Obj.prevent = !Obj.prevent"/>
+          <label for="checkbx8">All preventive services covered in-network are also covered OON-Member pays OON deductible and coinsurance <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx9" type="checkbox"  [checked]="Obj.newlyprevent" (change)="Obj.newlyprevent = !Obj.newlyprevent"/>
+          <label for="checkbx9">All preventive services covered in-network are also covered OON- <strong>Mammography-</strong> deductible is waived and member pays OON coinsurance. <strong>All other OON preventive service</strong>- member pays OON deductible and coinsurance <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx10" type="checkbox"  [checked]="Obj.react" (change)="Obj.react = !Obj.react"/>
+          <label for="checkbx10">Most services are not covered except: <strong>Mammography</strong> and <strong>Foreign Travel Immunizations</strong>- deductible and coinsurance apply <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx11" type="checkbox"  [checked]="Obj.customB" (change)="Obj.customB = !Obj.customB"/>
+          <label for="checkbx11">Most services are not covered except: <strong>Mammography</strong>- deductible is waived and member pays OON coinsurance. <strong>Foreign Travel Immunizations</strong>- member pays OON deductible and coinsurance <strong>(s)</strong>.</label>
+
+        </div>
+        <div class="chkbx">
+          <input id="checkbx12" type="checkbox"  [checked]="Obj.customC" (change)="Obj.customC = !Obj.customC"/>
+          <label for="checkbx12">Most services are not covered (including Foreign travel Immunizations) except: <strong>Mammography</strong>- deductible is waived and member pays OON coinsurance <strong>(s)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx13" type="checkbox" (click)="show()"/>
+          <label for="checkbx13">Custom <strong>(N)</strong></label>
+        </div>
+        <p class="bottom-border">
+          <strong>GF PLAN:</strong>
+        </p>
+        <br>
+        <div class="rows clearfix">
+          <div class="columns chkbx">
+            <input id="checkbx14" type="checkbox" [checked]="Obj.customD" (change)="Obj.customD = !Obj.customD">
+            <label for="checkbx14">&nbsp;</label>
+            <span><strong>Copay Plan:</strong></span>
+            <div class="clearfix">
+												<span class="half-width"> <strong>PCP:</strong>
+													<input type="text" [disabled]="(Obj.customD === true)?'false':'true'"  [(ngModel)]="Obj.pcpCopyVal"   [required]="(Obj.customD==true)?'true':'false'"  name="pcpCopyz" [class.error] = "customD.invalid && isSubmit && Obj.customD" #customD = "ngModel">
+											    </span>
+              <span class="half-width"> <strong>Specialist:</strong>
+													<input type="text" [disabled]="(Obj.customD === true)?'false':'true'"  [(ngModel)]="Obj.demopre"   [required]="(Obj.customD==true)?'true':'false'"  name="pcpCopyz2" [class.error] = "customD2.invalid && isSubmit && Obj.customD" #customD2 = "ngModel">
+											    </span>
+            </div>
+            <span>Deductible is waived and coinsurance applies to services outside the physician's office <strong>(s)</strong>.</span>
+          </div>
+
+        </div>
+        <p class="left-space">
+          <strong>OR:</strong>
+        </p>
+        <div class="chkbx">
+          <input id="checkbx15" type="checkbox"  [checked]="Obj.customE" (change)="Obj.customE = !Obj.customE"/>
+          <label for="checkbx15">BCBSAZ/Plan pays 100% of the BCBSAZ allowed amount for in-network.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx16" type="checkbox"  [checked]="Obj.customF" (change)="Obj.customF = !Obj.customF"/>
+          <label for="checkbx16">Expanded preventive services <strong>(N)</strong> :</label>
+        </div>
+        <p>
+          <strong>**FOR OON Preventive services select one:</strong>
+        </p>
+        <div class="chkbx">
+          <input id="checkbx17" type="checkbox" [checked]="Obj.prevent1" (change)="Obj.prevent1 = !Obj.prevent1"/>
+          <label for="checkbx17">All preventive service covered in-network are also coverved OON- member pays OON deductible and coinsurance. <strong>(s)</strong></label>
+        </div>
+        <div class="chkbx" >
+          <input id="checkbx18" type="checkbox"  [checked]="Obj.prevent2" (change)="Obj.prevent2 = !Obj.prevent2"/>
+          <label for="checkbx18">All preventive service covered in-network are also coverved OON- <strong>Mammography</strong>- deductible is waived and member pays OON coinsurance. <strong>All other OON preventive services</strong>- member pays OON deductible and coinsurance <strong>(N)</strong></label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx19" type="checkbox"  [checked]="Obj.prevent3" (change)="Obj.prevent3 = !Obj.prevent3"/>
+          <label for="checkbx19">Most services are not covered except: <strong>Mammography</strong>- deductible is waived and member pays OON coinsurance. <strong>Foreign travel Immunizations</strong>- member pays OON deductible and coinsurance <strong>(N)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx20" type="checkbox"  [checked]="Obj.prevent4" (change)="Obj.prevent4 = !Obj.prevent4"/>
+          <label for="checkbx20">Most Service are not covered except: <strong>Mammography</strong> and <strong>Foreign Travel Immunizations</strong>- deductiable and coinsurance are waived <strong>(N)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx21" type="checkbox"/>
+          <label for="checkbx21">Most services are not covered (including Foreign Travel Immunizations) except: <strong>Mammography</strong>- deductible is waived and member pays OON coinsurance <strong>(N)</strong>.</label>
+        </div>
+        <div class="chkbx">
+          <input id="checkbx22" type="checkbox" (click)="show()"/>
+          <label for="checkbx22">Custom <strong>(N)</strong></label>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+      </div>
+      <div class="btn-sec clearfix benifit-btn-sec">
+        <div class="forword-btn">
+          <a href="javascript:void(0);" class="btn" (click)="preventive(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+        </div>
+      </div>
+      </form>
+    </div>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="preventiveServicesBuffer" [isShow]="isShow"></app-bscommon-module>
+    </div>
+</div>

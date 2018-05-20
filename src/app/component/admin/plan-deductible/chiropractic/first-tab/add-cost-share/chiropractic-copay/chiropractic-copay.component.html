@@ -1,0 +1,101 @@
+<form class="clearfix md-form chiro_form" #ngCopayForm="ngForm">
+  <div class="formone-wrap">
+    <label for="Benifit1"> Network : </label>
+
+    <select class="selectBox" [ngModel]="ChriopraticCopaiesObj.CCopyNetWorkInfoVal" [class.error] = "ChriopraticCopaiesObj.CCopyNetWorkInfoVal == '' && isSubmitCostShare"  required  #CCopyNetWorkInfo = "ngModel" name="CCopyNetWorkInfoTxt" (ngModelChange)="ChriopraticCopaiesObj.CCopyNetWorkInfoVal=$event">
+      <option value="">Network</option>
+      <option   *ngFor="let netWorkInfo of netWorkInfos" [ngValue]="netWorkInfo"[innerHtml]="netWorkInfo['nService']"></option>
+    </select>
+  </div>
+  <div class="formone-wrap">
+    <label for="Benifit1"> Level : </label>
+
+    <input type="text"   name="levelsTxt"  [(ngModel)]="ChriopraticCopaiesObj.levels"  >
+  </div>
+  <div class="copay-form-wrap clearfix">
+    <div class="formone-wrap">
+      <label for="Benifit1"> Type : </label>
+      <select class="selectBox " [ngModel]="ChriopraticCopaiesObj.CCopyTypeVal" [class.error] = "ChriopraticCopaiesObj.CCopyTypeVal == '' && isSubmitCostShare"  required  #ChiropraticCopayType = "ngModel" name="CopayTypeTxt" (ngModelChange)="ChriopraticCopaiesObj.CCopyTypeVal=$event">
+        <option value="">Copay Type</option>
+        <option  *ngFor="let type of types" [ngValue]="type"[innerHtml]="type['bType']"></option>
+
+      </select>
+
+    </div>
+    <div class="formone-wrap">
+      <label for="Benifit1"> Amount : </label>
+      <input type="text" class="md-width" name="amount" required name="copayAmountTxt"  [(ngModel)]="ChriopraticCopaiesObj.copayAmount"  [class.error] = "ChiropraticCopayAmountText.invalid && isSubmitCostShare " #ChiropraticCopayAmountText = "ngModel">
+    </div>
+    <div class="formone-wrap">
+      <label for="Benifit1"> Time Period : </label>
+
+      <select class="selectBox" [ngModel]="ChriopraticCopaiesObj.CopyTimePeriodVal" [class.error] = "ChriopraticCopaiesObj.CopyTimePeriodVal == '' && isSubmitCostShare"  required  #ChiropraticCopyTimePeriod = "ngModel" name="CopyTimePeriodTxt" (ngModelChange)="ChriopraticCopaiesObj.CopyTimePeriodVal=$event">
+        <option value="">Time Period</option>
+        <option   *ngFor="let timePeriod of timePeriods" [ngValue]="timePeriod"[innerHtml]="timePeriod['btimePeriod']"></option>
+      </select>
+
+    </div>
+    <div class="formone-wrap">
+      <label for="Benifit1"> Additional Qualifier : </label>
+
+      <select class="selectBox" [ngModel]="ChriopraticCopaiesObj.CopyAddQualificationVal" [class.error] = "ChriopraticCopaiesObj.CopyAddQualificationVal == '' && isSubmitCostShare"  required  #ChiropraticCopyAddQualification = "ngModel" name="CopyAddQualificationTxt" (ngModelChange)="ChriopraticCopaiesObj.CopyAddQualificationVal=$event">
+        <option value="">Additional Qualifier</option>
+        <option   *ngFor="let addQualification of addQualifications" [ngValue]="addQualification" [innerHtml]="addQualification['addQual']"></option>
+      </select>
+
+    </div>
+  </div>
+  <div class="benifit-chckBox clearfix">
+    <div class="chkbx">
+      <input id="checkbx52" type="checkbox" [checked]="ChriopraticCopaiesObj.accFee"(change)="ChriopraticCopaiesObj.accFee=!ChriopraticCopaiesObj.accFee">
+      <label for="checkbx52">Is Access Fee</label>
+    </div>
+    <div class="chkbx">
+      <input id="checkbx51" type="checkbox" [checked]="ChriopraticCopaiesObj.applies"(change)="ChriopraticCopaiesObj.applies=!ChriopraticCopaiesObj.applies">
+      <label for="checkbx51">Copay Applies After Deductible Met</label>
+    </div>
+  </div>
+  <div class="formone-btn-wrap">
+    <button class="btn" (click) = "SavecopayForms(ngCopayForm.valid)">
+      save
+    </button>
+    <button class="btn" (click)="resetCopay()">
+      cancel
+    </button>
+  </div>
+</form>
+<div class=" benifit-tableWrap">
+  <div class="table-wrap">
+    <table>
+      <tbody>
+      <tr>
+        <th>Network</th>
+        <th>Copay Type</th>
+        <th>Amount</th>
+        <th>Time Period</th>
+        <th>Qualifier</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let rCBuffer of recordChriopraticCopayBuffer |selectedNetWork:costShareSelected:ChriopraticCopaiesObj:selectedPrevious:'copay';let i = index;">
+        <td [innerHtml]="rCBuffer.CCopyNetWorkInfoVal.nService">INN</td>
+        <td [innerHtml]="rCBuffer.CCopyTypeVal.bType">PCP</td>
+        <td [innerHtml]="rCBuffer.copayAmount">20</td>
+        <td [innerHtml]="rCBuffer.CopyTimePeriodVal.btimePeriod">Per Visit</td>
+        <td [innerHtml]="rCBuffer.CopyAddQualificationVal.addQual">Per Member
+          Per Provider
+          Per Day</td>
+        <td><a href="javascript:void(0);" (click)="editChriopraticTemplate(rCBuffer,$event,i)">Edit</a><span> | </span><a href="javascript:void(0);" (click)="deleteChriopraticTemplate(rCBuffer,index)">Delete</a></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

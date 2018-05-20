@@ -1,0 +1,268 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Prescription Medications</strong></div>
+ 
+  <div class="deductible-box clearfix benefit-deductible">
+      <div class="benefit-left">
+          <form #ngChiropratic="ngForm">
+        <div class="detail-row clearfix">
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx1" [checked]="Obj.demoapp"(change)="Obj.demoapp = !Obj.demoapp">
+            <label for="checkbx1">RX carve out</label>
+          </div>
+          <p><strong>Choose Formulary:</strong></p><br>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx2" [checked]="Obj.chvm"(change)="Obj.chvm = !Obj.chvm">
+            <label for="checkbx2">BCBSAZ Legacy (S)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx3" [checked]="Obj.nonCpy"(change)="Obj.nonCpy = !Obj.nonCpy">
+            <label for="checkbx3">Catamaran/OptumRx (N)</label>
+          </div>
+          <p><strong>Non-GF Plans: in-network <span class="underline-text">PPACA preventive</span> medications are paid at 100% of the BCBSAZ allowed amount. Member cost sharing is waived.</strong></p><br>
+          <p><strong>Retail Pharmacy (30-day supply)</strong></p><br>
+          <div class="select-detail">
+           <div class="left-space bottom-space">										 	
+             <strong>BCBSAZ Legacy:</strong>
+             <span>4 Tier (S) </span>
+           </div>	
+           <div class="left-space bottom-space">										 	
+             <strong>Catamaran/OptumRx:</strong>
+             <span>Select </span>
+           </div>
+          </div>
+          <div class="bottom-space clearfix">
+            <div class="one-fourth-width">
+              <span>Level 1</span>
+              <input type="text" value="$"  [disabled]="(Obj.nonCpy === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.nonCpy !== true}" [required]="(Obj.nonCpy==true)?'true':'false'" name="pcpCopyz1"  [(ngModel)]="Obj.pcpCopyVal"  [class.error] = "nonCpy1.invalid && isSubmit && Obj.nonCpy" #nonCpy1 = "ngModel">
+            </div>
+            <div class="one-fourth-width">
+              <span>Level 2</span>
+              <input type="text" value="$"  [disabled]="(Obj.nonCpy === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.nonCpy !== true}" [required]="(Obj.nonCpy==true)?'true':'false'" name="pcpCopyz2"  [(ngModel)]="Obj.benefitCateType"  [class.error] = "nonCpy2.invalid && isSubmit && Obj.nonCpy" #nonCpy2 = "ngModel">
+            </div>
+            <div class="one-fourth-width">
+              <span>Level 3</span>
+              <input type="text" value="$"  [disabled]="(Obj.nonCpy === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.nonCpy !== true}" [required]="(Obj.nonCpy==true)?'true':'false'" name="pcpCopyz36"  [(ngModel)]="Obj.customA"  [class.error] = "nonCpy3.invalid && isSubmit && Obj.nonCpy" #nonCpy3 = "ngModel">
+            </div>
+            <div class="one-fourth-width">
+              <span>Level 4</span>
+              <input type="text" value="$"  [disabled]="(Obj.nonCpy === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.nonCpy !== true}" [required]="(Obj.nonCpy==true)?'true':'false'" name="pcpCopyz4"  [(ngModel)]="Obj.max"  [class.error] = "nonCpy4.invalid && isSubmit && Obj.nonCpy" #nonCpy4 = "ngModel">
+            </div>
+          </div>
+          <p><strong class="underline-text">In-Network</strong></p><br>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx4"  [checked]="Obj.customA2"(change)="Obj.customA2 = !Obj.customA2">
+            <label for="checkbx4">copay</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx5" (click)="show()">
+            <label for="checkbx5">Custom <strong>(N)</strong></label>
+          </div>
+          <p><strong class="underline-text">out-of-Network</strong></p><br>	
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx6" [checked]="Obj.phymedicine"(change)="Obj.phymedicine = !Obj.phymedicine">
+            <label for="checkbx6">OON Copay Matches IIN Copay. Balance bill applies <strong>(S)</strong></label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx7"  [checked]="Obj.specialistCpy"(change)="Obj.specialistCpy = !Obj.specialistCpy">
+            <label for="checkbx7">Subject to deductible, coinsurance and balance bill <strong>(N)</strong></label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx8"  [checked]="Obj.subApplicable"(change)="Obj.subApplicable = !Obj.subApplicable">
+            <label for="checkbx8">Not covered <strong>(N)</strong></label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx9" (click)="show()">
+            <label for="checkbx9">Custom <strong>(N)</strong></label>
+          </div>		
+          <p><strong class="underline-text">90-day mail order:</strong></p><br>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx10" [checked]="Obj.presec"(change)="Obj.presec = !Obj.presec">
+            <label for="checkbx10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</label>
+          </div>	
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx11" (click)="show()">
+            <label for="checkbx11">Custom <strong>(N)</strong></label>
+          </div>
+          <p><strong class="underline-text">FDA Approved Hormonal Contraceptive methods, select one:</strong></p><br>	
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx12" [checked]="Obj.filter1"(change)="Obj.filter1 = !Obj.filter1">
+            <label for="checkbx12">
+Cover all FDA-approved generic and brand hormonal contraceptive methods with no generic equivalent at 100% at all in network retail/mail order phamacies and in-network physician offices. Existing BCBSAZ quality limits will Continue to applu <strong>(S for Non-GF) - [N for GF plans]</strong></label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx13" (click)="show()">
+            <label for="checkbx13">Custom <strong>(N)</strong></label>
+          </div>
+          <p><strong class="underline-text">FCompound Medications:</strong></p><br>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx14" [checked]="Obj.filter2"(change)="Obj.filter2 = !Obj.filter2">
+            <label for="checkbx14">Member Pays the greater of the level 3 copay or 50%.</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx15" [checked]="Obj.filter3"(change)="Obj.filter3 = !Obj.filter3">
+            <label for="checkbx15">Member pays the <b>Select</b> Copay.</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx16" [checked]="Obj.filter4"(change)="Obj.filter4 = !Obj.filter4">
+            <label for="checkbx16">Members Pays the Level 3 copay. ( Catamaran/OptumRx Only )</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx17" (click)="show()">
+            <label for="checkbx17">Custom <strong>(N)</strong></label>
+          </div>	
+          <p><strong class="underline-text">Other Optional Pharmacy Benefits:</strong></p><br>	
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx18"  [checked]="Obj.filter5"(change)="Obj.filter5 = !Obj.filter5">
+            <label for="checkbx18">Not appicable</label>
+          </div>
+          <div class="rows clearfix">
+            <div class="columns chkbx">                                             
+                                        <input id="checkbx19" type="checkbox" [checked]="Obj.medication"(change)="Obj.medication = !Obj.medication">
+                  <label for="checkbx19">&nbsp;</label>
+                                      <span class="bottom-space">90-day retail for maintenance medications <strong>(s)</strong></span>
+                                      <div class="clearfix bottom-space">
+              <span class="width-row"> 
+                <strong>2X</strong>
+                <select>
+                  <option>2x1</option>
+                  <option>2x2</option>
+                  <option>2x3</option>
+                  <option>2x4</option>
+                  <option>2x5</option>
+                </select>
+                </span>
+                <span class="width-row"> 
+                  <strong>Level 1</strong>
+                <input type="text" [disabled]="(Obj.medication === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.medication !== true}" [required]="(Obj.medication==true)?'true':'false'" name="pcpCopyz37"  [(ngModel)]="Obj.filter8"  [class.error] = "nonCpy21.invalid && isSubmit && Obj.medication" #nonCpy21 = "ngModel">
+                </span>
+                <span class="width-row"> 
+                  <strong>Level 2</strong>
+                <input type="text" [disabled]="(Obj.medication === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.medication !== true}" [required]="(Obj.medication==true)?'true':'false'" name="pcpCopyz46"  [(ngModel)]="Obj.filter9"  [class.error] = "nonCpy22.invalid && isSubmit && Obj.medication" #nonCpy22 = "ngModel">
+                </span>
+                <span class="width-row"> 
+                  <strong>Level 3</strong>
+                <input type="text" [disabled]="(Obj.medication === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.medication !== true}" [required]="(Obj.medication==true)?'true':'false'" name="pcpCopyz56"  [(ngModel)]="Obj.filter10"  [class.error] = "nonCpy23.invalid && isSubmit && Obj.medication" #nonCpy23 = "ngModel">
+                </span>
+                <span class="width-row"> 
+                  <strong>Level 4</strong>
+                <input type="text" [disabled]="(Obj.medication === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.medication !== true}" [required]="(Obj.medication==true)?'true':'false'" name="pcpCopyz67"  [(ngModel)]="Obj.filter11"  [class.error] = "nonCpy24.invalid && isSubmit && Obj.medication" #nonCpy24 = "ngModel">
+                </span>
+                </div>
+                <div class="clearfix">
+                  <span>Pharmacies inclued: </span>
+                  <select class="select-width">
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                  </select>
+                </div>											    
+            </div>
+            
+            <div class="rows bottom-space clearfix">
+              <div class="chkbx">
+            <input type="checkbox" id="checkbx20" [checked]="Obj.filter13"(change)="Obj.filter13 = !Obj.filter13">
+            <label for="checkbx20">Mandatory Generics / Generic's First <strong>(S)</strong></label>
+          </div>
+          
+          <div class="clearfix">
+            <span>Maintenance or all</span>
+            <select class="select-width">
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                  </select>
+          </div>	
+            </div>
+
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx21" [checked]="Obj.filter14"(change)="Obj.filter14 = !Obj.filter14">
+            <label for="checkbx21">Medication Synchronization Applies (Required for all insured groups)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx22" [checked]="Obj.filter15"(change)="Obj.filter15 = !Obj.filter15">
+            <label for="checkbx22">Medication Synchronization Does <strong>NOT</strong> apply (ASC groups only)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx23" [checked]="Obj.filter16"(change)="Obj.filter16 = !Obj.filter16">
+            <label for="checkbx23">Medication Synchronization Applies (Required for all insured groups)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx24"  [checked]="Obj.filter17"(change)="Obj.filter17 = !Obj.filter17">
+            <label for="checkbx22">Medication Synchronization Does <strong>NOT</strong> apply (ASC groups only)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx25"  [checked]="Obj.filter18"(change)="Obj.filter18 = !Obj.filter18">
+            <label for="checkbx25">Cancer parity applies (Required for all insured groups)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx26"  [checked]="Obj.filter19"(change)="Obj.filter19 = !Obj.filter19">
+            <label for="checkbx26">Cancer parity does NOT apply (ASC groups only)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx27"  [checked]="Obj.filter20"(change)="Obj.filter20 = !Obj.filter20">
+            <label for="checkbx27">Cancer parity applies (Required for all insured groups)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx28"  [checked]="Obj.filter21"(change)="Obj.filter21 = !Obj.filter21">
+            <label for="checkbx28">Cancer parity does NOT apply (ASC groups only)</label>
+          </div>
+          <div class="chkbx">
+            <input type="checkbox" id="checkbx29" (change)="show()">
+            <label for="checkbx29">Custom (Other Optional)</label>
+          </div>
+          <p class="bottom-space"><strong>Definitions for Legal to include in the benefit book:</strong>
+            <span class="full-width-coll italic-style">(only <span class="underline-text">uncheck</span> if excluded per custom benefit)</span>
+          </p>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx30"  [checked]="Obj.filter22"(change)="Obj.filter22 = !Obj.filter22">
+            <label for="checkbx30">Compounded Medications</label>
+          </div>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx31"  [checked]="Obj.filter23"(change)="Obj.filter23 = !Obj.filter23">
+            <label for="checkbx31">Specialty Medication</label>
+          </div>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx32"  [checked]="Obj.filter24"(change)="Obj.filter24 = !Obj.filter24">
+            <label for="checkbx32">Excluded Medications</label>
+          </div>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx33"  [checked]="Obj.filter25"(change)="Obj.filter25 = !Obj.filter25">
+            <label for="checkbx33">Specialty Pharmacy</label>
+          </div>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx34"  [checked]="Obj.filter26"(change)="Obj.filter26 = !Obj.filter26">
+            <label for="checkbx34">Generic Medications</label>
+          </div>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx35"  [checked]="Obj.filter27"(change)="Obj.filter27 = !Obj.filter27">
+            <label for="checkbx35">Step Therapy</label>
+          </div>
+          <div class="chkbx half-width" >
+            <input type="checkbox" id="checkbx36" [checked]="Obj.filter28"(change)="Obj.filter28 = !Obj.filter28">
+            <label for="checkbx36">PBM</label>
+          </div>
+          <div class="chkbx half-width">
+            <input type="checkbox" id="checkbx37"  [checked]="Obj.filter29"(change)="Obj.filter29 = !Obj.filter29">
+            <label for="checkbx37">Maintenance Medications</label>
+          </div>
+                    
+        </div>
+        <div class="btn-sec clearfix benifit-btn-sec">
+          <div class="forword-btn">
+            <a href="javascript:void(0);" class="btn" (click)="prescription(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="prescriptionMedicationsBuffer" [isShow]="isShow"></app-bscommon-module>
+    </div>
+  </div>
+    
+   
+</div>

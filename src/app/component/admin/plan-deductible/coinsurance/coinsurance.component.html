@@ -1,0 +1,46 @@
+<div class="deductible-sec coinsure-plan">
+  <form #coinsuranceForm = "ngForm">
+  <div class="head-txt"><strong>Coinsurance</strong></div>
+  <div class="deductible-box">
+    <div class="info-wraps">
+      <div class="rows clearfix">
+        <div class="columns chkbx empty"></div>
+        <div class="columns"><strong>BCBS Plan Pays</strong></div>
+        <div class="columns"><strong>Member Pays</strong></div>
+      </div>
+
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx2" [checked]="Obj.inNetwork" (change)="inNetworkSet()"/>
+          <label for="checkbx2"><strong>In Network</strong></label>
+        </div>
+        <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.inNetwork === true)?'false':'true'"placeholder="85" [ngClass]="{'InputDisabled':Obj.inNetwork !== true}" [required]="(Obj.inNetwork==true)?'true':'false'" name="inNetwork"  [(ngModel)]="Obj.inNetworkVal"  [class.error] = "inNetworkText.invalid && isSubmit && Obj.inNetwork" #inNetworkText = "ngModel"/></div></div>
+        <div class="columns"><div class="cost"><input type="text" placeholder="15"[disabled]="(Obj.inNetwork === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.inNetwork !== true}" [required]="(Obj.inNetwork==true)?'true':'false'" name="inNetwork1"  [(ngModel)]="Obj.inNetworkVal1"  [class.error] = "inNetworkText1.invalid && isSubmit && Obj.inNetwork" #inNetworkText1 = "ngModel"/></div></div>
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx3"[checked]="Obj.outOfNetwork" (change)="outOfNetworkSet()"/>
+          <label for="checkbx3"><strong>Out of Network</strong></label>
+        </div>
+        <div class="columns"><div class="cost"><input type="text" placeholder="60"[disabled]="(Obj.outOfNetwork === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.outOfNetwork !== true}" [required]="(Obj.outOfNetwork==true)?'true':'false'" name="outOfNetwork"  [(ngModel)]="Obj.outOfNetworkVal"  [class.error] = "outOfNetworkText.invalid && isSubmit && Obj.outOfNetwork" #outOfNetworkText = "ngModel"/></div></div>
+        <div class="columns"><div class="cost"><input type="text" placeholder="40"[disabled]="(Obj.outOfNetwork === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.outOfNetwork !== true}" [required]="(Obj.outOfNetwork==true)?'true':'false'" name="outOfNetwork1"  [(ngModel)]="Obj.outOfNetworkVal1"  [class.error] = "outOfNetworkText1.invalid && isSubmit && Obj.outOfNetwork" #outOfNetworkText1 = "ngModel"/></div></div>
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx1" (click)="router.navigate(['/planDeductible/coinsuranceCustom'])" />
+          <label for="checkbx1"><strong>custom</strong></label>
+        </div>
+      </div>
+    </div>
+    <div class="btn-sec clearfix">
+      <div class="back-btn">
+        <a href="javascript:void(0);" class="btn" (click)="router.navigate(['/planDeductible/deductible'])">Back</a>
+        <a href="javascript:void(0);" class="btn" (click)="nextSec()">Next</a>
+      </div>
+      <div class="forword-btn">
+        <a (click)="saveCoinsurance(coinsuranceForm.valid)" class="btn">Save</a><a href="javascript:void(0);" (click)="reset()" class="btn">Cancel</a>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>

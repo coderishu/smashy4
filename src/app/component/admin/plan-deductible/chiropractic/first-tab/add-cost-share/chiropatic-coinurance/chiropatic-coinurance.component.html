@@ -1,0 +1,69 @@
+<form class="clearfix" #ngConisuranceCostShare="ngForm">
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Network : </label>
+    <div class="chiro-select-wrapper">
+    <select class="selectBox" [ngModel]="ChriopraticCoisuranceObj.coisuranceNetworkVal" [class.error] = "ChriopraticCoisuranceObj.coisuranceNetworkVal == '' && isSubmitCostShare"  required  #coinsuranceNetworkType="ngModel" name="coinsuranceNetworkTxt" (ngModelChange)="ChriopraticCoisuranceObj.coisuranceNetworkVal=$event">
+      <!--<option value="">INN</option>-->
+      <option *ngFor="let object of networkInfor" [ngValue]="object" >{{object.nService}}</option>
+    </select>
+  </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Level : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text"  name="level"  [(ngModel)]="ChriopraticCoisuranceObj.level">
+  </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> plan pays : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text" class="md-width" required name="planpays"  [(ngModel)]="ChriopraticCoisuranceObj.planpays"  [class.error] = "planpaysText.invalid && isSubmitCostShare " #planpaysText = "ngModel">
+  </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Member pays : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text" class="md-width" required name="memberpays"  [(ngModel)]="ChriopraticCoisuranceObj.memberpays"  [class.error] = "memberpaysText.invalid && isSubmitCostShare " #memberpaysText = "ngModel">
+  </div>
+  </div>
+  <div class="formone-btn-wrap">
+    <button class="btn" (click)="saveCoinsurance(ngConisuranceCostShare.valid)">
+      save
+    </button>
+    <button class="btn" (click)="resetCoinsurance()">
+      cancel
+    </button>
+  </div>
+</form>
+<div class="  benifit-tableWrap chiro-table">
+  <h4> coninsurance : </h4>
+  <div class="table-wrap ">
+    <table>
+      <tbody>
+      <tr>
+        <th>Network</th>
+        <th>Level</th>
+        <th>Plan Pays</th>
+        <th>Member Pays</th>
+        <th>Action</th>
+      </tr>
+      <tr  *ngFor="let object of recordCoisuranceBuffer |selectedNetWork:costShareSelected:ChriopraticCoisuranceObj.coisuranceNetworkVal:selectedPrevious:'coinsurance';let i=index;">
+        <td [innerHtml]="object.selectedSetWork">INN</td>
+        <td [innerHtml]="object.level"></td>
+        <td [innerHtml]="object.planpays">400</td>
+        <td [innerHtml]="object.memberpays">800</td>
+        <td><a href="javascript:void(0);" (click)="editChriopraticTemplate(object,$event,i)">Edit</a><span> | </span><a href="javascript:void(0);"(click)="deleteChriopraticTemplate(object,i)">Delete</a></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

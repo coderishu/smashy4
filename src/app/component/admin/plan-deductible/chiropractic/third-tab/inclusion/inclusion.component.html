@@ -1,0 +1,34 @@
+<div class="qualifier-input clearfix">
+    <form #ngAddCostShareForm="ngForm">
+      <div class="detail-clmn clearfix">
+        <div class="detail-clmn md-detail-clmn">
+          Includes
+        </div>
+        <div class="detail-clmn md-detail-clmnTwo">
+          <div class="multiSelect sperate-multiselect">
+            <ul>
+              <li *ngFor="let include of inclusions;let i=index">
+                  <div class="chkbx">
+                      <input id="{{include.title}}" type="checkbox" [checked]="include.checkedEx" name="{{include}}" (change) = "toggleInclusionService(i)">
+                      <label for="{{include.title}}" [innerHtml]="include.title" ></label>
+                    </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="formone-btn-wrap">
+        <button class="btn reset" (click)="resetAddCostShare()">
+            Reset
+           </button>
+        <button class="btn" (click)="saveCostShare()">
+          save
+        </button>
+        <button class="btn">
+          cancel
+        </button>
+      </div>
+    </form>
+    
+  </div>
+

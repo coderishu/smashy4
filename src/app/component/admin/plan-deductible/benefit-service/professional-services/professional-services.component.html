@@ -1,0 +1,29 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Other Professional Services</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+
+
+    <div class="benefit-left ">
+      <form #ngChiropratic="ngForm" class="form-space">
+      <div class="detail-row clearfix">
+        <div class="chkbx">
+          <input type="checkbox" id="checkbx4"  [checked]="Obj.nonCpy"(change)="Obj.nonCpy= !Obj.nonCpy"/>
+          <label for="checkbx4">Subject to applicable deductible and coinsurance for services outside physician's office <strong>(s)</strong> </label>
+        </div>
+        <div class="chkbx">
+          <input type="checkbox" id="checkbx5" (click)="show()"/>
+          <label for="checkbx5">Custom <strong>(N)</strong></label>
+        </div>
+      </div>
+      <div class="btn-sec clearfix benifit-btn-sec">
+        <div class="forword-btn">
+          <a href="javascript:void(0);" class="btn" (click)="saveProfessional(ngChiropratic.valid)" >Save</a><a href="#" class="btn">Cancel</a>
+        </div>
+      </div>
+      </form>
+    </div>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="professionalServicesBuffer"  [isShow]="isShow"></app-bscommon-module>
+    </div>
+  </div>
+</div>

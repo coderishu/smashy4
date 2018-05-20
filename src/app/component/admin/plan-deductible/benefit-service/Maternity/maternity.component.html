@@ -1,0 +1,67 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong>Maternity Component</strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+                <div class="benefit-left">
+                        <form #ngChiropratic="ngForm">
+                        <div class="detail-row clearfix">
+                            <p class="bottom-space"><strong class="italic-style">For Non-GF plans, cost-share is waived for preventive maternity service.</strong></p>
+                            <p class="bottom-space"><strong>Physician Service -</strong></p>
+                            <p><strong class="underline-text">Copay Plan</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx1" [checked]="Obj.pcpCopy" (change)="Obj.pcpCopy=!Obj.pcpCopy">
+                                <label for="checkbx1">Physician visit copay applies to the first prenatal visit. Calender/Plan year deductible and coinsurance are waived on physician's global charge, but apply to all other covered service outside the physician office <strong>(S)</strong>.</label>
+                            </div>
+                            <p class="left-space"><strong>AND pick one regardless of GF status:</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx2" [checked]="Obj.custom" (change)="Obj.custom=!Obj.custom">
+                                <label for="checkbx2">Copays apply to all physician visit with maternity diagnosis, other than visits included in global charge <strong>(s for non-GF Plan). OR</strong></label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx3" [checked]="Obj.chvm" (change)="Obj.chvm=!Obj.chvm">
+                                <label for="checkbx3">Initial copay covers all physician visits with a maternity diagnosis <strong>(S to GF)</strong></label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx4" (click)="show()">
+                                <label for="checkbx4">Custom <strong>(N)</strong></label>
+                            </div>
+                            <p><strong class="underline-text">Non-Copay Plan</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx5" [checked]="Obj.demoapp" (change)="Obj.demoapp=!Obj.demoapp">
+                                <label for="checkbx5">BCBSAZ/Plan Pays <strong>100%</strong> on the provider's global charge, calendar/plan year deductible and coinsurance apply to all other covered services <strong>(S)</strong>.</label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx6" [checked]="Obj.phymedicine" (change)="Obj.phymedicine=!Obj.phymedicine">
+                                <label for="checkbx6">Subject to applicable deductible and coinsurance <strong>(N)</strong>.</label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx7" [checked]="Obj.specialistCpy" (change)="Obj.specialistCpy=!Obj.specialistCpy">
+                                <label for="checkbx7">Plan pays 100% for all physician maternity service <strong>(N)</strong>.</label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx8" (click)="show()">
+                                <label for="checkbx8">Custom <strong>(N)</strong></label>
+                            </div>
+                            
+                            <p class="bottom-space"><strong>Hospital Service -</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx9" [checked]="Obj.chiropra" (change)="Obj.chiropra=!Obj.chiropra">
+                                <label for="checkbx9">Subject to application deductible and coinsurance <strong>(S)</strong>.</label>
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx10" (click)="show()">
+                                <label for="checkbx10">Custom <strong>(N)</strong></label>
+                            </div>                              
+                        </div>
+                        <div class="btn-sec clearfix benifit-btn-sec">
+                            <div class="forword-btn">
+                                <a href="javascript:void(0);" class="btn" (click)="maternity(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+              <div class="benefit-right benefit-tab chiro">
+                  <app-bscommon-module [BenefitServicesBuffer]="maternityBuffer" [isShow]="isShow"></app-bscommon-module>
+                </div>
+        </div>
+      </div>
+      

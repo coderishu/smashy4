@@ -1,0 +1,466 @@
+{
+"benefitServices":{
+  "inclusion":[
+    {"id":1,"title":"Office","checkedEx":true},
+    {"id":2,"title":"Home","checkedEx":true},
+    {"id":3,"title":"Walk in clinic","checkedEx":true},
+    {"id":4,"title":"Lab","checkedEx":true},
+    {"id":5,"title":"about","checkedEx":true},
+    {"id":6,"title":"testing","checkedEx":false},
+    {"id":7,"title":"practical","checkedEx":false},
+    {"id":8,"title":"pro","checkedEx":false},
+    {"id":9,"title":"heavy","checkedEx":false},
+    {"id":10,"title":"dedicated","checkedEx":false}
+    ],
+  "benefitService": [
+    {
+      "id": "1",
+      "bService": "Physician Services",
+      "routerLink": "physicianServices"
+    },
+    {
+      "id": "2",
+      "bService": "Chiropractic",
+      "routerLink": "chiropractic"
+    },
+    {
+      "id": "3",
+      "bService": "Other Professional Services",
+      "routerLink": "professionalServices"
+    },
+    {
+      "id": "4",
+      "bService": "Preventive Services",
+      "routerLink": "preventiveServices"
+    },
+    {
+      "id": "5",
+      "bService": "Laboratory Services",
+      "routerLink": "labServices"
+    },
+    {
+      "id": "6",
+      "bService": "Radiology Services",
+      "routerLink": "radiologyServices"
+    },
+    {
+      "id": "7",
+      "bService": "Prescription Medications",
+      "routerLink": "prescriptionMedications"
+    },
+    {
+      "id": "8",
+      "bService": "Specialty Medications",
+      "routerLink": "specialtyMedications"
+    },
+    {
+      "id": "9",
+      "bService": "Outpatient Services",
+      "routerLink": "outpatientServices"
+    },
+    {
+      "id": "10",
+      "bService": "Bariatric Surgery",
+      "routerLink": "bariatricSurgery"
+    },
+    {
+      "id": "11",
+      "bService": "Emergency Room",
+      "routerLink": "emergencyRoom"
+    },
+    {
+      "id": "12",
+      "bService": "Ambulance",
+      "routerLink": "ambulance"
+    },
+    {
+      "id": "13",
+      "bService": "Urgent Care",
+      "routerLink": "urgentCare"
+    },
+    {
+      "id": "14",
+      "bService": "Inpatient Hospital",
+      "routerLink": "inpatientHospital"
+    },
+    {
+      "id": "15",
+      "bService": "Long Term Acute Care",
+      "routerLink": "longTermAcuteCare"
+    },
+    {
+      "id": "16",
+      "bService": "Employee Assistance Program",
+      "routerLink": "employeeAssistanceProgram"
+    },
+    {
+      "id": "17",
+      "bService": "Maternity",
+      "routerLink": "maternity"
+    },
+    {
+      "id": "18",
+      "bService": "Newborn",
+      "routerLink": "newborn"
+    },
+    {
+      "id": "19",
+      "bService": "Home Health",
+      "routerLink": "homeHealth"
+    },
+    {
+      "id": "20",
+      "bService": "Extended Active Rehabilitation",
+      "routerLink": "extendedActiveRehabilitation"
+    },
+    {
+      "id": "21",
+      "bService": "Physical/Occupational/Speech Therapy",
+      "routerLink": "physicalOccupationalSpeechTherapy"
+    },
+    {
+      "id": "22",
+      "bService": "Skilled Nursing Facility",
+      "routerLink": "skilledNursingFAcility"
+    },
+    {
+      "id": "23",
+      "bService": "Durable Medical Equipment",
+      "routerLink": "durableMedicalEquipment"
+    },
+    {
+      "id": "24",
+      "bService": "Hospice",
+      "routerLink": "hospice"
+    },
+    {
+      "id": "25",
+      "bService": "Routine Vision Services",
+      "routerLink": "routineVisionServices"
+    },
+    {
+      "id": "26",
+      "bService": "Autism Spectrum Disorders",
+      "routerLink": "autismSpectrumDisorders"
+    },
+    {
+      "id": "27",
+      "bService": "Hearing",
+      "routerLink": "hearing"
+    },
+    {
+      "id": "28",
+      "bService": "Sexual Dysfunction",
+      "routerLink": "sexualDysfunction"
+    },
+    {
+      "id": "29",
+      "bService": "Tobacco Cessation",
+      "routerLink": "tobaccoCessation"
+    },
+    {
+      "id": "30",
+      "bService": "Weight Loss Reimbursement",
+      "routerLink": "weightLossReimbursement"
+    },
+    {
+      "id": "31",
+      "bService": "4th Quarter Carry-Over Deductible",
+      "routerLink": "fourthQuarterCarryOverDeductible"
+    },
+    {
+      "id": "32",
+      "bService": "Ancillary Services Out of State",
+      "routerLink": "ancillaryServices"
+    },
+    {
+      "id": "33",
+      "bService": "Cataract Surgery",
+      "routerLink": "cataractSurgery"
+    },
+    {
+      "id": "34",
+      "bService": "Eosinophilic Gastro Intestinal Disorder",
+      "routerLink": "eosinophilicGastroIntestinalDisorder"
+    },
+    {
+      "id": "34",
+      "bService": "Medical Foods",
+      "routerLink": "medicalFoods"
+    },
+    {
+      "id": "35",
+      "bService": "Diabetes And Asthma",
+      "routerLink": "diabetesAndAsthma"
+    },
+    {
+      "id": "36",
+      "bService": "Transgender Services",
+      "routerLink": "transgenderServices"
+    },
+    {
+      "id": "37",
+      "bService": "Nutritional Counselling",
+      "routerLink": "nutritionalCounselling"
+    },
+    {
+      "id": "38",
+      "bService": "Percertification",
+      "routerLink": "precertification"
+    },
+    {
+      "id": "39",
+      "bService": "Telemedicine",
+      "routerLink": "telemedicine"
+    },
+    {
+      "id": "40",
+      "bService": "Transplant Travel & Lodging",
+      "routerLink": "tranplantTravelLodging"
+    }
+  ],
+
+  "netWorkInfo": [
+    {
+      "rId": "1",
+      "nService": "INN"
+    },
+    {
+      "rId": "2",
+      "nService": "OON"
+    },
+    {
+      "rId": "3",
+      "nService": "COMMON"
+    },
+    {
+      "rId": "4",
+      "nService": "IN AND OUT"
+    }
+  ],
+  "type": [
+    {
+      "id": "1",
+      "bType": "PCP"
+    },
+    {
+      "id": "2",
+      "bType": "Specialist"
+    },
+    {
+      "id": "3",
+      "bType": "Emergency"
+    },
+    {
+      "id": "4",
+      "bType": "UrgentCare"
+    },
+    {
+      "id": "5",
+      "bType": "InPatient"
+    },
+    {
+      "id": "6",
+      "bType": "OutPatient"
+    },
+    {
+      "id": "7",
+      "bType": "Bariatric Surgery"
+    },
+    {
+      "id": "8",
+      "bType": "Chiropractic"
+    },
+    {
+      "id": "9",
+      "bType": "Emergency Room"
+    },
+    {
+      "id": "10",
+      "bType": "Inpatient Hospital"
+    },
+    {
+      "id": "11",
+      "bType": "Lab"
+    },
+    {
+      "id": "12",
+      "bType": "First Prenatal Visit"
+    },
+    {
+      "id": "13",
+      "bType": "Maternity Visit"
+    },
+    {
+      "id": "14",
+      "bType": "Newborn Inpatient"
+    },
+    {
+      "id": "15",
+      "bType": "Nutritional Visit"
+    },
+    {
+      "id": "16",
+      "bType": "Outpatient Surgery"
+    },
+    {
+      "id": "17",
+      "bType": "PT/OT/ST"
+    },
+    {
+      "id": "18",
+      "bType": "Radiology"
+    },
+    {
+      "id": "19",
+      "bType": "Routine Eye/ Contacts Lens Exam"
+    },
+    {
+      "id": "20",
+      "bType": "Catamaran/Optum Rx"
+    },
+    {
+      "id": "21",
+      "bType": "Specialty Medications"
+    },
+    {
+      "id": "22",
+      "bType": "BehavioralMentalHealth - PCP"
+    },
+    {
+      "id": "23",
+      "bType": "BehavioralMentalHealth - Specialist"
+    }
+  ],
+  "timePeriod": [
+    {
+      "id": "1",
+      "btimePeriod": "Per VISIT"
+    },
+    {
+      "id": "2",
+      "btimePeriod": "Per DAY"
+    },
+    {
+      "id": "3",
+      "btimePeriod": "Per CALENDAR YEAR"
+    },
+    {
+      "id": "4",
+      "btimePeriod": "Per PLAN YEAR"
+    },
+    {
+      "id": "5",
+      "btimePeriod": "Per PLAN/CALENDAR YEAR"
+    },
+    {
+      "id": "6",
+      "btimePeriod": "Per 6 MONTHS"
+    },
+    {
+      "id": "7",
+      "btimePeriod": "Per LIFE TIME"
+    },
+    {
+      "id": "8",
+      "btimePeriod": "Per ADMISSION"
+    }
+  ],
+  "addQualification": [
+    {
+      "id": "1",
+      "addQual": "Per Member"
+    },
+    {
+      "id": "2",
+      "addQual": "Per Member, Per Provider"
+    },
+    {
+      "id": "3",
+      "addQual": "Per Member, Per Facility"
+    },
+    {
+      "id": "4",
+      "addQual": "Per Member, Per Trasnplant"
+    },
+    {
+      "id": "5",
+      "addQual": "Per Member, Per Surgery"
+    },
+    {
+      "id": "6",
+      "addQual": "Per Member, Per Service"
+    }
+  ],
+  "qualifier":[
+  {
+      "id": "1",
+      "addQual": "Claim Type"
+    },
+    {
+      "id": "2",
+      "addQual": "Procedure Class Code"
+    },
+    {
+      "id": "3",
+      "addQual": "Day Range"
+    },
+    {
+      "id": "4",
+      "addQual": "Age Range"
+    },
+    {
+      "id": "5",
+      "addQual": "Diagnosis Class Code"
+    },
+    {
+      "id": "6",
+      "addQual": "Physician Global Charge"
+    },
+    {
+      "id": "7",
+      "addQual": "Provider Type"
+    },
+    {
+      "id": "8",
+      "addQual": "Expanded Preventive Services"
+    }
+  ],
+  "addCostExcludes":[
+  {"id":1,"title":"Office","checkedEx":false},
+  {"id":2,"title":"Home","checkedEx":false},
+  {"id":3,"title":"Walk in clinic","checkedEx":false},
+  {"id":4,"title":"Lab","checkedEx":false}
+  
+  ],
+   "addCostIncludes":[
+  {"id":1,"title":"Office","checkedIn":false},
+  {"id":2,"title":"Home","checkedIn":false},
+  {"id":3,"title":"Walk in clinic","checkedIn":false},
+  {"id":4,"title":"Lab","checkedIn":false}
+  
+  ],
+  "costShareServices":[
+  {
+      "id": "1",
+      "costShareName": "Cost Share 1"
+    },
+    {
+      "id": "2",
+      "costShareName": "Cost Share 2"
+    },
+    {
+      "id": "3",
+      "costShareName": "Cost Share 3"
+    },
+    {
+      "id": "4",
+      "costShareName": "Cost Share 4"
+    },
+    {
+      "id": "5",
+      "costShareName": "Cost Share 5"
+    }
+  ]
+}
+}

@@ -1,0 +1,78 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>RadiologyServices</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+      <div class="benefit-left">
+          <form #ngChiropratic="ngForm">
+          	<div class="detail-row clearfix">
+                <p><strong class="bottom-border">Copay Plan:</strong></p><br>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx1"  [checked]="Obj.copyPlan"(change)="Obj.copyPlan= !Obj.copyPlan"/>
+                  <label for="checkbx1">During a physcian office visit, copay applies as specified. At all other facilities, applicable deductible and coinsurance apply <strong>(s)</strong> </label>
+                </div>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx2" (click)="show()"/>
+                  <label for="checkbx2">Custom <strong>(N)</strong></label>
+                </div>
+                <p><strong class="bottom-border">Non-Copay Plan:</strong></p><br>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx1" [checked]="Obj.customA"(change)="Obj.customA= !Obj.customA" />
+                  <input type="checkbox" id="checkbx3" [checked]="Obj.chvm"(change)="Obj.chvm= !Obj.chvm"/>
+                  <label for="checkbx3">subject to applicable deductible and coinsurance  <strong>(S)</strong></label>
+                 
+                </div>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx4" (click)="show()"/>
+                  <label for="checkbx4">Custom <strong>(N)</strong></label>
+                </div>
+                <p><strong>AND:</strong></p>
+                <p>Does high-tech have a different cost-share than the rest of radiology?</p><br>
+                <div class="clearfix">
+                  <div class="half-width"><div class="chkbx">
+
+                  <input type="checkbox" id="checkbx5"  [checked]="Obj.phymedicine"(change)="Obj.phymedicine= !Obj.phymedicine"/>
+                  <label for="checkbx5">No</label>
+                 
+                </div></div>
+                  <div class="half-width">
+                    <div class="chkbx">
+                  <input type="checkbox" id="checkbx6" [checked]="Obj.pcpCopy"(change)="Obj.pcpCopy= !Obj.pcpCopy"/>
+                  <label for="checkbx6">Yes</label>
+                </div>
+                  </div>
+                </div>
+                <p>If yes, choose the services considered high-tech:</p><br>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx7" [checked]="Obj.specialistCpy"(change)="Obj.specialistCpy= !Obj.specialistCpy" />
+                  <label for="checkbx7">MRI / MRA / PET scan / CAT scan </label>
+                </div>
+                <p class="left-space"><strong>OR</strong></p><br>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx8"  [checked]="Obj.custom"(change)="Obj.custom= !Obj.custom" />
+                  <label for="checkbx8">MRI / MRA / PET scan / CAT scan / Nuclear Medicine</label>
+                 
+                </div>
+                <p><strong>And</strong> enter high-tech cost-share information here:</p><br>
+                
+                <p><strong class="bottom-border">Professional services provided by a radiologist:</strong></p><br>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx9"  [checked]="Obj.costShareVal"(change)="Obj.costShareVal= !Obj.costShareVal"/>
+                  <label for="checkbx9">subject to applicable deductible and coinsurance (even when the services are provided in a physician's office) <strong>(S)</strong></label>
+         
+                </div>
+                <div class="chkbx">
+                  <input type="checkbox" id="checkbx10" (click)="show()"/>
+                  <label for="checkbx10">Custom <strong>(S)</strong> </label>
+                </div>
+              </div>
+              <div class="btn-sec clearfix benifit-btn-sec">
+                <div class="forword-btn">
+                  <a href="javascript:void(0);" class="btn" (click)="radiology(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                </div>
+              </div>
+          </form>
+            </div>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="radiologyServices"  [isShow]="isShow"></app-bscommon-module>
+    </div>
+  </div>
+</div>

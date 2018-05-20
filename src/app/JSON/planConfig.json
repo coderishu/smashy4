@@ -1,0 +1,46 @@
+{
+"planConfig":{
+   "copayPlanType":[
+   {"cpId":"1","cpName":"Copay Plan"},
+   {"cpId":"2","cpName":"add PlanType-1"},
+   {"cpId":"3","cpName":"add PlanType-2"},
+   {"cpId":"4","cpName":"add PlanType-3"},
+   {"cpId":"5","cpName":"add PlanType-4"}
+   ],
+   "gfType":[
+   {"gfId":"1","gfName":"GF"},
+   {"gfId":"2","gfName":"add PlanType-1"},
+   {"gfId":"3","gfName":"add PlanType-1"},
+   {"gfId":"4","gfName":"add PlanType-1"},
+   {"gfId":"5","gfName":"add PlanType-1"}
+   ],
+    "suite":[
+   {"sId":"1","sName":"Pooled"},
+   {"sId":"2","sName":"add PlanType-1"},
+   {"sId":"3","sName":"add PlanType-1"},
+   {"sId":"4","sName":"add PlanType-1"},
+   {"sId":"5","sName":"add PlanType-1"}
+   ],
+    "planCovarageType":[
+   {"pcId":"1","pcName":"100%"},
+   {"pcId":"2","pcName":"add PlanType-1"},
+   {"pcId":"3","pcName":"add PlanType-1"},
+   {"pcId":"4","pcName":"add PlanType-1"},
+   {"pcId":"5","pcName":"add PlanType-1"}
+   ],
+    "fundingType":[
+   {"pId":"1","fName":"ASC"},
+   {"pId":"2","fName":"add PlanType-1"},
+   {"pId":"3","fName":"add PlanType-1"},
+   {"pId":"4","fName":"add PlanType-1"},
+   {"pId":"5","fName":"add PlanType-1"}
+   ],
+   "providerNetwork":[
+   {"pnId":"1","pnName":"ASC 2"},
+   {"pnId":"2","pnName":"add PlanType-1"},
+   {"pnId":"3","pnName":"add PlanType-1"},
+   {"pnId":"4","pnName":"add PlanType-1"},
+   {"pnId":"5","pnName":"add PlanType-1"}
+   ]
+}
+}

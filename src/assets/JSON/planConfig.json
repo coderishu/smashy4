@@ -1,0 +1,100 @@
+{
+"planConfig":{
+  "copayPlanType": [
+    {
+      "cpId": "1",
+      "cpName": "ALL"
+    },
+    {
+      "cpId": "2",
+      "cpName": "Copay Plan"
+    },
+    {
+      "cpId": "3",
+      "cpName": "Non-Copay Plan"
+    }
+  ],
+  "gfType": [
+    {
+      "gfId": "1",
+      "gfName": "ALL"
+    },
+    {
+      "gfId": "2",
+      "gfName": "GF"
+    },
+    {
+      "gfId": "3",
+      "gfName": "NonGF"
+    }
+  ],
+  "suite": [
+    {
+      "sId": "1",
+      "sName": "Suite A"
+    },
+    {
+      "sId": "2",
+      "sName": "Suite C"
+    },
+    {
+      "sId": "3",
+      "sName": "Suite E"
+    },
+    {
+      "sId": "4",
+      "sName": "Suite F"
+    },
+    {
+      "sId": "5",
+      "sName": "Suite N"
+    },
+    {
+      "sId": "6",
+      "sName": "Suite G"
+    }
+  ],
+  "planCovarageType": [
+    {
+      "pcId": "1",
+      "pcName": "ALL"
+    },
+    {
+      "pcId": "2",
+      "pcName": "100% Plan"
+    },
+    {
+      "pcId": "3",
+      "pcName": "Non-100% Plan"
+    }
+  ],
+  "fundingType": [
+    {
+      "pId": "1",
+      "fName": "ALL"
+    },
+    {
+      "pId": "2",
+      "fName": "ASC"
+    },
+    {
+      "pId": "3",
+      "fName": "Fully Insured"
+    }
+  ],
+  "providerNetwork": [
+    {
+      "pnId": "1",
+      "pnName": "Alliance"
+    },
+    {
+      "pnId": "2",
+      "pnName": "Acclaim"
+    },
+    {
+      "pnId": "3",
+      "pnName": "Pima Connect"
+    }
+  ]
+}
+}

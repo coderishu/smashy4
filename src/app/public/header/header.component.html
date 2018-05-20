@@ -1,0 +1,22 @@
+<header>
+  <div class="container">
+    <div class="header clearfix">
+      <div class="logo">
+        <a href="index.html">Company Logo Image</a>
+      </div>
+      <div class="project-title"><h2>Project Title</h2></div>
+
+    </div>
+    <div class="breadcrumb clearfix">
+      <ul>
+
+        <li *ngFor="let breadCrumb of breadCrumbData"><a href="javascript:void(0);"[routerLink]="breadCrumb.link" [innerHtml]="breadCrumb.pageName">Home</a></li>
+        <!--<li><a href="#">Plan Info</a></li>-->
+      </ul>
+      <div class="user-info">
+        <a href="javascript:void(0);" class="name">Madhan Ratnaswamy</a>
+        <a href="javascript:void(0);" class="log-out">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>

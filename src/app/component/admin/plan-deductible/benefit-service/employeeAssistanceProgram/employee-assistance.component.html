@@ -1,0 +1,30 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong>Employee Assistance Component</strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+            <div class="benefit-left">
+                    <form #ngChiropratic="ngForm">
+                <div class="detail-row clearfix">                                  
+                    <div class="chkbx">
+                        <input type="checkbox" id="checkbx1" [checked]="Obj.pcpCopy" (change)="Obj.pcpCopy=!Obj.pcpCopy">
+                        <label for="checkbx1">Not applicable</label>
+                    </div>
+                    <div class="chkbx">
+                        <input type="checkbox" id="checkbx2" [checked]="Obj.demoapp" (change)="Obj.demoapp=!Obj.demoapp">
+                        <label for="checkbx2">EAP Provider:</label>
+                        <input type="text" placeholder="Enter provider Name and Phone #here"  [disabled]="(Obj.demoapp == true)?'false':'true'"  [(ngModel)]="Obj.chiropra"   [required]="(Obj.demoapp==true)?'true':'false'"  name="pcpCopyz2" [class.error] = "maximumOf2.invalid && isSubmit && Obj.demoapp" #maximumOf2 = "ngModel"> 
+                    </div>                                   
+                </div>
+                <div class="btn-sec clearfix benifit-btn-sec">
+                    <div class="forword-btn">
+                        <a href="javascript:void(0);" class="btn" (click)="employeeAssistance(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                    </div>
+                </div>
+            </form>
+            </div>
+              
+              <div class="benefit-right benefit-tab chiro">
+                  <app-bscommon-module [BenefitServicesBuffer]="EmployeeAssistance" [isShow]="isShow"></app-bscommon-module>
+                </div>
+        </div>
+      </div>
+      

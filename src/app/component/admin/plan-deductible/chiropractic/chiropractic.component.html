@@ -1,0 +1,101 @@
+<div class="deductible-sec benefit-service">
+  <div class="head-txt"><strong>Chiropractic</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">  
+    <form #ngChiropratic="ngForm" class="chiro form-space">
+      <div class="deductible-box">
+        <div class="info-wraps">
+          <div class="rows clearfix copay-plan-section">
+            <div class="columns chkbx">
+              <!--[checked]="Obj.cpyPlan" (change)="Obj.cpyPlan = !Obj.cpyPlan"-->
+              <input type="checkbox" id="checkbx19" [checked]="Obj.copyPlan" (change)="Obj.copyPlan=!Obj.copyPlan" />
+              <label for="checkbx19">&nbsp;</label>
+              <!--[ngClass]="{'InputDisabled':Obj.cpyPlan !== true}" [required]="(Obj.cpyPlan==true)?'true':'false'" name="cpyPlan" #cpyPlanText = "ngModel"  [(ngModel)]="Obj.cpyPlanVal"  [class.error] = "cpyPlanText.invalid && isSubmit && Obj.cpyPlan"-->
+              <span> <strong>Copay Plan:</strong>
+
+                <input type="text" [disabled]="(Obj.copyPlan === true)?'false':'true'"  [(ngModel)]="Obj.demoapp"   [required]="(Obj.copyPlan==true)?'true':'false'"  name="pcpCopyz" [class.error] = "copyPlan.invalid && isSubmit && Obj.copyPlan" #copyPlan = "ngModel"/> Copay* per member, per provider , per day,(S) Copay applies for services in office ,home and walk-in clinic</span>
+            </div>
+            <!-- <div class="columns">
+               
+              </div> -->
+
+          </div>
+          <div class="rows clearfix asc-text">
+            <strong>(Limits allowed for ASC groups)</strong>
+            <strong> (Fully-insured group's benefit must be the same as the physician services benifit)</strong>
+            <h6><strong>Physical Medician and Rehabilitative Services performed by a Chiropractor</strong></h6>
+          </div>
+          <div class="rows clearfix plan-section">
+            <div class="columns chkbx">
+             
+              <input type="checkbox" id="checkbx20"  [checked]="Obj.subApplicable"(change)="Obj.subApplicable = !Obj.subApplicable"/>
+              <label for="checkbx20">subject to applicable deductible and coinsurance(S)</label>
+            </div>
+
+
+          </div>
+          <div class="rows clearfix plan-section">
+            <div class="columns chkbx">
+              
+              <input type="checkbox" id="checkbx3" [checked]="Obj.chiropratics"(change)="Obj.chiropratics= !Obj.chiropratics"/>
+              <label for="checkbx3">chiropractics copay applies for services in office ,home walk-in clinics; deductible and coinsurance in any other location(N)</label>
+            </div>
+
+          </div>
+          <div class="chkbx rows plan-section" >
+            
+            <input type="checkbox" id="checkbx4" (change)="show()" />
+            <label for="checkbx4">Custom(N)</label>
+          </div>
+          <div class="chkbx rows">
+           
+            <input type="checkbox" id="checkbx5"  [checked]="Obj.nonCpy"(change)="Obj.nonCpy= !Obj.nonCpy"/>
+            <label for="checkbx5"><strong>Non-copay Plan:</strong> subject to applicable deductible and coinsurance(S)</label>
+          </div>
+          <div class="chkbx rows"  >
+            <input type="checkbox" id="checkbx6" (change)="show()"/>
+            <label for="checkbx6">Custom(N)</label>
+          </div>
+
+          <div class="rows asc-grops-text">
+            <h6><strong>*********************for asc groups only*********************</strong></h6>
+          </div>
+          <div class="chkbx rows plan-section network-text">
+           
+            <input type="checkbox" id="checkbx7"  [checked]="Obj.maximumOf" (change)="Obj.maximumOf = !Obj.maximumOf" />
+            <label for="checkbx7">&nbsp;</label>
+            <!--[ngClass]="{'InputDisabled':Obj.maximumOf !== true}"[required]="(Obj.maximumOf==true)?'true':'false'"-->
+            <!--[(ngModel)]="Obj.maximumOfVal1"  [class.error] = "maximumOfText1.invalid && isSubmit && Obj.maximumOf" #maximumOfText1 = "ngModel"-->
+            <!--[(ngModel)]="Obj.maximumOfVal"  [class.error] = "maximumOfText.invalid && isSubmit && Obj.maximumOf" #maximumOfText = "ngModel"-->
+            <!--[ngClass]="{'InputDisabled':Obj.maximumOf !== true}" [required]="(Obj.maximumOf==true)?'true':'false'"-->
+            <span> Maximum of 
+              <input type="text" name="pcpCopyz1" placeholder="#" [disabled]="(Obj.maximumOf === true)?'false':'true'"  [(ngModel)]="Obj.pcpCopyVal"   [required]="(Obj.maximumOf==true)?'true':'false'"  name="pcpCopyz21" [class.error] = "maximumOf.invalid && isSubmit && Obj.maximumOf" #maximumOf = "ngModel"/>
+               Chiropractics visit per member, per calendar/plan year.In and out-of-network visit count towards the 
+               <input type="text"  placeholder="#" [disabled]="(Obj.maximumOf === true)?'false':'true'"  [(ngModel)]="Obj.chiropra"   [required]="(Obj.maximumOf==true)?'true':'false'"  name="pcpCopyz1" [class.error] = "maximumOf2.invalid && isSubmit && Obj.maximumOf" #maximumOf2 = "ngModel"/> visit limit</span>
+          </div>
+          <div class="chkbx rows plan-section">
+            <!--[checked]="Obj.phyMedicine"(change)="Obj.phyMedicine= !Obj.phyMedicine"-->
+            <input type="checkbox" id="checkbx8"   [checked]="Obj.pcpCopy" (change)="pcpCopySet()"/>
+            <label for="checkbx8">Physical medicine performed by a Chiropractor applies toward the chiropractic  limit</label>
+          </div>
+          <div class="chkbx rows plan-section" >
+            <!--[checked]="Obj.customA3"(change)="Obj.customA3 =!Obj.customA3"-->
+            <input type="checkbox" id="checkbx9" (change)="show()"/>
+            <label for="checkbx9">Custom(N)</label>
+          </div>
+        </div>
+        <div class="btn-sec chiro-btn clearfix">
+          <div class="back-btn">
+            <a href="javascript:void(0);" class="btn">Back</a>
+            <a href="javascript:void(0);" class="btn">Next</a>
+          </div>
+       <div class="forword-btn">    <!-- (click)="saveChiropratic(ngChiropratic.valid)"-->
+            <a href="javascript:void(0);" class="btn" (click)="saveChiro(ngChiropratic.valid)" >Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="benefit-right benefit-tab chiro">
+      <app-bscommon-module [BenefitServicesBuffer]="chiropracticServicesBuffer"  [isShow]="isShow"></app-bscommon-module>
+    </div>
+</div>
+</div>

@@ -1,0 +1,12 @@
+ "addCostExcludes":[
+  {"id":1,"title":"Office","checkedEx":true},
+  {"id":2,"title":"Home","checkedEx":true},
+  {"id":3,"title":"Walk in clinic","checkedEx":true},
+  {"id":4,"title":"Lab","checkedEx":true},
+  {"id":5,"title":"about","checkedEx":true},
+  {"id":6,"title":"testing","checkedEx":false}
+  {"id":7,"title":"practical","checkedEx":false},
+  {"id":8,"title":"pro","checkedEx":false},
+  {"id":9,"title":"heavy","checkedEx":false},
+  {"id":10,"title":"dedicated","checkedEx":false}
+  ],

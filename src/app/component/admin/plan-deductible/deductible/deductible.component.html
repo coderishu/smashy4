@@ -1,0 +1,63 @@
+<div class="deductible-sec">
+<form #deductibleForm = "ngForm">
+
+<div class="head-txt"><strong>Deductible</strong></div>
+<div class="deductible-box">
+  <div class="info-wraps">
+    <div class="rows clearfix">
+      <div class="columns chkbx empty"></div>
+      <div class="columns"><strong>Member</strong></div>
+      <div class="columns"><strong>Family</strong></div>
+    </div>
+    <div class="rows clearfix">
+      <div class="columns chkbx">
+        <input type="checkbox" id="checkbx1" [checked]="Obj.common" (change)="commonSet()" />
+        <label for="checkbx1"><strong>Common</strong></label>
+      </div>
+      <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.common == true)?'false':'true'"  [ngClass]="{'InputDisabled':Obj.common !== true}" [required]="(Obj.common==true)?'true':'false'" name="common"  [(ngModel)]="Obj.commonVal"  [class.error] = "commonText.invalid && isSubmit && Obj.common" #commonText = "ngModel"/> </div></div>
+      <div class="columns"><div class="cost"><input type="text"  [disabled]="(Obj.common == true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.common !== true}" [required]="(Obj.common==true)?'true':'false'" name="common1"[(ngModel)]="Obj.commonVal1"[class.error] = "commonText1.invalid && isSubmit && Obj.common" #commonText1 = "ngModel" /></div></div>
+    </div>
+    <div class="rows clearfix">
+      <div class="columns chkbx">
+        <input type="checkbox" id="checkbx2" [checked]="Obj.inNetwork" (change)="inNetworkSet()"/>
+        <label for="checkbx2"><strong>In Network</strong></label>
+      </div>
+      <div class="columns"><div class="cost"><input type="text"  [disabled]="(Obj.inNetwork == true)?'false':'true'" [ngClass]="{'InputDisabled':Obj.inNetwork !== true}"[required]="(Obj.inNetwork==true)?'true':'false'" name="inNetwork"  [(ngModel)]="Obj.inNetworkVal"  [class.error] = "inNetworkText.invalid && isSubmit && Obj.inNetwork" #inNetworkText = "ngModel"/></div></div>
+      <div class="columns"><div class="cost"><input type="text"  [disabled]="(Obj.inNetwork == true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.inNetwork !== true}"[required]="(Obj.inNetwork==true)?'true':'false'"name="inNetwork"  [(ngModel)]="Obj.inNetworkVal1"  [class.error] = "inNetworkText1.invalid && isSubmit && Obj.inNetwork" #inNetworkText1 = "ngModel"/></div></div>
+    </div>
+    <div class="rows clearfix">
+      <div class="columns chkbx">
+        <input type="checkbox" id="checkbx3"[checked]="Obj.outOfNetwork" (change)="outOfNetworkSet()"/>
+        <label for="checkbx3"><strong>Out of Network</strong></label>
+      </div>
+      <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.outOfNetwork == true)?'false':'true'" [ngClass]="{'InputDisabled':Obj.outOfNetwork !== true}" [required]="(Obj.outOfNetwork==true)?'true':'false'" name="outOfNetwork"  [(ngModel)]="Obj.outOfNetworkVal"  [class.error] = "outOfNetworkText.invalid && isSubmit && Obj.outOfNetwork " #outOfNetworkText = "ngModel"/></div></div>
+      <div class="columns"><div class="cost"><input type="text"  [disabled]="(Obj.outOfNetwork == true)?'false':'true'" [ngClass]="{'InputDisabled':Obj.outOfNetwork !== true}" [required]="(Obj.outOfNetwork==true)?'true':'false'"name="outOfNetwork1"  [(ngModel)]="Obj.outOfNetworkVal1"  [class.error] = "outOfNetworkText1.invalid && isSubmit && Obj.outOfNetwork" #outOfNetworkText1 = "ngModel"/></div></div>
+
+    </div>
+    <div class="chkbx rows">
+      <input type="checkbox" id="checkbx4"[checked]="Obj.dualCreditPro" (change)="Obj.dualCreditPro=!Obj.dualCreditPro"/>
+      <label for="checkbx4">Dual Credit-PPO credits to Non-PPO and Non-PPO credits to PPO</label>
+    </div>
+    <div class="chkbx rows">
+      <input type="checkbox" id="checkbx5"[checked]="Obj.seprateFMembers" (change)="Obj.seprateFMembers=!Obj.seprateFMembers"/>
+      <label for="checkbx5">Separate family members</label>
+    </div>
+    <div class="chkbx rows">
+      <input type="checkbox" id="checkbx6"[checked]="Obj.custom" (click)=" router.navigate(['/planDeductible/deductibleCustom'])" />
+      <!--(click)="router.navigate()"-->
+      <label for="checkbx6">Custom</label>
+    </div>
+  </div>
+  <div class="btn-sec clearfix">
+    <div class="back-btn">
+      <a href="javascript:void(0);" class="btn">Back</a>
+      <a href="javascript:void(0);" (click)="nextSec()" class="btn">Next</a>
+    </div>
+    <div class="forword-btn">
+      <a  class="btn" (click)="saveDeductible(deductibleForm.valid)">Save</a><a href="javascript:void(0);" (click)="resetDeductibleRec()"class="btn">Cancel</a>
+    </div>
+  </div>
+</div>
+</form>
+</div>
+<router-outlet></router-outlet>

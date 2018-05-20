@@ -1,0 +1,69 @@
+<form class="clearfix" #ngchiropraticOutOfPC="ngForm">
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Network : </label>
+    <div class="chiro-select-wrapper">
+    <select class="selectBox" [ngModel]="ChriopraticOutofPocketObj.outofPCNetworkVal" [class.error] = "ChriopraticOutofPocketObj.outofPCNetworkVal == '' && isSubmitCostShare"  required  #outofPCNetworkType = "ngModel" name="outofPCNetworkTxt" (ngModelChange)="ChriopraticOutofPocketObj.outofPCNetworkVal=$event">
+    <!--<option value="">INN</option>-->
+    <option *ngFor="let object of networkInfor" [ngValue]="object" >{{object.nService}}</option>
+    </select>
+    </div>
+
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Level : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text"  name="outofPClavelTxt"  [(ngModel)]="ChriopraticOutofPocketObj.level"  >
+  </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Member : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text" class="md-width"  required name="outofPCMemberTxt"  [(ngModel)]="ChriopraticOutofPocketObj.member"  [class.error] = "outofPCMemberText.invalid && isSubmitCostShare " #outofPCMemberText = "ngModel">
+  </div>
+  </div>
+  <div class="formone-wrap chiro_label">
+    <label for="Benifit1"> Family : </label>
+    <div class="chiro-select-wrapper">
+    <input type="text" class="md-width"  required name="outofPCFamilyTxt"  [(ngModel)]="ChriopraticOutofPocketObj.family"  [class.error] = "outofPCFamilyText.invalid && isSubmitCostShare " #outofPCFamilyText = "ngModel">
+  </div>
+  </div>
+  <div class="formone-btn-wrap">
+    <button class="btn" (click)="saveOutofPocket(ngchiropraticOutOfPC.valid)">
+      save
+    </button>
+    <button class="btn" (click)="resetChiropraticPC()">
+      cancel
+    </button>
+  </div>
+</form>
+<div class="  benifit-tableWrap chiro-table">
+  <h4> out of pocket : </h4>
+  <div class="table-wrap ">
+    <table>
+      <tbody>
+      <tr>
+        <th>Network</th>
+        <th>Level</th>
+        <th>Individual</th>
+        <th>Family</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let rOPBuffer of recordOutOfPocketBuffer |benefitOutofPocket:costShareSelected:ChriopraticOutofPocketObj.outofPCNetworkVal:selectedPrevious:'outofPocket';let i= index;">
+        <td [innerHtml]="rOPBuffer.selectedSetWork">INN</td>
+        <td [innerHtml]="rOPBuffer.level"></td>
+        <td [innerHtml]="rOPBuffer.member">400</td>
+        <td [innerHtml]="rOPBuffer.family">800</td>
+        <td><a href="javascript:void(0);" (click)="editChriopraticTemplate(rOPBuffer,$event,i)">Edit</a><span> | </span><a href="javascript:void(0);" (click)="deleteChriopraticTemplate(rOPBuffer,i)">Delete</a></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

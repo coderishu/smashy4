@@ -1,0 +1,44 @@
+<div class="deductible-sec clearfix benefit-service">
+  <div class="head-txt"><strong>Physician Services</strong></div>
+  <div class="deductible-box clearfix benefit-deductible">
+  <form  class="chiro-physi" #ngPhysicianService="ngForm">
+  <div class="deductible-box">
+    <div class="info-wraps">
+
+      <div class="rows clearfix">
+        <div class="columns chkbx chiro_col">
+          <input type="checkbox" id="checkbx1" [checked]="Obj.pcpCopy" (change)="pcpCopySet()"/>
+          <label for="checkbx1"><strong>PCP copy per member, per provider,per day</strong></label>
+
+        </div>
+        <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.pcpCopy === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.pcpCopy !== true}" [required]="(Obj.pcpCopy==true)?'true':'false'" name="pcpCopyz"  [(ngModel)]="Obj.pcpCopyVal"  [class.error] = "pcpCopyText.invalid && isSubmit && Obj.pcpCopy" #pcpCopyText = "ngModel"/></div></div>
+
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx chiro_col">
+          <input type="checkbox" id="checkbx2"[checked]="Obj.specialistCpy" (change)="specialistCpySet()"/>
+          <label for="checkbx2"><strong>Specialist copy per member ,per provider ,per day</strong></label>
+        </div>
+        <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.specialistCpy === true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.specialistCpy !== true}" [required]="(Obj.specialistCpy==true)?'true':'false'" name="specialistCpyz"  [(ngModel)]="Obj.specialistCpyVal"  [class.error] = "specialistCpyText.invalid && isSubmit && Obj.specialistCpy" #specialistCpyText = "ngModel"/></div></div>
+
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx chiro_col" >
+          <input type="checkbox" id="checkbx3" [checked]="Obj.custom" (change)="show()"/>
+          <label for="checkbx3"><strong>Custom(N)</strong></label>
+        </div>
+      </div>
+    </div>
+    <div class="btn-sec move-right chiro-btn clearfix">
+      <div class="back-btn">
+        <a href="javascript:void(0);"(click)="savePhysician(ngPhysicianService.valid)" class="btn">Save</a><a href="javascript:void(0);" (click)="reset()"class="btn">Cancel</a>
+      </div>
+
+    </div>
+  </div>
+  </form>
+
+  <div class="benefit-right benefit-tab chiro">
+     <app-bscommon-module [BenefitServicesBuffer]="physicianServicesBuffer" [isShow]="isShow"></app-bscommon-module>
+</div>
+</div>

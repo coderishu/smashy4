@@ -1,0 +1,137 @@
+/*
+ Table Of Contents
+ 1.) Media Query for Handheld Devices
+ 2.) Media Query for Tablet
+ 3.) Media Query for mobile
+ ===============================================*/
+/*
+ 1.) Media Query for Handheld Devices
+ ===============================*/
+@media only screen and (max-width : 1119px) {
+/* Styles */
+}
+
+
+/*
+ 2.) Media Query for Tablet
+ ===============================*/
+@media only screen and (min-width : 768px) and (max-width : 1002px) {
+	
+}
+
+@media only screen and (max-width : 992px) {
+	.effective-date .txt span, .plans-type .plans-left label, .enterplan-sec input, .enterplan-sec label{
+		font-size: 13px;
+	}
+	.plans-type .plans-right, .plans-type .plans-left{
+		max-width: 100%;
+		width: 50%;
+	}
+	.enterplan-sec .plan-name{
+		width: 100%;
+	}
+	.deductible-info,
+	.plan-output{
+		font-size: 13px;
+	}
+	.benefit-service .benefit-left .btn-sec .btn{
+		min-width: 90px;
+	}
+}
+/*
+ 3.) Media Query for mobile
+ ===============================*/
+@media only screen and (max-width : 767px){
+	.plans-type .plans-right, .plans-type .plans-left{
+		width: 100%;
+		max-width: 330px;
+		float: none;
+		margin: 0 auto;
+	}
+	.plans-type .plans-left select,
+	.plans-type .plans-left label,
+	.plans-type .plans-right select,
+	.plans-type .plans-right label{
+		width: 50%;
+	}
+	.header .logo,
+	.project-title{
+		width: 100%;
+		text-align: center;
+	}
+	.header .logo{
+		padding: 0 0 20px;
+	}
+	.enterplan-sec .plan-name input{
+		width: 70%;
+	}
+	.enterplan-sec .plan-name label{
+		width: 30%;
+	}
+	.enterplan-sec{
+		padding: 30px 15px;
+	}
+	.effective-date{
+		padding: 18px 10px;
+	}
+	.benefit-service .benefit-left,
+	.benefit-service .benefit-right,
+	.dtails-blog .detail-row > .detail-clmn,
+	.deductible-sec,
+	.left-wedget,
+	.plan-output .plan-benefit{
+		width: 100%;
+		float: none;
+	}
+	.deductible-sec .info-wraps .columns .cost{
+		padding: 1px 5px;
+	}
+	.benefit-service .benefit-right{
+		border-left:0;
+		border-top: 2px solid #507da9;
+	}
+	
+
+}
+@media only screen and (max-width : 575px){
+.enterplan-sec .plan-name input{
+		width: 50%;
+	}
+	.enterplan-sec .plan-name label{
+		width: 50%;
+	}
+	.btn-sec .btn{
+		min-width: 90px;
+	}
+	.plan-benefit .plan-name span,
+	.plan-benefit .plan-name strong,
+	.plan-benefit .right-coln .column-sec:first-child,
+	.plan-benefit .column-sec:last-child,
+	.plan-benefit .column-sec{
+		width: 100%;
+		float: none;
+	}
+	.deductible-sec .info-wraps{
+		padding: 0;
+	}
+	.deductible-sec .info-wraps .columns{
+		width: 33.33%;
+	}
+	.deductible-sec .info-wraps .columns .cost::after{
+		left: 13px;
+	}
+	.deductible-sec .info-wraps .columns .cost input{
+		padding: 0 10px 0 14px;
+	}
+	.deductible-sec .btn-sec .btn{
+		min-width:auto;
+		padding: 2px 10px;
+	}
+	div.info-wraps .plan-section .columns{
+		width:100%;
+	}
+	.rows.service-text .columns .cost:after{
+		    left: 20px;
+	}
+	
+}

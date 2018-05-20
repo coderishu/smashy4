@@ -1,0 +1,38 @@
+import {LaboratoryServicesComponent} from "../component/admin/plan-deductible/benefit-service/laboratory-services/laboratory-services.component";
+
+export const appConstant = {
+   "BREADCRUMB":{
+     "/":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]}],
+     "/pageInfo":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]}],
+     "/planconfig":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]}],
+     "/planDeductible/deductible":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Deductible ","link":["/planDeductible/deductible"]}],
+     "/planDeductible/coinsurance":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Coinsurance ","link":["/planDeductible/coinsurance"]}],
+     "/planDeductible/OutofPocket":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/OutofPocket ","link":["/planDeductible/OutofPocket"]}],
+     "/planDeductible/chiropractic":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Chiropractic ","link":["/planDeductible/chiropractic"]}],
+
+     "/planDeductible/generalRadiology":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/General Radiology ","link":["/planDeductible/generalRadiology"]}],
+     // "/planDeductible/inpatientHospital":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Inpatient Hospital ","link":["/planDeductible/inpatientHospital"]}],
+     "/planDeductible/outpatientHospital":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Outpatient Hospital ","link":["/planDeductible/outpatientHospital"]}],
+     // "/planDeductible/emergencyRoom":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Emergency Room ","link":["/planDeductible/emergencyRoom"]}],
+     // "/planDeductible/urgentCare":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Urgent Care ","link":["/planDeductible/urgentCare"]}],
+     "/planDeductible/copay":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Copay ","link":["/planDeductible/copay"]}],
+     "/planDeductible/ambulance":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible /Ambulance ","link":["/planDeductible/ambulance"]}],
+     "/planDeductible/deductibleCustom":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible /Deductible ","link":["/planDeductible/deductible"]},{"pageName":"Deductible Custom ","link":["/planDeductible/deductibleCustom"]}],
+     "/planDeductible/coinsuranceCustom":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Coinsurance ","link":["/planDeductible/coinsurance"]},{"pageName":"Coinsurance Custom ","link":["/planDeductible/coinsuranceCustom"]}],
+     "/planDeductible/outofpocketCustom":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Out of Pocket ","link":["/planDeductible/OutofPocket"]},{"pageName":"Out of Pocket Custom ","link":["/planDeductible/outofpocketCustom"]}],
+     "/planDeductible/physicianServices":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Physician Service ","link":["/planDeductible/physicianServices"]}],
+     "/planDeductible/professionalServices":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/professionalServices ","link":["/planDeductible/professionalServices"]}],
+     "/planDeductible/preventiveServices":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/preventiveServices ","link":["/planDeductible/preventiveServices"]}],
+     "/planDeductible/labServices":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/laboratoryServices ","link":["/planDeductible/labServices"]}],
+     "/planDeductible/radiologyServices":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/radiologyServices ","link":["/planDeductible/radiologyServices"]}],
+
+     "/planDeductible/prescriptionMedications":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/prescriptionMedications ","link":["/planDeductible/prescriptionMedications"]}],
+     "/planDeductible/specialtyMedications":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/specialtyMedications ","link":["/planDeductible/specialtyMedications"]}],
+     "/planDeductible/outpatientServices":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/outpatientServices ","link":["/planDeductible/outpatientServices"]}],
+     "/planDeductible/bariatricSurgery":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/bariatricSurgery ","link":["/planDeductible/bariatricSurgery"]}],
+     "/planDeductible/emergencyRoom":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/emergencyRoom ","link":["/planDeductible/emergencyRoom"]}],
+     "/planDeductible/urgentCare":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/urgentCare ","link":["/planDeductible/urgentCare"]}],
+     "/planDeductible/inpatientHospital":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/inpatientHospital ","link":["/planDeductible/inpatientHospital"]}],
+     "/PdfoverView":[{"pageName":"Home","link":[""]},{"pageName":"PageInfo","link":["/pageInfo"]},{"pageName":"PageConfig","link":["/planconfig"]},{"pageName":"planDeductible/Deductible ","link":["/planDeductible/deductible"]},{"pageName":"PDF Preview","link":["/PdfoverView"]}]
+   }
+ };

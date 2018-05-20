@@ -1,0 +1,21 @@
+{
+"planDeductible":{
+"globalCostShare":[
+{"id":"1","gCostShare":"Deductible","routerLink":"deductible"},
+{"id":"2","gCostShare":"Coinsurance","routerLink":"coinsurance"},
+{"id":"3","gCostShare":"Out of Pocket","routerLink":"OutofPocket"},
+{"id":"4","gCostShare":"Copay","routerLink":"copay"}
+],
+"benefitServices":[
+{"id":"1","bService":"Physician Services","routerLink":"physicianServices"},
+{"id":"2","bService":"Chiropractic","routerLink":"chiropractic"},
+{"id":"3","bService":"Ambulance","routerLink":"ambulance"},
+{"id":"4","bService":"Lab Services","routerLink":"labServices"},
+{"id":"5","bService":"General Radiology","routerLink":"generalRadiology"},
+{"id":"6","bService":"Inpatient Hospital","routerLink":"inpatientHospital"},
+{"id":"7","bService":"Outpatient Hospital","routerLink":"outpatientHospital"},
+{"id":"8","bService":"Emergency Room","routerLink":"emergencyRoom"},
+{"id":"9","bService":"Urgent Care","routerLink":"urgentCare"}
+]
+}
+}

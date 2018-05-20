@@ -1,0 +1,39 @@
+{
+"planInfo":{
+   "planType":[
+   {"pId":"1","pName":"PPO"},
+   {"pId":"2","pName":"add PlanType-1"},
+   {"pId":"3","pName":"add PlanType-2"},
+   {"pId":"4","pName":"add PlanType-3"},
+   {"pId":"5","pName":"add PlanType-4"}
+   ],
+   "renewalType":[
+   {"rId":"1","rName":"New Group"},
+   {"rId":"2","rName":"Renewal Group-1"},
+   {"rId":"3","rName":"Renewal Group-2"},
+   {"rId":"4","rName":"Renewal Group-3"},
+   {"rId":"5","rName":"Renewal Group-4"}
+   ],
+    "segmentType":[
+   {"sId":"1","sName":"Pooled"},
+   {"sId":"2","sName":"Segment Type-1"},
+   {"sId":"3","sName":"Segment Type--2"},
+   {"sId":"4","sName":"Segment Type--3"},
+   {"sId":"5","sName":"Segment Type--4"}
+   ],
+    "benefitPeriod":[
+   {"bpId":"1","bpName":"Plan Year"},
+   {"bpId":"2","bpName":"Plan Year-1"},
+   {"bpId":"3","bpName":"Plan Year-2"},
+   {"bpId":"4","bpName":"Plan Year-3"},
+   {"bpId":"5","bpName":"Plan Year-4"}
+   ],
+    "planStateType":[
+   {"psId":"1","psName":"Plan Year"},
+   {"psId":"2","psName":"Plan Year-1"},
+   {"psId":"3","psName":"Plan Year-2"},
+   {"psId":"4","psName":"Plan Year-3"},
+   {"psId":"5","psName":"Plan Year-4"}
+   ]
+}
+}

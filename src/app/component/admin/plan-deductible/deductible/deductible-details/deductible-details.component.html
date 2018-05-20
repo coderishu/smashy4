@@ -1,0 +1,149 @@
+<div class="deductible-sec">
+
+  <div class="head-txt"><strong>Deductible</strong></div>
+
+  <div class="deductible-box">
+    <form #deductibleDetailsForm="ngForm">
+    <div class="info-wraps dtails-blog">
+      <div class="detail-row clearfix">
+        <div class="detail-clmn clearfix">
+          <div class="detail-clmn align-rgt">Network</div>
+          <div class="detail-clmn">
+            <select class="selectBox"[class.error] = "Obj.inNetwork == '' && isSubmit" [ngModel]="Obj.inNetwork" required  #inNetworkText = "ngModel" name="inNetwork" (ngModelChange)="Obj.inNetwork=$event">
+              <option value="">Network</option>
+              <option value="1">INN</option>
+              <option value="2">OON</option>
+              <option value="3">COMMON</option>
+              <option value="4">IN/OUT</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="detail-row clearfix">
+        <div class="detail-clmn clearfix">
+          <div class="detail-clmn align-rgt">Individual Amount</div>
+          <div class="detail-clmn cost">
+            <input type="text" name="individualAmtText" value=""[class.error] = "individualAmt.invalid && isSubmit" #individualAmt = "ngModel"  required [(ngModel)]="Obj.individualAmt" />
+          </div>
+        </div>
+        <div class="detail-clmn clearfix">
+          <div class="detail-clmn align-rgt">Family Amount</div>
+          <div class="detail-clmn cost">
+            <input type="text" name="familyAmtText" value=""[class.error] = "familyAmt.invalid && isSubmit" #familyAmt = "ngModel"  required [(ngModel)]="Obj.familyAmt"  />
+          </div>
+        </div>
+      </div>
+      <div class="detail-row clearfix">
+        <div class="detail-clmn clearfix">
+          <div class="detail-clmn align-rgt">Level</div>
+          <div class="detail-clmn">
+            <input type="text" name="levelText" value=""[class.error] = "level.invalid && isSubmit" #level = "ngModel"  required [(ngModel)]="Obj.level" />
+          </div>
+        </div>
+      </div>
+      <!--<div class="detail-row clearfix">
+        <div class="detail-clmn clearfix">
+          <div class="detail-clmn align-rgt">Includes</div>
+          <div class="detail-clmn">
+													<div class="multiSelect">
+														<ul>
+
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx2"[checked]="Obj.deductible" (change)="Obj.deductible=!Obj.deductible"  />
+																	<label for="chkbx2">Deductible</label>
+																</div>
+															</li>
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx3"[checked]="Obj.copay" (change)="Obj.copay=!Obj.copay" />
+																	<label for="chkbx3">Copay</label>
+																</div>
+															</li>
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx4"[checked]="Obj.accFee" (change)="Obj.accFee=!Obj.accFee" />
+																	<label for="chkbx4">Access Fee</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+        </div>
+        <div class="detail-clmn clearfix">
+												<div class="detail-clmn align-rgt">Excludes</div>
+												<div class="detail-clmn">
+													<div class="multiSelect">
+														<ul>
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx5"[checked]="Obj.medicalCopay" (change)="Obj.medicalCopay=!Obj.medicalCopay"/>
+																	<label for="chkbx5">Medical Copay</label>
+																</div>
+															</li>
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx6"[checked]="Obj.rxCopay" (change)="Obj.rxCopay=!Obj.rxCopay"/>
+																	<label for="chkbx6">Rx Copay</label>
+																</div>
+															</li>
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx7"[checked]="Obj.balaceBill" (change)="Obj.balaceBill=!Obj.balaceBill"/>
+																	<label for="chkbx7">Balance Billing</label>
+																</div>
+															</li>
+															<li>
+																<div class="chkbx">
+																	<input type="checkbox" id="chkbx8"[checked]="Obj.nonCoveredSev" (change)="Obj.nonCoveredSev=!Obj.nonCoveredSev"/>
+																	<label for="chkbx8">Non Covered Services</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+      </div>-->
+    </div>
+    <div class="btn-sec margin-0 clearfix">
+      <div class="back-btn">
+        <a href="javascript:void(0);" class="btn" (click)="router.navigate(['/planDeductible/deductible'])">Back</a>
+        <a  href="javascript:void(0);" class="btn">Next</a>
+      </div>
+      <div class="forword-btn">
+        <a  (click) = "submitdeductibleDetails(deductibleDetailsForm.valid)" class="btn">Save</a><a href="javascript:void(0);"(click)="resetDeductibleDetails()" class="btn">Cancel</a>
+      </div>
+    </div>
+  </form>
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>Network</th>
+          <th>Individual</th>
+          <th>Family</th>
+          <th>Level</th>
+          <th></th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let deductdetail of recordBuffer;let i =index;">
+          <td [innerHtml]="deductdetail.inNetwork">INN</td>
+          <td [innerHtml]="deductdetail.individualAmt">200</td>
+          <td [innerHtml]="deductdetail.familyAmt">300</td>
+          <td [innerHtml]="deductdetail.level"></td>
+          <td ></td>
+          <td><a href="javascript:void(0);"(click)="editTemplate(deductdetail,$event,i)">Edit</a> <span> | </span> <a href="javascript:void(0);"(click)="deleteTemplate(deductdetail,i)">Delete</a></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+

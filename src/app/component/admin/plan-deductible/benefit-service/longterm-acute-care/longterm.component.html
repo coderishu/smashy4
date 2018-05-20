@@ -1,0 +1,88 @@
+<div class="deductible-sec benefit-service">
+        <div class="head-txt"><strong>Longterm Acute Care Component</strong></div>
+        <div class="deductible-box clearfix benefit-deductible">
+           
+                <div class="benefit-left">
+                        <form #ngChiropratic="ngForm">
+                        <div class="detail-row clearfix">
+                                                                                            
+                            <p class="bottom-space"><strong class="underline-text">NON-100% PLANS</strong></p>
+                            <p><strong class="underline-text">GF PLAN:</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx1" [checked]="Obj.pcpCopy" (change)="Obj.pcpCopy=!Obj.pcpCopy">
+                                <label for="checkbx1"><strong>NO day limit</strong></label> - subject to applicable <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.pcpCopy === true)?'false':'true'"  [(ngModel)]="Obj.chiropratics"   [required]="(Obj.pcpCopy==true)?'true':'false'"  name="pcpCopyz" [class.error] = "copyPlan1.invalid && isSubmit && Obj.pcpCopy" #copyPlan1 = "ngModel"> year deductible and coinsurance for the first  days (IIN and OON). After <strong>365</strong> days, subject to deductible then BCBSAZ/Plan pays <strong>50%</strong> member pays <strong>50%</strong> for the remainder of the life of the plan, after initial <strong>365</strong> days, <strong>50%</strong> coinsurance does not count toward OOP coinsurance maximum <strong>(S)</strong>. 
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx2"  [checked]="Obj.custom" (change)="Obj.custom=!Obj.custom">
+                                <label for="checkbx2"><strong>365 day limit</strong></label> - subject to <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.custom === true)?'false':'true'"  [(ngModel)]="Obj.nonCpy"   [required]="(Obj.custom==true)?'true':'false'"  name="pcpCopyz1" [class.error] = "copyPlan2.invalid && isSubmit && Obj.custom" #copyPlan2 = "ngModel"> year deductible and coinsurance <strong>(N)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx3" (click)="show()">
+                                <label for="checkbx3">Custom <strong>(N)</strong>.  
+                            </label></div>
+                            <p><strong class="underline-text">NON-GF PLAN:</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx4"  [checked]="Obj.demoapp" (change)="Obj.demoapp=!Obj.demoapp">
+                                <label for="checkbx4"><strong>365 day limit</strong></label> - Subject to applicable <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.demoapp === true)?'false':'true'"  [(ngModel)]="Obj.customA"   [required]="(Obj.demoapp==true)?'true':'false'"  name="pcpCopyz2" [class.error] = "copyPlan2.invalid && isSubmit && Obj.demoapp" #copyPlan2 = "ngModel"> year deductible and coinsurance for the first 100 days (INN and OON). Days 101-365, subject to deductible then BCBSAZ/Plan Pays 50%, member pay 50% <strong>(S)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx5" [checked]="Obj.phymedicine" (change)="Obj.phymedicine=!Obj.phymedicine">
+                                <label for="checkbx5"><strong>No day limit</strong></label> - Subject to applicable <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.phymedicine === true)?'false':'true'"  [(ngModel)]="Obj.customA2"   [required]="(Obj.phymedicine==true)?'true':'false'"  name="pcpCopyz3" [class.error] = "copyPlan3.invalid && isSubmit && Obj.phymedicine" #copyPlan3 = "ngModel"> year deductible and coinsurance for the first 365 days (IIN and OON). After 365 days, subject to deductible then BCBSAZ/Plan pays 50%, member pays 50% for the remainder of the life of the plan <strong>(N)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx6"  [checked]="Obj.specialistCpy" (change)="Obj.specialistCpy=!Obj.specialistCpy">
+                                <label for="checkbx6"><strong>No day limit</strong></label> - Subject to <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.specialistCpy === true)?'false':'true'"  [(ngModel)]="Obj.chiropratics"   [required]="(Obj.specialistCpy==true)?'true':'false'"  name="pcpCopyz4" [class.error] = "copyPlan4.invalid && isSubmit && Obj.specialistCpy" #copyPlan4 = "ngModel"> year deductible and coinsurance <strong>(N)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx7" (click)="show()">
+                                <label for="checkbx7">Custom <strong>(N)</strong>.  
+                            </label></div>
+                            <p class="bottom-space"><strong class="underline-text">100% PLANS</strong></p>
+                            <p><strong class="underline-text">GF PLAN:</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx8"  [checked]="Obj.chvm" (change)="Obj.chvm=!Obj.chvm">
+                                <label for="checkbx8"><strong>NO day limit</strong></label> - subject to applicable <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.chvm === true)?'false':'true'"  [(ngModel)]="Obj.subApplicable"   [required]="(Obj.chvm==true)?'true':'false'"  name="pcpCopyz5" [class.error] = "copyPlan5.invalid && isSubmit && Obj.chvm" #copyPlan5 = "ngModel"> year deductible and coinsurance for the first  days (IIN and OON). After <strong>365</strong> days, subject to deductible then BCBSAZ/Plan pays <strong>50%</strong> member pays <strong>50%</strong> for the remainder of the life of the plan, after initial <strong>365</strong> days, <strong>50%</strong> coinsurance does not count toward OOP coinsurance maximum <strong>(S)</strong>. 
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx9"  [checked]="Obj.longy" (change)="Obj.longy=!Obj.longy">
+                                <label for="checkbx9"><strong>365 day limit</strong></label> - subject to <input class="input-bdr" type="text" placeholder="auto-fills"  [disabled]="(Obj.longy === true)?'false':'true'"  [(ngModel)]="Obj.max"   [required]="(Obj.longy==true)?'true':'false'"  name="pcpCopyz6" [class.error] = "copyPlan6.invalid && isSubmit && Obj.longy" #copyPlan6 = "ngModel"> year deductible and coinsurance <strong>(N)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx10" (click)="show()">
+                                <label for="checkbx10">Custom <strong>(N)</strong>.  
+                            </label></div>
+                            <p><strong class="underline-text">NON-GF PLAN:</strong></p>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx11" [checked]="Obj.acute" (change)="Obj.acute=!Obj.acute">
+                                <label for="checkbx11"><strong>365 day limit</strong></label> - Subject to applicable <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.acute === true)?'false':'true'"  [(ngModel)]="Obj.benefitCateType"   [required]="(Obj.acute==true)?'true':'false'"  name="pcpCopyz7" [class.error] = "copyPlan7.invalid && isSubmit && Obj.acute" #copyPlan7 = "ngModel"> year deductible and coinsurance for the first 100 days (INN and OON). Days 101-365, subject to deductible then BCBSAZ/Plan Pays 50%, member pay 50% <strong>(S)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx12" [checked]="Obj.longtermacute" (change)="Obj.longtermacute=!Obj.longtermacute">
+                                <label for="checkbx12"><strong>No day limit</strong></label> - Subject to applicable <input class="input-bdr" type="text" placeholder="auto-fills" [disabled]="(Obj.longtermacute === true)?'false':'true'"  [(ngModel)]="Obj.heavy"   [required]="(Obj.longtermacute==true)?'true':'false'"  name="pcpCopyz8" [class.error] = "copyPlan8.invalid && isSubmit && Obj.longtermacute" #copyPlan8 = "ngModel"> year deductible and coinsurance for the first 365 days (IIN and OON). After 365 days, subject to deductible then BCBSAZ/Plan pays 50%, member pays 50% for the remainder of the life of the plan <strong>(N)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx13" [checked]="Obj.lterm" (change)="Obj.lterm=!Obj.lterm">
+                                <label for="checkbx13"><strong>No day limit</strong></label> - Subject to <input class="input-bdr" type="text" placeholder="auto-fills"  [disabled]="(Obj.lterm === true)?'false':'true'"  [(ngModel)]="Obj.blank"   [required]="(Obj.lterm==true)?'true':'false'"  name="pcpCopyz9" [class.error] = "copyPlan9.invalid && isSubmit && Obj.lterm" #copyPlan9 = "ngModel"> year deductible and coinsurance <strong>(N)</strong>.  
+                            </div>
+                            <div class="chkbx">
+                                <input type="checkbox" id="checkbx14" (click)="show()">
+                                <label for="checkbx14">Custom <strong>(N)</strong>.  
+                            </label></div>
+                            
+                            
+                                                                
+                        </div>
+                        <div class="btn-sec clearfix benifit-btn-sec">
+                            <div class="forword-btn">
+                                <a href="javascript:void(0);" class="btn" (click)="longTerm(ngChiropratic.valid)">Save</a><a href="javascript:void(0);" class="btn">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+          
+              <div class="benefit-right benefit-tab chiro">
+                  <app-bscommon-module [BenefitServicesBuffer]="longtermComponent" [isShow]="isShow"></app-bscommon-module>
+                </div>
+        </div>
+      </div>
+      

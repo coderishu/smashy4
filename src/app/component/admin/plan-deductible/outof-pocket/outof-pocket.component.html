@@ -1,0 +1,68 @@
+<div class="deductible-sec outOfPocket">
+  <form #OutOfPocketForm="ngForm">
+  <div class="head-txt"><strong>Out of Pocket</strong></div>
+  <div class="deductible-box">
+    <div class="info-wraps">
+      <div class="rows clearfix"><strong>If box is checked, these services apply to OPP coinsurance max (N).</strong></div>
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx4" [checked]="Obj.deductible" (change)="Obj.deductible=!Obj.deductible" />
+          <label for="checkbx4"><strong>Deductible</strong></label>
+        </div>
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx5" [checked]="Obj.accFee" (change)="Obj.accFee=!Obj.accFee"/>
+          <label for="checkbx5"><strong>Access Fee</strong></label>
+        </div>
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx6" [checked]="Obj.copay" (change)="Obj.copay=!Obj.copay"/>
+          <label for="checkbx6"><strong>Copays (excluding Rx Copays)</strong></label>
+        </div>
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx empty"></div>
+        <div class="columns"><strong>Member</strong></div>
+        <div class="columns"><strong>Family</strong></div>
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx1" [checked]="Obj.common" (change)="commonSet()"  />
+          <label for="checkbx1"><strong>Common</strong></label>
+        </div>
+        <div class="columns"><div class="cost"><input  [disabled]="(Obj.common == true)?'false':'true'" class="InputDisabled" type="text" [ngClass]="{'InputDisabled':Obj.common !== true}" [required]="(Obj.common==true)?'true':'false'" name="common"  [(ngModel)]="Obj.commonVal"  [class.error] = "commonText.invalid && isSubmit && Obj.common" #commonText = "ngModel"/></div></div>
+        <div class="columns"><div class="cost"><input [disabled]="(Obj.common == true)?'false':'true'" class="InputDisabled" type="text"[ngClass]="{'InputDisabled':Obj.common !== true}" [required]="(Obj.common==true)?'true':'false'" name="common1"  [(ngModel)]="Obj.commonVal1"  [class.error] = "commonText1.invalid && isSubmit && Obj.common" #commonText1 = "ngModel" /></div></div>
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx2" [checked]="Obj.inNetwork" (change)="inNetworkSet()"/>
+          <label for="checkbx2"><strong>In Network</strong></label>
+        </div>
+        <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.inNetwork == true)?'false':'true'"[ngClass]="{'InputDisabled':Obj.inNetwork !== true}" [required]="(Obj.inNetwork==true)?'true':'false'" name="inNetwork"  [(ngModel)]="Obj.inNetworkVal"  [class.error] = "inNetworkText.invalid && isSubmit && Obj.inNetwork" #inNetworkText = "ngModel"/></div></div>
+        <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.inNetwork == true)?'false':'true'" [ngClass]="{'InputDisabled':Obj.inNetwork !== true}" [required]="(Obj.inNetwork==true)?'true':'false'" name="inNetwork1"  [(ngModel)]="Obj.inNetworkVal1"  [class.error] = "inNetworkText1.invalid && isSubmit && Obj.inNetwork" #inNetworkText1 = "ngModel" /></div></div>
+      </div>
+      <div class="rows clearfix">
+        <div class="columns chkbx">
+          <input type="checkbox" id="checkbx3"[checked]="Obj.outOfNetwork" (change)="outOfNetworkSet()"/>
+          <label for="checkbx3"><strong>Out of Network</strong></label>
+        </div>
+
+        <div class="columns"><div class="cost"><input type="text" [disabled]="(Obj.outOfNetwork == true)?'false':'true'" [ngClass]="{'InputDisabled':Obj.outOfNetwork !== true}" [required]="(Obj.outOfNetwork==true)?'true':'false'" name="outOfNetwork"  [(ngModel)]="Obj.outOfNetworkVal"  [class.error] = "outOfNetworkText.invalid && isSubmit && Obj.outOfNetwork" #outOfNetworkText = "ngModel"/></div></div>
+        <div class="columns"><div class="cost"><input type="text"[disabled]="(Obj.outOfNetwork == true)?'false':'true'" [ngClass]="{'InputDisabled':Obj.outOfNetwork !== true}" [required]="(Obj.outOfNetwork==true)?'true':'false'" name="outOfNetwork1"  [(ngModel)]="Obj.outOfNetworkVal1"  [class.error] = "outOfNetworkText1.invalid && isSubmit && Obj.outOfNetwork" #outOfNetworkText1 = "ngModel" /></div></div>
+      </div>
+      <div class="chkbx rows">
+        <input type="checkbox" id="checkbx9" (click)="router.navigate(['/planDeductible/outofpocketCustom'])" />
+        <!--(click)="router.navigate()"-->
+        <label for="checkbx9">Custom</label>
+      </div>
+    </div>
+    <div class="btn-sec clearfix">
+      <div class="back-btn">
+        <a href="javascript:void(0);" class="btn" (click)="router.navigate(['/planDeductible/coinsurance'])">Back</a>
+        <a (click)="nextSec()"class="btn" >Next</a>
+      </div>
+      <div class="forword-btn">
+        <a (click)="saveOutOfPocket(OutOfPocketForm.valid)" class="btn">Save</a><a href="javascript:void(0);"(click)="resetOutOfPocketRec()" class="btn">Cancel</a>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>

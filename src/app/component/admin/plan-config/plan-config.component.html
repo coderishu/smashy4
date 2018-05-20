@@ -1,0 +1,71 @@
+<!--Content Area Start-->
+ <div class="content mid-contant">
+
+  <div class="container">
+    <form #planConfigForm = "ngForm">
+      <div class="enterplan-sec config-page">
+        <div class="planInfo-txt">Enter Plan Config</div>
+
+        <div class="plans-type clearfix">
+          <div class="plans-left">
+            <div class="wraps clearfix">
+              <label>Copay Plan Type</label>
+
+              <select class="selectBox" [ngModel]="Obj.copayPlanType"[class.error] = "Obj.copayPlanType == '' && isSubmit"  required  #copayPlanTypeText = "ngModel" name="copayPlanType" (ngModelChange)="Obj.copayPlanType=$event">
+                <option value="" selected>Select Copay Plan Type</option>
+                <option *ngFor="let object of copayPlanType" [ngValue]="object" [selected]="object==Obj.copayPlanType">{{object.cpName}}</option>
+              </select>
+            </div>
+            <div class="wraps clearfix">
+              <label>GF Type</label>
+              <select class="selectBox" [ngModel]="Obj.gfType" [class.error] = "Obj.gfType == '' && isSubmit"  required  #gfTypeText = "ngModel"name="gfType" (ngModelChange)="Obj.gfType=$event">
+               <option value="" selected>Select GF Type</option>
+                <option *ngFor="let object of gfType" [ngValue]="object" [selected]="object==Obj.gfType">{{object.gfName}}</option>
+              </select>
+            </div>
+            <div class="wraps clearfix">
+              <label>Suite</label>
+              <select class="selectBox" [ngModel]="Obj.suite"[class.error] = "Obj.suite == '' && isSubmit"  required  #suiteText = "ngModel" name="suite" (ngModelChange)="Obj.suite=$event">
+                <option value="" selected>Select Suite</option>
+                <option *ngFor="let object of suite" [ngValue]="object" [selected]="object==Obj.suite">{{object.sName}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="plans-right">
+            <div class="wraps clearfix">
+              <label>Plan Covarage Type </label>
+              <select class="selectBox" [ngModel]="Obj.planCovarageType" [class.error] = "Obj.planCovarageType == '' && isSubmit"  required  #planCovarageTypeText = "ngModel"name="planCovarageType" (ngModelChange)="Obj.planCovarageType=$event">
+                <option value="" selected>Select Plan Covarage Type</option>
+                <option *ngFor="let object of planCovarageType" [ngValue]="object" [selected]="object==Obj.planCovarageType">{{object.pcName}}</option>
+              </select>
+            </div>
+            <div class="wraps clearfix">
+              <label>Funding Type </label>
+              <select class="selectBox" [ngModel]="Obj.fundingType" [class.error] = "Obj.fundingType == '' && isSubmit"  required  #fundingTypeText = "ngModel"name="fundingType" (ngModelChange)="Obj.fundingType=$event">
+              <option value="" selected>Select Funding Type</option>
+                <option *ngFor="let object of fundingType" [ngValue]="object" [selected]="object==Obj.fundingType">{{object.fName}}</option>
+              </select>
+            </div>
+            <div class="wraps clearfix">
+              <label>Provider Network</label>
+              <select class="selectBox" [ngModel]="Obj.providerNetwork" [class.error] = "Obj.providerNetwork == '' && isSubmit"  required  #providerNetworkText = "ngModel"name="providerNetwork" (ngModelChange)="Obj.providerNetwork=$event">
+              <option value="" selected>Select Provider Network</option>
+                <option *ngFor="let object of providerNetwork" [ngValue]="object" [selected]="object==Obj.providerNetwork">{{object.pnName}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="btn-sec clearfix">
+          <div class="back-btn">
+            <a [routerLink] = "['/pageInfo']" class="btn">BACK</a>
+          </div>
+          <div class="forword-btn">
+            <a  class="btn" (click) = "planConfig(planConfigForm.valid)">SAVE</a><a  class="btn" (click)="reset()">CANCEL</a>
+          </div>
+        </div>
+      </div>
+
+    </form>
+    </div>
+</div>
+<!--Content Area End-->

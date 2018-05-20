@@ -1,0 +1,129 @@
+<!--<form class="benifit-formone md-border clearfix">-->
+  <!--<div class="formone-wrap">-->
+    <!--<label for="Benifit1"> Benefit Category : </label>-->
+    <!--<select class="selectBox" [ngModel]="Obj.benefitCategory" [class.error] = "Obj.benefitCategory == '' && isSubmitCostShare"  required  #bServicesType="ngModel" name="bServicesTxt" (ngModelChange)="Obj.benefitCategory=$event">-->
+      <!--<option value="">Select Benefit Service</option>-->
+      <!--<option *ngFor="let bServices of benefitServices"[ngValue]="bServices" [innerHtml]="bServices.bService"></option>-->
+    <!--</select>-->
+  <!--</div>-->
+<!--</form>-->
+
+<div class="limitation clearfix">
+  <form class="benifit-formone clearfix" #ngLimitation="ngForm">
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Network </label>
+      <div class="chiro-select-wrapper">
+      <select class="selectBox large-selectbox" [ngModel]="Obj.network" [class.error] = "Obj.network == '' && isSubmitCostShare"  required  #limitNetworkType="ngModel" name="limitNetworkTxt" (ngModelChange)="Obj.network=$event">
+        <option value="">Network</option>
+        <option *ngFor="let network of networks"[ngValue]="network" [innerHtml]="network.rName"></option>
+
+      </select>
+    </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Limitation Type </label>
+      <div class="chiro-select-wrapper">
+      <select class="selectBox large-selectbox" [ngModel]="Obj.limitationType" [class.error] = "Obj.limitationType == '' && isSubmitCostShare"  required  #limitationTypeType="ngModel" name="limitationTxt" (ngModelChange)="Obj.limitationType=$event">
+        <option value="">Limitation Type</option>
+        <option *ngFor="let lTypeObj of limitationTypes"[ngValue]="lTypeObj" [innerHtml]="lTypeObj.limtType"></option>
+
+      </select>
+    </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Amount or percent</label>
+      <div class="chiro-select-wrapper">
+      <input type="text" name="amtpercentTxt"  [(ngModel)]="Obj.amtpercent"  [class.error] = "amtpercentText.invalid && isSubmitCostShare " #amtpercentText = "ngModel">
+    </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Amount Type</label>
+      <div class="chiro-select-wrapper">
+      <select class="selectBox" [ngModel]="Obj.amtType" [class.error] = "Obj.amtType == '' && isSubmitCostShare" #amtpercentType="ngModel" name="amtTypeTxt" (ngModelChange)="Obj.amtType=$event">
+        <option value="">Amount Type</option>
+        <option *ngFor="let aTypeObj of amountTypes" [ngValue]="aTypeObj" [innerHtml]="aTypeObj.aType">VISITS</option>
+
+      </select>
+    </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1" > Quantity</label>
+      <div class="chiro-select-wrapper">
+      <input type="text" name="quantityTxt" [(ngModel)]="Obj.quantity" [class.error]="Obj.quantity == '' && isSubmitCostShare" #quantityType="ngModel">
+
+      </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Quantity Qualifier</label>
+      <div class="chiro-select-wrapper">
+      <select class="selectBox"  [ngModel]="Obj.quantityQual" [class.error] = "Obj.quantityQual == '' && isSubmitCostShare"  #quantityQualType="ngModel" name="quantityQualTxt" (ngModelChange)="Obj.quantityQual=$event">
+        <option value="">Quantity Qualifier</option>
+        <option *ngFor="let qQualifierObj of quantityQualifiers"[ngValue]="qQualifierObj" [innerHtml]="qQualifierObj.qQualifier"></option>
+
+      </select>
+      </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Time Period </label>
+      <div class="chiro-select-wrapper">
+      <select class="selectBox"  [ngModel]="Obj.timePeriod" [class.error] = "Obj.timePeriod == '' && isSubmitCostShare"  #timePeriodType="ngModel" name="timePeriodTxt" (ngModelChange)="Obj.timePeriod=$event">
+        <option value="">Time Period</option>
+        <option  *ngFor="let timePeriodObj of timePeriods"[ngValue]="timePeriodObj" [innerHtml]="timePeriodObj.tPeriod">VISITS</option>
+
+      </select>
+    </div>
+    </div>
+    <div class="formone-wrap chiro_label">
+      <label for="Benifit1"> Add Qualifier </label>
+      <div class="chiro-select-wrapper">
+      <select class="selectBox"  [ngModel]="Obj.addQualifier" [class.error] = "Obj.addQualifier == '' && isSubmitCostShare"  #addQualifierType="ngModel" name="addQualifierTxt" (ngModelChange)="Obj.addQualifier=$event">
+        <option value="">Addl. Qualifier</option>
+        <option  *ngFor="let addQualifierObj of addQualifiers"[ngValue]="addQualifierObj" [innerHtml]="addQualifierObj.aQualifier">VISITS</option>
+
+      </select>
+    </div>
+    </div>
+    <div class="formone-btn-wrap">
+      <button class="btn" (click)="saveLimitation(ngLimitation.valid)">
+        save
+      </button>
+      <button class="btn" (click)="resetLimitation()">
+        cancel
+      </button>
+    </div>
+  </form>
+</div>
+<div class=" benifit-tableWrap md-limitation-table">
+  <div class="table-wrap ">
+    <table>
+      <tbody>
+      <tr class="chiro-table_tr">
+        <th>Limitation Type</th>
+        <th>Amount Percent</th>
+        <th>Amount Type</th>
+        <th>Quantity</th>
+        <th>Quantity Qualifier</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let rCBuffer of selectedPrevious[0]['limitations']; let i=index;">
+        <td [innerHtml]="rCBuffer.limitationType['limtType']" ></td>
+        <td [innerHtml]="rCBuffer.amtpercent" ></td>
+        <td [innerHtml]="rCBuffer.amtType['aType']"></td>
+        <td [innerHtml]="rCBuffer.quantity"></td>
+        <td [innerHtml]="rCBuffer.quantityQual['qQualifier']"></td>
+        <td><a href="javascript:void(0);" (click)="editChriopraticTemplate(rCBuffer,$event,i)">Edit</a><span> | </span><a href="javascript:void(0);"(click)="deleteChriopraticTemplate(rCBuffer,i)">Delete</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<!--</div>-->
